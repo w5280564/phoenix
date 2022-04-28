@@ -1,0 +1,231 @@
+com.fastchat.sdk.BuildConfig
+com.fastchat.sdk.ProgressConnection$Default
+com.fastchat.sdk.ProgressConnection$Stub$Proxy
+com.fastchat.sdk.ProgressConnection$Stub
+com.fastchat.sdk.ProgressConnection
+com.fastchat.sdk.SDKConstant
+com.fastchat.sdk.db.DBManager:
+    private static final java.lang.String DB_NAME
+    private boolean isSDCardExist()
+com.fastchat.sdk.db.TypeConverters
+com.fastchat.sdk.db.dao.MessageDao:
+    public abstract com.fastchat.sdk.db.model.MessageModel getLastMessageOffSize(java.lang.String,int,int)
+com.fastchat.sdk.db.dao.MessageDao_Impl:
+    public com.fastchat.sdk.db.model.MessageModel getLastMessageOffSize(java.lang.String,int,int)
+com.fastchat.sdk.logcollect.logcat.LogcatHelper:
+    private static final java.lang.String LOGCAT_FNAME
+    private static final java.lang.String LOGCAT_NAME
+    private static final double MAX_SIZE
+com.fastchat.sdk.logcollect.utils.FileSizeUtil:
+    public static final int SIZETYPE_B
+    public static final int SIZETYPE_GB
+    public static final int SIZETYPE_KB
+    public static final int SIZETYPE_MB
+    private static java.lang.String FormetFileSize(long)
+    public static java.lang.String getAutoFileOrFilesSize(java.io.File)
+com.fastchat.sdk.manager.AndroidAdaptiveServerPingManager:
+    private static final int MIN_ALARM_INTERVAL
+    private static final java.lang.String PING_ALARM_ACTION
+com.fastchat.sdk.manager.GroupManager$5:
+    final synthetic com.fastchat.sdk.manager.GroupManager this$0
+    void <init>(com.fastchat.sdk.manager.GroupManager,com.fastchat.sdk.model.HTMessage,com.fastchat.sdk.manager.GroupManager$CallBack)
+com.fastchat.sdk.manager.GroupManager$6:
+    final synthetic com.fastchat.sdk.manager.GroupManager this$0
+    void <init>(com.fastchat.sdk.manager.GroupManager)
+com.fastchat.sdk.manager.GroupManager:
+    private void sendCustomMessage(java.lang.String,com.fastchat.sdk.ChatType,java.lang.String)
+    private void sendNoticeMessage(com.alibaba.fastjson.JSONObject,java.lang.String,java.lang.String,com.fastchat.sdk.manager.GroupManager$CallBack)
+com.fastchat.sdk.manager.HTPreferenceManager:
+    private static final java.lang.String PREFERENCE_NAME
+com.fastchat.sdk.manager.MessageManager$1:
+    final synthetic com.fastchat.sdk.manager.MessageManager this$0
+    void <init>(com.fastchat.sdk.manager.MessageManager)
+com.fastchat.sdk.manager.MessageManager:
+    private java.util.List loadMessageList(java.util.List)
+    private void sortMessageByLastChatTime(java.util.List)
+com.fastchat.sdk.model.SendCallbackMessageInfo:
+    public static final java.lang.String ELEMENT_NAME
+    public static final java.lang.String NAME_SPACE
+com.fastchat.sdk.model.SendCallbackMessageInfo_GroupChat:
+    public static final java.lang.String ELEMENT_NAME
+    public static final java.lang.String NAME_SPACE
+    public long getTimeStamp()
+    public void setTimeStamp(long)
+com.fastchat.sdk.model.SendMessageInfo:
+    public static final java.lang.String ELEMENT_NAME
+    public static final java.lang.String NAME_SPACE
+    public java.lang.String getBody()
+com.fastchat.sdk.receiver.NetworkStateReceiver:
+    private static final int ACTION_START
+    private static final int ACTION_STOP
+    private static final int ACTION_TEST
+com.fastchat.sdk.service.MessageService$MyBinder:
+    public java.lang.String getProName()
+com.fastchat.sdk.service.MessageService:
+    public static final java.lang.String TAG_CONNECT
+    public static final java.lang.String TAG_NETWORK
+    public static final java.lang.String TAG_OTHER
+    public static final java.lang.String TAG_RECEIVE
+    public static final java.lang.String TAG_RECEIVE_OTHER
+    public static final java.lang.String TAG_SEND
+    public static final java.lang.String TAG_SEND_OTHER
+    private static final int TIME
+    public static final int TYPE_AWAKE
+    public static final int TYPE_CHAT
+    public static final int TYPE_CHAT_CMD
+    public static final int TYPE_CONNECT_FOREGROUND
+    public static final int TYPE_DISCONNECT_BACKGROUND
+    public static final int TYPE_INIT
+    public static final int TYPE_LOGIN
+    public static final int TYPE_LOGOUT
+    public static final int TYPE_NTIFICATION
+    public static final int TYPE_NTIFICATION_CANCEL
+    public static final int TYPE_REGISTER
+com.fastchat.sdk.utils.AESUtils
+com.fastchat.sdk.utils.HTMessageHelper
+com.fastchat.sdk.utils.JsonUtil:
+    public void <init>()
+    public static java.lang.String arrayToJson(java.util.List)
+    public static java.lang.String getValue(java.lang.String,java.lang.String)
+    public static java.lang.Object json2Bean(java.lang.String,java.lang.Class)
+    public static java.util.List json2List(java.lang.String,java.lang.Class)
+com.fastchat.sdk.utils.Logger:
+    private static final java.lang.String TAG
+    private void <init>()
+    public static void d(java.lang.String)
+    public static void e(java.lang.String)
+    public static void i(java.lang.String)
+    public static void i(java.lang.String,java.lang.String)
+    public static void v(java.lang.String)
+    public static void v(java.lang.String,java.lang.String)
+com.fastchat.sdk.utils.NetWorkUtil$netType
+com.fastchat.sdk.utils.NetWorkUtil:
+    private static final double BYTE_TO_KILOBIT
+    private static final int EXPECTED_SIZE_IN_BYTES
+    private static final double KILOBIT_TO_MEGABIT
+    private static android.os.Handler mHandler
+    public static int timer
+    public static com.fastchat.sdk.utils.NetWorkUtil$netType getAPNType(android.content.Context)
+    public static int getConnectedType(android.content.Context)
+    public static boolean isMobileConnected(android.content.Context)
+    public static boolean isNetworkAvailable(android.content.Context)
+    public static boolean isWifiConnected(android.content.Context)
+com.fastchat.sdk.utils.NewOkHttpUtils$HttpCallBack
+com.fastchat.sdk.utils.NewOkHttpUtils
+com.fastchat.sdk.utils.Param
+com.fastchat.sdk.utils.SystemUtils:
+    private static android.net.Uri sProfileUri
+    private void <init>()
+    public static void acquireScreenOn(android.app.Activity)
+    public static android.util.SparseBooleanArray cloneSparseBooleanArray(android.util.SparseBooleanArray)
+    public static void closeStream(java.io.Closeable)
+    public static java.lang.Object[] concatenate(java.lang.Object[],java.lang.Object)
+    public static java.lang.Object[] concatenate(java.lang.Object[],java.lang.Object[])
+    public static boolean contains(java.lang.Object[],java.lang.Object)
+    public static long copy(java.io.InputStream,java.io.OutputStream)
+    public static android.text.style.CharacterStyle getColoredSpan(android.content.Context,int)
+    public static int getDisplayRotation(android.content.Context)
+    public static android.graphics.Point getDisplaySize(android.content.Context)
+    public static android.graphics.Bitmap getProfilePhoto(android.content.Context)
+    public static int getScreenOrientation(android.app.Activity)
+    public static int getThemedResource(android.content.Context,int)
+    public static android.text.style.CharacterStyle getTypefaceSpan(int)
+    public static java.lang.String getUserSerial(android.content.Context)
+    public static boolean isCallable(android.content.Context,android.content.Intent)
+    public static boolean isNetworkConnectionAvailable(android.content.Context)
+    public static android.net.Uri lookupPhoneNumber(android.content.Context,java.lang.String)
+    public static void releaseScreenOn(android.app.Activity)
+com.fastchat.sdk.utils.UploadFileUtilsNew$10
+com.fastchat.sdk.utils.UploadFileUtilsNew$1
+com.fastchat.sdk.utils.UploadFileUtilsNew$2
+com.fastchat.sdk.utils.UploadFileUtilsNew$3
+com.fastchat.sdk.utils.UploadFileUtilsNew$4
+com.fastchat.sdk.utils.UploadFileUtilsNew$5
+com.fastchat.sdk.utils.UploadFileUtilsNew$6
+com.fastchat.sdk.utils.UploadFileUtilsNew$7
+com.fastchat.sdk.utils.UploadFileUtilsNew$8
+com.fastchat.sdk.utils.UploadFileUtilsNew$9
+com.fastchat.sdk.utils.UploadFileUtilsNew$UploadCallBack
+com.fastchat.sdk.utils.UploadFileUtilsNew
+com.fastchat.sdk.utils.http.HttpBaseList
+com.fastchat.sdk.utils.http.HttpSender:
+    private java.util.HashMap getRequestData()
+    private void requestGet()
+    private void requestPostFile(java.io.File)
+    public void sendGet()
+    public void sendPostFile(java.io.File)
+com.fastchat.sdk.utils.http.OkhttpInitUtil$1
+com.fastchat.sdk.utils.http.OkhttpInitUtil$TrustAllHostnameVerifier
+com.fastchat.sdk.utils.http.OkhttpInitUtil$TrustAllManager
+com.fastchat.sdk.utils.http.OkhttpInitUtil:
+    private java.lang.String DEVICE_URL_GET
+    private java.lang.String DEVICE_URL_UPDATE
+    private static javax.net.ssl.SSLSocketFactory createSSLSocketFactory()
+com.fastchat.sdk.db.DBManager:
+    private final java.lang.String DB_NAME_FORMAT
+com.fastchat.sdk.db.dao.ConversationDao_Impl$1:
+    final synthetic com.fastchat.sdk.db.dao.ConversationDao_Impl this$0
+com.fastchat.sdk.db.dao.ConversationDao_Impl$2:
+    final synthetic com.fastchat.sdk.db.dao.ConversationDao_Impl this$0
+com.fastchat.sdk.db.dao.GroupDao_Impl$1:
+    final synthetic com.fastchat.sdk.db.dao.GroupDao_Impl this$0
+com.fastchat.sdk.db.dao.GroupDao_Impl$2:
+    final synthetic com.fastchat.sdk.db.dao.GroupDao_Impl this$0
+com.fastchat.sdk.db.dao.MessageDao_Impl$1:
+    final synthetic com.fastchat.sdk.db.dao.MessageDao_Impl this$0
+com.fastchat.sdk.db.dao.MessageDao_Impl$2:
+    final synthetic com.fastchat.sdk.db.dao.MessageDao_Impl this$0
+com.fastchat.sdk.db.dao.MessageDao_Impl$3:
+    final synthetic com.fastchat.sdk.db.dao.MessageDao_Impl this$0
+com.fastchat.sdk.db.dao.MessageDao_Impl$4:
+    final synthetic com.fastchat.sdk.db.dao.MessageDao_Impl this$0
+com.fastchat.sdk.logcollect.logcat.LogcatHelper:
+    private final java.lang.String LOG_NAME_FORMAT
+com.fastchat.sdk.logcollect.utils.FileSizeUtil:
+    private static final java.lang.String TAG
+    public void <init>()
+com.fastchat.sdk.manager.AbstractAdaptiveServerPingManager:
+    private static final java.util.logging.Logger LOGGER
+com.fastchat.sdk.manager.ConversationManager$1:
+    final synthetic com.fastchat.sdk.manager.ConversationManager this$0
+com.fastchat.sdk.manager.ConversationManager$2:
+    final synthetic com.fastchat.sdk.manager.ConversationManager this$0
+com.fastchat.sdk.manager.ConversationManager$3:
+    final synthetic com.fastchat.sdk.manager.ConversationManager this$0
+com.fastchat.sdk.manager.GroupManager:
+    private java.lang.String baseOssUrl
+    android.os.Handler handler
+com.fastchat.sdk.manager.MessageManager:
+    private android.content.Context context
+com.fastchat.sdk.model.HTMessageVideoBody:
+    private java.lang.String size
+com.fastchat.sdk.service.MessageService$13:
+    final synthetic com.fastchat.sdk.service.MessageService this$0
+com.fastchat.sdk.service.MessageService$5:
+    final synthetic com.fastchat.sdk.service.MessageService this$0
+com.fastchat.sdk.service.MessageService$8:
+    final synthetic com.fastchat.sdk.service.MessageService this$0
+com.fastchat.sdk.service.MessageService$MyBinder:
+    final synthetic com.fastchat.sdk.service.MessageService this$0
+com.fastchat.sdk.service.MessageService$MyServiceConnection:
+    final synthetic com.fastchat.sdk.service.MessageService this$0
+com.fastchat.sdk.utils.NetWorkUtil:
+    private static final java.lang.String TAG
+    public void <init>()
+com.fastchat.sdk.utils.SystemUtils:
+    private static final java.util.regex.Pattern VERSION_CODE_MATCH
+com.fastchat.sdk.utils.UploadFileUtils$10:
+    final synthetic com.fastchat.sdk.utils.UploadFileUtils this$0
+com.fastchat.sdk.utils.UploadFileUtils$2:
+    final synthetic com.fastchat.sdk.utils.UploadFileUtils this$0
+com.fastchat.sdk.utils.UploadFileUtils$3:
+    final synthetic com.fastchat.sdk.utils.UploadFileUtils this$0
+com.fastchat.sdk.utils.UploadFileUtils$6:
+    final synthetic com.fastchat.sdk.utils.UploadFileUtils this$0
+com.fastchat.sdk.utils.UploadFileUtils$7:
+    final synthetic com.fastchat.sdk.utils.UploadFileUtils this$0
+com.fastchat.sdk.utils.UploadFileUtils$9:
+    final synthetic com.fastchat.sdk.utils.UploadFileUtils this$0
+com.fastchat.sdk.utils.http.OkhttpInitUtil:
+    private java.lang.String baseUrl
+    private android.content.Context mContext

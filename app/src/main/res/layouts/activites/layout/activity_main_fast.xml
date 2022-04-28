@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.zhengshuo.phoenix.widget.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        app:titleBarLeftShowFlag="INVISIBLE"
+        app:titleBarTitle="消息"
+        app:titleBarRightShowType="IMG"
+        app:titleBarRightShowFlag="VISIBLE"
+        app:titleBarRightImg="@mipmap/jiahao_top"/>
+
+    <com.zhengshuo.phoenix.widget.ViewPagerNoScroll
+        android:id="@+id/vp_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/common_divider"
+        />
+
+    <com.zhengshuo.phoenix.widget.MainBottomTabGroupView
+        android:id="@+id/tg_bottom_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/color_main_tab"
+        />
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <com.zhengshuo.phoenix.widget.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        app:titleBarLeftImg="@mipmap/fanhui"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleBarRightShowType="TEXT"
+        app:titleBarRightShowFlag="VISIBLE"
+        app:titleBarRightTxt="自动发"/>
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container_chat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/title_bar">
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/white"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_press_to_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_set_mode_voice"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@mipmap/yuyin" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_sendmessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:hint="请输入消息"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/shape_background_edit_chat"
+                    android:maxLines="4"
+                    android:minHeight="29dp"
+                    android:paddingLeft="11dp"
+                    android:paddingRight="11dp"
+                    android:textCursorDrawable="@drawable/et_curse_normal"
+                    android:textSize="12sp"
+                    android:textColor="@color/color_444444"
+                    android:textColorHint="@color/color_999999"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_reference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:background="@drawable/shape_background_yinyong_chat"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="11dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_reference"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:lineSpacingExtra="2dp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textColor="@color/text_color_8A8A8A"
+                        android:textSize="10sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_reference_cancel"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:src="@mipmap/quxiao_yinyong"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_press_to_speak"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <Button
+                android:id="@+id/btn_set_mode_keyboard"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@mipmap/jianpan" />
+
+            <TextView
+                android:id="@+id/tv_recording"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:minHeight="29dp"
+                android:text="按住说话"
+                android:gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/shape_background_voice_chat"
+                android:textSize="12sp"
+                android:textColor="@color/color_444444"/>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_emoticons_normal"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="@mipmap/biaoqing"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_emoticons_checked"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="@mipmap/jianpan"
+            android:visibility="gone" />
+
+
+
+        <Button
+            android:id="@+id/btn_hot"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="12dp"
+            android:background="@mipmap/cehhui" />
+
+        <Button
+            android:id="@+id/btn_more"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="12dp"
+            android:background="@mipmap/jiahao" />
+
+        <TextView
+            android:id="@+id/btn_send"
+            android:layout_width="42dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/bg_btn_send_normal"
+            android:text="@string/button_send"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:id="@+id/ll_emoji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:showDividers="middle">
+            <!-- 表情图片 -->
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/emoji_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.tabs.TabLayout
+
+                android:id="@+id/tl_face_container"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                app:tabBackground="@drawable/emoji_bottom_bg"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp"
+                app:tabMode="scrollable" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_extend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d4d4d4" />
+
+            <!-- 图片，表情，名片等按钮 -->
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/extend_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="12dp" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tablelayout_extend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:tabGravity="fill" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,830 @@
+com.fastchat.sdk.model.HTMessage
+com.fastchat.sdk.manager.GroupManager$2
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$7
+com.fastchat.sdk.model.HTConversation
+com.fastchat.sdk.model.HTMessage$Direct
+com.fastchat.sdk.manager.GroupManager$4
+com.fastchat.sdk.manager.HTChatManager
+com.fastchat.sdk.manager.GroupManager$GroupOperationCallBack
+com.fastchat.sdk.manager.HTChatManager$6
+com.fastchat.sdk.client.HTOptions
+com.fastchat.sdk.manager.HTChatManager$5
+com.fastchat.sdk.model.SendCallbackMessageInfo_GroupChat
+com.fastchat.sdk.client.HTClient
+com.fastchat.sdk.manager.HTPreferenceManager
+com.fastchat.sdk.client.HTAction
+com.fastchat.sdk.manager.HTChatManager$2
+com.fastchat.sdk.manager.AbstractAdaptiveServerPingManager
+com.fastchat.sdk.model.HTMessageBody
+com.fastchat.sdk.model.HTGroup
+com.fastchat.sdk.manager.MessageManager$1
+com.fastchat.sdk.R$string
+com.fastchat.sdk.client.HTClient$GroupListener
+com.fastchat.sdk.R$style
+com.fastchat.sdk.manager.MmvkManger
+com.fastchat.sdk.listener.HTConnectionListener
+com.fastchat.sdk.manager.HTChatManager$3
+com.fastchat.sdk.utils.MessageUtils
+com.fastchat.sdk.model.HTMessageVoiceBody
+com.fastchat.sdk.R
+com.fastchat.sdk.R$integer
+com.fastchat.sdk.db.YuRuanTalkDatabase
+com.fastchat.sdk.manager.GroupManager$5
+com.fastchat.sdk.manager.HTChatManager$MyReceiver
+com.fastchat.sdk.client.HTClient$HTCallBack
+com.fastchat.sdk.R$styleable
+com.fastchat.sdk.R$drawable
+com.fastchat.sdk.manager.HTChatManager$1
+com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$6
+com.fastchat.sdk.service.MessageService
+com.fastchat.sdk.manager.MessageManager
+com.fastchat.sdk.ChatType
+com.fastchat.sdk.R$layout
+com.fastchat.sdk.R$id
+com.fastchat.sdk.manager.HTChatManager$4
+com.fastchat.sdk.model.HTMessage$Type
+com.fastchat.sdk.manager.ConversationManager$3
+com.fastchat.sdk.model.HTMessageImageBody
+com.fastchat.sdk.R$color
+com.fastchat.sdk.manager.GroupManager$1
+com.fastchat.sdk.model.CmdMessage
+com.fastchat.sdk.manager.GroupManager$CallBack
+com.fastchat.sdk.manager.GroupManager
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver
+com.fastchat.sdk.client.SDKAction
+com.fastchat.sdk.manager.HTChatManager$5$1
+com.fastchat.sdk.model.CallMessage
+com.fastchat.sdk.model.SendCallbackMessageInfo
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$2
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$3
+com.fastchat.sdk.manager.AndroidAdaptiveServerPingManager
+com.fastchat.sdk.utils.UploadFileUtils
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$1
+com.fastchat.sdk.model.SendMessageInfo
+com.fastchat.sdk.manager.ConversationManager$1
+com.fastchat.sdk.manager.GroupManager$6
+com.fastchat.sdk.model.HTMessage$Status
+com.fastchat.sdk.receiver.NetworkStateReceiver
+com.fastchat.sdk.manager.GroupManager$GroupListCallBack
+com.fastchat.sdk.client.HTClient$MessageListener
+com.fastchat.sdk.R$dimen
+com.fastchat.sdk.model.HTMessageFileBody
+com.fastchat.sdk.manager.ConversationManager
+com.fastchat.sdk.db.YuRuanTalkDatabase_Impl
+com.fastchat.sdk.model.CurrentUser
+com.fastchat.sdk.model.HTMessageVideoBody
+com.fastchat.sdk.R$attr
+com.fastchat.sdk.model.HTMessageLocationBody
+com.fastchat.sdk.manager.HTChatManager$MyReceiver$1
+com.fastchat.sdk.manager.ConversationManager$2
+com.fastchat.sdk.R$bool
+com.fastchat.sdk.model.HTMessageTextBody
+com.fastchat.sdk.manager.HTChatManager$8
+com.fastchat.sdk.manager.AndroidAdaptiveServerPingManager$1
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$4
+com.fastchat.sdk.utils.UploadFileUtils$8
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$5
+com.fastchat.sdk.manager.GroupManager$3
+com.fastchat.sdk.manager.HTChatManager$7
+com.fastchat.sdk.R$style: int TextAppearance_Compat_Notification_Media
+com.fastchat.sdk.utils.UploadFileUtils: java.lang.String accessKeyId
+com.fastchat.sdk.model.HTMessageBody: com.alibaba.fastjson.JSONObject bodyJson
+com.fastchat.sdk.R$attr: int layout_insetEdge
+com.fastchat.sdk.model.CmdMessage: android.os.Parcelable$Creator CREATOR
+com.fastchat.sdk.R$styleable: int GradientColor_android_tileMode
+com.fastchat.sdk.R$drawable: int notification_bg_low
+com.fastchat.sdk.R$attr: int fontProviderFetchTimeout
+com.fastchat.sdk.R$styleable: int CoordinatorLayout_Layout_layout_insetEdge
+com.fastchat.sdk.R$styleable: int FontFamilyFont_font
+com.fastchat.sdk.R$styleable: int[] FontFamilyFont
+com.fastchat.sdk.R$styleable: int CoordinatorLayout_keylines
+com.fastchat.sdk.R$id: int tag_unhandled_key_event_manager
+com.fastchat.sdk.R$style: int Widget_Compat_NotificationActionText
+com.fastchat.sdk.client.HTOptions: boolean debug
+com.fastchat.sdk.listener.HTConnectionListener: int CONFLICT
+com.fastchat.sdk.R$dimen: int notification_subtext_size
+com.fastchat.sdk.R$layout: int notification_template_media_custom
+com.fastchat.sdk.client.HTAction: java.lang.String ACTION_LOGIN
+com.fastchat.sdk.client.HTAction: java.lang.String ACTION_CONNECTION
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.client.HTClient$GroupListener groupLisenter
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$2: com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver this$1
+com.fastchat.sdk.model.HTMessageBody: android.os.Parcelable$Creator CREATOR
+com.fastchat.sdk.R$attr: int layout_behavior
+com.fastchat.sdk.client.SDKAction: java.lang.String HTMESSAGE_CMD
+com.fastchat.sdk.R$styleable: int FontFamilyFont_android_fontVariationSettings
+com.fastchat.sdk.client.HTAction: java.lang.String ACTION_MESSAGE_CMD
+com.fastchat.sdk.R$styleable: int FontFamily_fontProviderPackage
+com.fastchat.sdk.R$attr: int fontVariationSettings
+com.fastchat.sdk.R$layout: int notification_action
+com.fastchat.sdk.R$attr: int layout_keyline
+com.fastchat.sdk.R$styleable: int FontFamilyFont_android_fontStyle
+com.fastchat.sdk.R$dimen: int notification_big_circle_margin
+com.fastchat.sdk.R$id: int top
+com.fastchat.sdk.R$styleable: int FontFamilyFont_ttcIndex
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$6: android.content.Intent val$intent
+com.fastchat.sdk.utils.MessageUtils: int CHAT_GROUP
+com.fastchat.sdk.R$id: int icon_group
+com.fastchat.sdk.utils.MessageUtils: int TYPE_TEXT
+com.fastchat.sdk.client.HTAction: java.lang.String ACTION_GROUPLIST_LOADED
+com.fastchat.sdk.R$style: int TextAppearance_Compat_Notification_Time_Media
+com.fastchat.sdk.R$id: int action_text
+com.fastchat.sdk.model.HTMessage$Status: com.fastchat.sdk.model.HTMessage$Status INPROGRESS
+com.fastchat.sdk.R$styleable: int GradientColor_android_endY
+com.fastchat.sdk.utils.MessageUtils: java.lang.String EXT
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$2: android.content.Context val$context
+com.fastchat.sdk.R$attr: int fontWeight
+com.fastchat.sdk.R$attr: int alpha
+com.fastchat.sdk.utils.UploadFileUtils: java.lang.String uploadFilePath
+com.fastchat.sdk.R$styleable: int ColorStateListItem_android_color
+com.fastchat.sdk.R$id: int end
+com.fastchat.sdk.R$id: int normal
+com.fastchat.sdk.R$styleable: int ColorStateListItem_alpha
+com.fastchat.sdk.R$dimen: int notification_small_icon_background_padding
+com.fastchat.sdk.model.HTMessage$Type: com.fastchat.sdk.model.HTMessage$Type IMAGE
+com.fastchat.sdk.R$attr: int fontProviderPackage
+com.fastchat.sdk.utils.MessageUtils: int TYPE_IMAGE
+com.fastchat.sdk.R$style: int TextAppearance_Compat_Notification_Line2_Media
+com.fastchat.sdk.R$layout: int notification_template_part_chronometer
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.manager.HTChatManager htChatManager
+com.fastchat.sdk.R$styleable: int[] FontFamily
+com.fastchat.sdk.R$string: int app_name
+com.fastchat.sdk.R$drawable: int notification_icon_background
+com.fastchat.sdk.utils.MessageUtils: java.lang.String TEXT_CONTENT
+com.fastchat.sdk.utils.MessageUtils: java.lang.String CHAT_TYPE
+com.fastchat.sdk.R$id: int actions
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver: com.fastchat.sdk.client.HTClient this$0
+com.fastchat.sdk.R$attr: int coordinatorLayoutStyle
+com.fastchat.sdk.utils.MessageUtils: java.lang.String BODY
+com.fastchat.sdk.R$string: int status_bar_notification_info_overflow
+com.fastchat.sdk.R$id: int cancel_action
+com.fastchat.sdk.R$dimen: int compat_notification_large_icon_max_width
+com.fastchat.sdk.R$id: int end_padder
+com.fastchat.sdk.R$dimen: int subtitle_outline_width
+com.fastchat.sdk.client.HTOptions: boolean isDualProcess
+com.fastchat.sdk.R$dimen: int compat_button_inset_vertical_material
+com.fastchat.sdk.utils.MessageUtils: int TYPE_FILE
+com.fastchat.sdk.R$styleable: int GradientColor_android_startX
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.client.HTClient$HTCallBack logoutCallBack
+com.fastchat.sdk.R$drawable: int notification_template_icon_bg
+com.fastchat.sdk.R$styleable: int GradientColor_android_gradientRadius
+com.fastchat.sdk.R$id: int tag_transition_group
+com.fastchat.sdk.utils.UploadFileUtils: java.lang.String baseOssUrl
+com.fastchat.sdk.R$id: int right
+com.fastchat.sdk.R$style: int TextAppearance_Compat_Notification_Info_Media
+com.fastchat.sdk.client.HTAction: java.lang.String ACTION_REGISTER
+com.fastchat.sdk.R$styleable: int[] GradientColorItem
+com.fastchat.sdk.utils.MessageUtils: int TYPE_LOCATION
+com.fastchat.sdk.R$style: int Widget_Compat_NotificationActionContainer
+com.fastchat.sdk.model.HTMessage$Status: com.fastchat.sdk.model.HTMessage$Status ACKED
+com.fastchat.sdk.utils.UploadFileUtils: com.fastchat.sdk.utils.UploadFileUtils$UploadCallBack uploadCallBack
+com.fastchat.sdk.R$styleable: int[] CoordinatorLayout
+com.fastchat.sdk.R$drawable: int notification_template_icon_low_bg
+com.fastchat.sdk.R$styleable: int CoordinatorLayout_statusBarBackground
+com.fastchat.sdk.utils.UploadFileUtils: java.lang.String endpoint
+com.fastchat.sdk.R$color: int secondary_text_default_material_light
+com.fastchat.sdk.R$style: int Widget_Support_CoordinatorLayout
+com.fastchat.sdk.R$attr: int layout_anchor
+com.fastchat.sdk.utils.UploadFileUtils: com.alibaba.sdk.android.oss.OSS oss
+com.fastchat.sdk.R$dimen: int notification_right_icon_size
+com.fastchat.sdk.R$dimen: int compat_control_corner_material
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$2: android.content.Intent val$intent
+com.fastchat.sdk.R$attr: int fontProviderFetchStrategy
+com.fastchat.sdk.client.HTAction: java.lang.String ACTION_GROUP_DELETED
+com.fastchat.sdk.utils.MessageUtils: java.lang.String MSG_ID
+com.fastchat.sdk.R$dimen: int notification_large_icon_width
+com.fastchat.sdk.R$style: int TextAppearance_Compat_Notification_Title_Media
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$3: android.content.Context val$context
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.client.HTClient htClient
+com.fastchat.sdk.utils.MessageUtils: int CHAT_SINGLE
+com.fastchat.sdk.R$id: int title
+com.fastchat.sdk.R$styleable: int FontFamilyFont_android_ttcIndex
+com.fastchat.sdk.R$style: int TextAppearance_Compat_Notification_Title
+com.fastchat.sdk.R$id: int line3
+com.fastchat.sdk.utils.UploadFileUtils$8: com.fastchat.sdk.utils.UploadFileUtils this$0
+com.fastchat.sdk.R$styleable: int FontFamily_fontProviderFetchStrategy
+com.fastchat.sdk.R$id: int tag_unhandled_key_listeners
+com.fastchat.sdk.R$attr: int keylines
+com.fastchat.sdk.R$dimen: int compat_button_inset_horizontal_material
+com.fastchat.sdk.R$id: int media_actions
+com.fastchat.sdk.R$styleable: int FontFamily_fontProviderAuthority
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.client.HTClient$MessageListener messageLisenter
+com.fastchat.sdk.R$id: int blocking
+com.fastchat.sdk.client.HTAction: java.lang.String ACTION_RESULT_MESSAGE
+com.fastchat.sdk.R$styleable: int GradientColor_android_endX
+com.fastchat.sdk.model.HTMessage$Status: com.fastchat.sdk.model.HTMessage$Status SUCCESS
+com.fastchat.sdk.R$styleable: int FontFamilyFont_fontWeight
+com.fastchat.sdk.R$id: int action0
+com.fastchat.sdk.R$styleable: int CoordinatorLayout_Layout_layout_behavior
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver connectionBroadcastReceiver
+com.fastchat.sdk.model.HTMessage$Status: com.fastchat.sdk.model.HTMessage$Status FAIL
+com.fastchat.sdk.R$dimen: int notification_media_narrow_margin
+com.fastchat.sdk.R$attr: int statusBarBackground
+com.fastchat.sdk.R$style: int TextAppearance_Compat_Notification_Time
+com.fastchat.sdk.R$style: int TextAppearance_Compat_Notification_Info
+com.fastchat.sdk.R$styleable: int CoordinatorLayout_Layout_layout_anchorGravity
+com.fastchat.sdk.R$id: int left
+com.fastchat.sdk.R$attr: int layout_dodgeInsetEdges
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$4: android.content.Intent val$intent
+com.fastchat.sdk.utils.MessageUtils: java.lang.String TO
+com.fastchat.sdk.R$color: int notification_material_background_media_default_color
+com.fastchat.sdk.R$dimen: int notification_large_icon_height
+com.fastchat.sdk.R$id: int italic
+com.fastchat.sdk.R$styleable: int FontFamily_fontProviderFetchTimeout
+com.fastchat.sdk.R$id: int icon
+com.fastchat.sdk.R$id: int text2
+com.fastchat.sdk.R$dimen: int subtitle_shadow_offset
+com.fastchat.sdk.R$id: int notification_background
+com.fastchat.sdk.R$styleable: int FontFamilyFont_android_font
+com.fastchat.sdk.R$drawable: int notification_action_background
+com.fastchat.sdk.R$styleable: int FontFamilyFont_android_fontWeight
+com.fastchat.sdk.R$layout: int notification_template_custom_big
+com.fastchat.sdk.utils.MessageUtils: int TYPE_VEDIO
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$3: android.content.Intent val$intent
+com.fastchat.sdk.R$color: int primary_text_default_material_dark
+com.fastchat.sdk.R$id: int chronometer
+com.fastchat.sdk.R$styleable: int GradientColor_android_endColor
+com.fastchat.sdk.R$styleable: int GradientColor_android_centerColor
+com.fastchat.sdk.R$styleable: int CoordinatorLayout_Layout_layout_anchor
+com.fastchat.sdk.R$styleable: int GradientColor_android_startY
+com.fastchat.sdk.R$id: int action_image
+com.fastchat.sdk.utils.UploadFileUtils: java.lang.String bucket
+com.fastchat.sdk.R$id: int start
+com.fastchat.sdk.R$styleable: int GradientColor_android_centerY
+com.fastchat.sdk.R$id: int async
+com.fastchat.sdk.R$styleable: int[] GradientColor
+com.fastchat.sdk.R$layout: int notification_template_big_media_custom
+com.fastchat.sdk.R$color: int secondary_text_default_material_dark
+com.fastchat.sdk.utils.MessageUtils: int TYPE_VOICE
+com.fastchat.sdk.model.HTMessage$Direct: com.fastchat.sdk.model.HTMessage$Direct RECEIVE
+com.fastchat.sdk.model.HTMessage$Type: com.fastchat.sdk.model.HTMessage$Type VOICE
+com.fastchat.sdk.R$attr: int ttcIndex
+com.fastchat.sdk.R$dimen: int subtitle_corner_radius
+com.fastchat.sdk.R$style: int TextAppearance_Compat_Notification
+com.fastchat.sdk.R$styleable: int CoordinatorLayout_Layout_layout_keyline
+com.fastchat.sdk.R$attr: int fontProviderQuery
+com.fastchat.sdk.utils.UploadFileUtils: java.lang.String testObject
+com.fastchat.sdk.R$drawable: int notify_panel_notification_icon_bg
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$3: com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver this$1
+com.fastchat.sdk.R$drawable: int notification_bg_normal
+com.fastchat.sdk.client.HTAction: java.lang.String ACTION_MESSAGE
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.manager.MessageManager messageManager
+com.fastchat.sdk.R$styleable: int[] ColorStateListItem
+com.fastchat.sdk.model.HTMessage$Status: com.fastchat.sdk.model.HTMessage$Status READ
+com.fastchat.sdk.R$styleable: int FontFamilyFont_fontStyle
+com.fastchat.sdk.model.HTMessage$Direct: com.fastchat.sdk.model.HTMessage$Direct SEND
+com.fastchat.sdk.R$styleable: int[] CoordinatorLayout_Layout
+com.fastchat.sdk.R$id: int text
+com.fastchat.sdk.R$drawable: int notification_bg_low_normal
+com.fastchat.sdk.R$styleable: int CoordinatorLayout_Layout_layout_dodgeInsetEdges
+com.fastchat.sdk.R$id: int info
+com.fastchat.sdk.R$attr: int fontProviderCerts
+com.fastchat.sdk.R$drawable: int notification_bg_normal_pressed
+com.fastchat.sdk.client.HTAction: java.lang.String ACTION_LOGOUT
+com.fastchat.sdk.client.HTAction: java.lang.String ACTION_MESSAGE_CALL
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$5: com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver this$1
+com.fastchat.sdk.R$dimen: int compat_button_padding_horizontal_material
+com.fastchat.sdk.R$color: int ripple_material_light
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$7: android.content.Intent val$intent
+com.fastchat.sdk.R$dimen: int subtitle_shadow_radius
+com.fastchat.sdk.R$layout: int notification_media_action
+com.fastchat.sdk.R$dimen: int notification_action_icon_size
+com.fastchat.sdk.R$bool: int abc_action_bar_embed_tabs
+com.fastchat.sdk.R$styleable: int GradientColorItem_android_offset
+com.fastchat.sdk.model.HTConversation: android.os.Parcelable$Creator CREATOR
+com.fastchat.sdk.R$dimen: int compat_notification_large_icon_max_height
+com.fastchat.sdk.R$id: int time
+com.fastchat.sdk.R$dimen: int notification_content_margin_start
+com.fastchat.sdk.R$id: int line1
+com.fastchat.sdk.model.HTMessage$Status: com.fastchat.sdk.model.HTMessage$Status CREATE
+com.fastchat.sdk.model.HTMessage$Type: com.fastchat.sdk.model.HTMessage$Type VIDEO
+com.fastchat.sdk.R$layout: int notification_media_cancel_action
+com.fastchat.sdk.R$layout: int notification_template_part_time
+com.fastchat.sdk.R$dimen: int compat_button_padding_vertical_material
+com.fastchat.sdk.R$drawable: int notification_bg_low_pressed
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.client.HTClient$HTCallBack registerCallBack
+com.fastchat.sdk.R$attr: int fontStyle
+com.fastchat.sdk.R$layout: int notification_template_lines_media
+com.fastchat.sdk.R$dimen: int notification_small_icon_size_as_large
+com.fastchat.sdk.client.SDKAction: java.lang.String HTMESSAGE
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.client.HTClient$HTCallBack htCallBack
+com.fastchat.sdk.R$color: int notification_icon_bg_color
+com.fastchat.sdk.model.HTMessage$Type: com.fastchat.sdk.model.HTMessage$Type LOCATION
+com.fastchat.sdk.client.HTClient: android.content.Context appContext
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$6: com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver this$1
+com.fastchat.sdk.R$id: int action_container
+com.fastchat.sdk.utils.UploadFileUtils: android.os.Handler handler
+com.fastchat.sdk.R$styleable: int FontFamily_fontProviderQuery
+com.fastchat.sdk.R$layout: int notification_template_big_media_narrow
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.manager.ConversationManager conversationManager
+com.fastchat.sdk.R$id: int action_divider
+com.fastchat.sdk.model.HTMessage: android.os.Parcelable$Creator CREATOR
+com.fastchat.sdk.ChatType: com.fastchat.sdk.ChatType singleChat
+com.fastchat.sdk.R$layout: int notification_template_big_media_narrow_custom
+com.fastchat.sdk.R$layout: int notification_template_big_media
+com.fastchat.sdk.R$styleable: int CoordinatorLayout_Layout_android_layout_gravity
+com.fastchat.sdk.R$styleable: int ColorStateListItem_android_alpha
+com.fastchat.sdk.utils.MessageUtils: java.lang.String FROM
+com.fastchat.sdk.ChatType: com.fastchat.sdk.ChatType groupChat
+com.fastchat.sdk.R$dimen: int notification_top_pad_large_text
+com.fastchat.sdk.R$attr: int layout_anchorGravity
+com.fastchat.sdk.R$attr: int fontProviderAuthority
+com.fastchat.sdk.model.HTMessage$Type: com.fastchat.sdk.model.HTMessage$Type TEXT
+com.fastchat.sdk.R$style: int TextAppearance_Compat_Notification_Line2
+com.fastchat.sdk.R$id: int right_side
+com.fastchat.sdk.utils.MessageUtils: java.lang.String MSG_TYPE
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.manager.GroupManager groupManager
+com.fastchat.sdk.R$layout: int notification_template_icon_group
+com.fastchat.sdk.R$id: int status_bar_latest_event_content
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$4: com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver this$1
+com.fastchat.sdk.client.HTAction: java.lang.String ACTION_GROUP_LEAVED
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$7: com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver this$1
+com.fastchat.sdk.R$dimen: int notification_right_side_padding_top
+com.fastchat.sdk.R$attr: int font
+com.fastchat.sdk.R$styleable: int GradientColor_android_centerX
+com.fastchat.sdk.R$layout: int notification_action_tombstone
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.listener.HTConnectionListener htConnectionListener
+com.fastchat.sdk.R$id: int none
+com.fastchat.sdk.model.HTMessage$Type: com.fastchat.sdk.model.HTMessage$Type FILE
+com.fastchat.sdk.client.HTClient: java.lang.String TAG
+com.fastchat.sdk.R$styleable: int FontFamily_fontProviderCerts
+com.fastchat.sdk.R$id: int notification_main_column
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$1: com.fastchat.sdk.model.HTMessage val$htMessage
+com.fastchat.sdk.client.HTClient: com.alibaba.sdk.android.oss.OSSClient oss
+com.fastchat.sdk.R$styleable: int GradientColor_android_type
+com.fastchat.sdk.R$layout: int notification_template_media
+com.fastchat.sdk.R$dimen: int notification_main_column_padding_top
+com.fastchat.sdk.R$id: int notification_main_column_container
+com.fastchat.sdk.R$id: int forever
+com.fastchat.sdk.R$dimen: int notification_top_pad
+com.fastchat.sdk.R$integer: int status_bar_notification_info_maxnum
+com.fastchat.sdk.listener.HTConnectionListener: int NUMORL
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$1: com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver this$1
+com.fastchat.sdk.listener.HTConnectionListener: int RECONNECT_ERROR
+com.fastchat.sdk.R$styleable: int FontFamilyFont_fontVariationSettings
+com.fastchat.sdk.R$styleable: int GradientColorItem_android_color
+com.fastchat.sdk.R$dimen: int notification_action_text_size
+com.fastchat.sdk.R$id: int bottom
+com.fastchat.sdk.R$color: int notification_action_color_filter
+com.fastchat.sdk.R$id: int right_icon
+com.fastchat.sdk.R$drawable: int notification_tile_bg
+com.fastchat.sdk.R$styleable: int GradientColor_android_startColor
+com.fastchat.sdk.utils.UploadFileUtils: java.lang.String accessKeySecret
+com.fastchat.sdk.model.HTGroup: android.os.Parcelable$Creator CREATOR
+com.fastchat.sdk.R$integer: int cancel_button_image_alpha
+com.fastchat.sdk.R$drawable: int notification_bg
+com.fastchat.sdk.manager.HTChatManager$4: void onProgress(com.alibaba.sdk.android.oss.model.PutObjectRequest,long,long)
+com.fastchat.sdk.model.HTMessage$Type: com.fastchat.sdk.model.HTMessage$Type[] values()
+com.fastchat.sdk.model.HTMessageBody: int describeContents()
+com.fastchat.sdk.model.HTMessage: void setType(com.fastchat.sdk.model.HTMessage$Type)
+com.fastchat.sdk.client.HTClient: void addConnectionListener(com.fastchat.sdk.listener.HTConnectionListener)
+com.fastchat.sdk.model.HTMessageFileBody: java.lang.String getLocalPath()
+com.fastchat.sdk.model.HTMessage: int describeContents()
+com.fastchat.sdk.utils.UploadFileUtils: void putObjectWithMetadataSetting()
+com.fastchat.sdk.model.HTMessageImageBody: java.lang.String getRemotePath()
+com.fastchat.sdk.model.HTMessageVoiceBody: void setRemotePath(java.lang.String)
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$5: void run()
+com.fastchat.sdk.manager.ConversationManager: void deleteConversationAndMessage(java.lang.String)
+com.fastchat.sdk.model.HTMessageTextBody: HTMessageTextBody()
+com.fastchat.sdk.model.HTMessageLocationBody: void setRemotePath(java.lang.String)
+com.fastchat.sdk.manager.ConversationManager: void clearAllConversations()
+com.fastchat.sdk.model.HTMessageVoiceBody: java.lang.String getLocalPath()
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.client.HTClient$HTCallBack access$300(com.fastchat.sdk.client.HTClient)
+com.fastchat.sdk.model.HTMessageLocationBody: java.lang.String getLocalPath()
+com.fastchat.sdk.model.HTMessageImageBody: void setThumbnailRemotePath(java.lang.String)
+com.fastchat.sdk.manager.HTPreferenceManager: void setDeviceGet(java.lang.String)
+com.fastchat.sdk.R$styleable: R$styleable()
+com.fastchat.sdk.client.HTClient$MessageListener: void onCallMessgae(com.fastchat.sdk.model.CallMessage)
+com.fastchat.sdk.manager.ConversationManager: ConversationManager(android.content.Context)
+com.fastchat.sdk.manager.GroupManager$GroupOperationCallBack: void callBack(com.fastchat.sdk.model.HTMessage)
+com.fastchat.sdk.model.HTMessageImageBody: void setRemotePath(java.lang.String)
+com.fastchat.sdk.model.HTMessageVideoBody: void setThumbnailRemotePath(java.lang.String)
+com.fastchat.sdk.manager.MessageManager: com.fastchat.sdk.model.HTMessage getLastMessage(java.lang.String)
+com.fastchat.sdk.client.HTClient: android.content.Context access$500()
+com.fastchat.sdk.model.HTGroup: java.lang.String getGroupName()
+com.fastchat.sdk.model.HTGroup: int describeContents()
+com.fastchat.sdk.model.HTMessageImageBody: void setSize(java.lang.String)
+com.fastchat.sdk.model.HTConversation: java.lang.String toString()
+com.fastchat.sdk.model.HTConversation: void writeToParcel(android.os.Parcel,int)
+com.fastchat.sdk.manager.MmvkManger: boolean getBoolean(java.lang.String,boolean)
+com.fastchat.sdk.manager.MmvkManger: void putLong(java.lang.String,long)
+com.fastchat.sdk.utils.UploadFileUtils: void putObjectFromLocalFile()
+com.fastchat.sdk.manager.HTPreferenceManager: void setBucket(java.lang.String)
+com.fastchat.sdk.manager.MmvkManger: void putBoolean(java.lang.String,boolean)
+com.fastchat.sdk.manager.GroupManager$5: void onProgress()
+com.fastchat.sdk.manager.MessageManager: java.util.List loadMoreMsgFromDB(java.lang.String,long,int)
+com.fastchat.sdk.manager.HTPreferenceManager: boolean setPingAlarmInterval(android.content.Context,long)
+com.fastchat.sdk.manager.AbstractAdaptiveServerPingManager: boolean isEnabled()
+com.fastchat.sdk.model.HTMessage: com.fastchat.sdk.model.HTMessageBody getBody()
+com.fastchat.sdk.model.CmdMessage: int describeContents()
+com.fastchat.sdk.model.CmdMessage: long getTime()
+com.fastchat.sdk.client.HTClient$HTCallBack: void onSuccess()
+com.fastchat.sdk.manager.MmvkManger: void putInt(java.lang.String,java.lang.Integer)
+com.fastchat.sdk.model.HTMessageVideoBody: HTMessageVideoBody()
+com.fastchat.sdk.model.HTMessageImageBody: HTMessageImageBody(java.lang.String)
+com.fastchat.sdk.model.HTGroup: void setGroupName(java.lang.String)
+com.fastchat.sdk.manager.GroupManager$4: void handleMessage(android.os.Message)
+com.fastchat.sdk.manager.MessageManager: void updateSuccess(com.fastchat.sdk.model.HTMessage)
+com.fastchat.sdk.manager.HTPreferenceManager: java.lang.String getDeviceUpdate()
+com.fastchat.sdk.model.HTMessage: com.fastchat.sdk.model.HTMessage createLocationSendMessage(java.lang.String,double,double,java.lang.String,java.lang.String)
+com.fastchat.sdk.model.HTMessageVoiceBody: HTMessageVoiceBody()
+com.fastchat.sdk.client.HTClient$HTCallBack: void onError()
+com.fastchat.sdk.manager.HTChatManager: void sendCallMessage(com.fastchat.sdk.model.CallMessage,com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack)
+com.fastchat.sdk.manager.GroupManager$CallBack: void onSuccess(java.lang.String)
+com.fastchat.sdk.model.HTMessage: com.fastchat.sdk.model.HTMessage createVideoSendMessage(java.lang.String,java.lang.String,java.lang.String,int)
+com.fastchat.sdk.model.HTConversation: void setTime(long)
+com.fastchat.sdk.manager.MmvkManger: com.alibaba.fastjson.JSONArray getJSONArray(java.lang.String)
+com.fastchat.sdk.utils.MessageUtils: void handleReceiveMessage(org.jivesoftware.smack.packet.Message,android.content.Context,boolean)
+com.fastchat.sdk.model.HTMessage: void writeToParcel(android.os.Parcel,int)
+com.fastchat.sdk.model.HTMessageVideoBody: int getVideoDuration()
+com.fastchat.sdk.manager.HTChatManager$5$1: void onProgress(com.alibaba.sdk.android.oss.model.PutObjectRequest,long,long)
+com.fastchat.sdk.model.CmdMessage: java.lang.String getTo()
+com.fastchat.sdk.manager.HTPreferenceManager: java.lang.String getEndpoint()
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.client.HTClient$HTCallBack access$600(com.fastchat.sdk.client.HTClient)
+com.fastchat.sdk.client.HTClient: java.lang.String getAppName(int)
+com.fastchat.sdk.manager.MmvkManger: void putJSON(java.lang.String,com.alibaba.fastjson.JSONObject)
+com.fastchat.sdk.model.HTMessage: void setDirect(com.fastchat.sdk.model.HTMessage$Direct)
+com.fastchat.sdk.manager.MmvkManger: void putStringSet(java.lang.String,java.util.Set)
+com.fastchat.sdk.client.HTClient: void refreshIMConnection()
+com.fastchat.sdk.model.HTConversation: int getUnReadCount()
+com.fastchat.sdk.R$bool: R$bool()
+com.fastchat.sdk.manager.AbstractAdaptiveServerPingManager: void pingSuccess()
+com.fastchat.sdk.client.HTClient: void initReceiver(android.content.Context)
+com.fastchat.sdk.model.HTMessageVideoBody: java.lang.String getLocalPath()
+com.fastchat.sdk.model.HTMessageFileBody: HTMessageFileBody(com.alibaba.fastjson.JSONObject)
+com.fastchat.sdk.model.HTMessageBody: void writeToParcel(android.os.Parcel,int)
+com.fastchat.sdk.manager.HTPreferenceManager: void init(android.content.Context)
+com.fastchat.sdk.client.HTAction: HTAction()
+com.fastchat.sdk.manager.MmvkManger: int getInt(java.lang.String,int)
+com.fastchat.sdk.model.CallMessage: CallMessage()
+com.fastchat.sdk.model.HTMessageVoiceBody: HTMessageVoiceBody(com.alibaba.fastjson.JSONObject)
+com.fastchat.sdk.manager.GroupManager: void updateGroupImgUrlRemote(java.lang.String,java.lang.String,java.lang.String,com.fastchat.sdk.manager.GroupManager$CallBack)
+com.fastchat.sdk.model.HTMessageFileBody: java.lang.String getFileName()
+com.fastchat.sdk.model.HTMessageImageBody: HTMessageImageBody(com.alibaba.fastjson.JSONObject)
+com.fastchat.sdk.model.HTMessageVideoBody: void setFileName(java.lang.String)
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver: void onReceive(android.content.Context,android.content.Intent)
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$3: void run()
+com.fastchat.sdk.utils.MessageUtils: void createNewGroup(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+com.fastchat.sdk.model.HTMessageLocationBody: double getLatitude()
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.manager.ConversationManager conversationManager()
+com.fastchat.sdk.client.HTOptions: HTOptions()
+com.fastchat.sdk.manager.HTPreferenceManager: boolean getNotificationShow()
+com.fastchat.sdk.manager.AndroidAdaptiveServerPingManager: void setEnabled(boolean)
+com.fastchat.sdk.model.CmdMessage: void writeToParcel(android.os.Parcel,int)
+com.fastchat.sdk.manager.HTPreferenceManager: void setNotificationShow(boolean)
+com.fastchat.sdk.manager.MessageManager$1: int compare(android.util.Pair,android.util.Pair)
+com.fastchat.sdk.model.HTMessage: com.fastchat.sdk.model.HTMessage$Status getStatus()
+com.fastchat.sdk.model.HTMessage: void setChatType(com.fastchat.sdk.ChatType)
+com.fastchat.sdk.manager.HTPreferenceManager: boolean setLastConnection(android.content.Context)
+com.fastchat.sdk.manager.GroupManager$5: void onSuccess(long)
+com.fastchat.sdk.model.HTMessageImageBody: HTMessageImageBody()
+com.fastchat.sdk.manager.GroupManager: java.util.List getAllGroups()
+com.fastchat.sdk.model.HTMessage: void setJSONArrayAttribute(java.lang.String,com.alibaba.fastjson.JSONArray)
+com.fastchat.sdk.manager.ConversationManager: void refreshConversationList(java.lang.String,com.fastchat.sdk.model.HTConversation)
+com.fastchat.sdk.model.CallMessage: CallMessage(com.alibaba.fastjson.JSONObject,long)
+com.fastchat.sdk.model.HTMessageImageBody: java.lang.String getThumbnailRemotePath()
+com.fastchat.sdk.model.HTMessageFileBody: HTMessageFileBody()
+com.fastchat.sdk.model.CmdMessage: void setMsgId(java.lang.String)
+com.fastchat.sdk.manager.HTChatManager$MyReceiver$1: void run()
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.client.HTClient getInstance()
+com.fastchat.sdk.model.HTMessage: com.fastchat.sdk.model.HTMessage createTextSendMessage(java.lang.String,java.lang.String)
+com.fastchat.sdk.utils.MessageUtils: void sendGroupChangeBroadCast(java.lang.String)
+com.fastchat.sdk.model.HTMessage: void setAttribute(java.lang.String,java.lang.String)
+com.fastchat.sdk.manager.MmvkManger: com.alibaba.fastjson.JSONObject getJSON(java.lang.String)
+com.fastchat.sdk.model.HTMessage: long getTime()
+com.fastchat.sdk.manager.AndroidAdaptiveServerPingManager$1: void onReceive(android.content.Context,android.content.Intent)
+com.fastchat.sdk.R$style: R$style()
+com.fastchat.sdk.model.HTMessageVoiceBody: void setFileName(java.lang.String)
+com.fastchat.sdk.model.HTMessage: com.fastchat.sdk.ChatType getChatType()
+com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack: void onFailure()
+com.fastchat.sdk.model.HTConversation: com.fastchat.sdk.model.HTMessage getLastMessage()
+com.fastchat.sdk.model.HTMessageVideoBody: void setVideoDuration(int)
+com.fastchat.sdk.model.HTMessage: java.lang.String getStringAttribute(java.lang.String)
+com.fastchat.sdk.utils.MessageUtils: java.lang.String getMsgId(java.lang.String)
+com.fastchat.sdk.manager.MmvkManger: void putBtimap(java.lang.String,android.graphics.Bitmap)
+com.fastchat.sdk.model.HTMessageVideoBody: java.lang.String getThumbnailRemotePath()
+com.fastchat.sdk.manager.GroupManager: void updateGroupName(java.lang.String,java.lang.String,java.lang.String,com.fastchat.sdk.manager.GroupManager$CallBack)
+com.fastchat.sdk.manager.GroupManager: GroupManager(android.content.Context)
+com.fastchat.sdk.manager.MmvkManger: void putJSONArray(java.lang.String,com.alibaba.fastjson.JSONArray)
+com.fastchat.sdk.R$string: R$string()
+com.fastchat.sdk.model.HTMessageLocationBody: void setFileName(java.lang.String)
+com.fastchat.sdk.manager.HTPreferenceManager: boolean isDebug()
+com.fastchat.sdk.manager.GroupManager$GroupListCallBack: void onSuccess(java.util.List)
+com.fastchat.sdk.model.HTMessageFileBody: java.lang.String getLocalBody()
+com.fastchat.sdk.manager.ConversationManager: void deleteConversation(java.lang.String)
+com.fastchat.sdk.manager.HTPreferenceManager: com.fastchat.sdk.manager.HTPreferenceManager getInstance()
+com.fastchat.sdk.manager.HTChatManager$5$1: void onFailure(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.ClientException,com.alibaba.sdk.android.oss.ServiceException)
+com.fastchat.sdk.model.CmdMessage: CmdMessage()
+com.fastchat.sdk.model.HTMessageFileBody: HTMessageFileBody(java.lang.String)
+com.fastchat.sdk.client.HTClient: void setOnNewMessageReceived()
+com.fastchat.sdk.model.HTConversation: com.fastchat.sdk.ChatType getChatType()
+com.fastchat.sdk.manager.ConversationManager$3: int compare(android.util.Pair,android.util.Pair)
+com.fastchat.sdk.client.HTOptions: void setDebug(boolean)
+com.fastchat.sdk.manager.GroupManager$3: void run()
+com.fastchat.sdk.R$integer: R$integer()
+com.fastchat.sdk.model.CmdMessage: void setBody(java.lang.String)
+com.fastchat.sdk.model.HTGroup: java.lang.String toString()
+com.fastchat.sdk.client.HTClient: android.content.Context getContext()
+com.fastchat.sdk.model.CallMessage: java.lang.String toXmppMessage()
+com.fastchat.sdk.manager.MessageManager: java.util.List getMessageList(java.lang.String)
+com.fastchat.sdk.client.HTClient: void unregisterReceiver()
+com.fastchat.sdk.manager.MmvkManger: java.lang.Double getDouble(java.lang.String)
+com.fastchat.sdk.manager.GroupManager: void updateGroupImgUrlLocal(java.lang.String,java.lang.String,java.lang.String,com.fastchat.sdk.manager.GroupManager$CallBack)
+com.fastchat.sdk.model.CmdMessage: java.lang.String getMsgId()
+com.fastchat.sdk.manager.MessageManager$1: int compare(java.lang.Object,java.lang.Object)
+com.fastchat.sdk.manager.AndroidAdaptiveServerPingManager: void onConnected()
+com.fastchat.sdk.manager.HTPreferenceManager: long getPingAlarmInterval(android.content.Context,long)
+com.fastchat.sdk.manager.MessageManager: MessageManager(android.content.Context)
+com.fastchat.sdk.manager.MmvkManger: MmvkManger()
+com.fastchat.sdk.manager.HTChatManager$MyReceiver: void onReceive(android.content.Context,android.content.Intent)
+com.fastchat.sdk.client.HTClient: com.alibaba.sdk.android.oss.OSSClient ossClient()
+com.fastchat.sdk.model.SendCallbackMessageInfo_GroupChat: SendCallbackMessageInfo_GroupChat()
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.client.HTClient$HTCallBack access$200(com.fastchat.sdk.client.HTClient)
+com.fastchat.sdk.model.HTMessage: java.lang.String getTo()
+com.fastchat.sdk.manager.MessageManager: com.fastchat.sdk.model.HTMessage getMessage(java.lang.String)
+com.fastchat.sdk.model.HTMessageVideoBody: java.lang.String getLocalPathThumbnail()
+com.fastchat.sdk.client.HTClient: boolean isLoginEd()
+com.fastchat.sdk.model.CmdMessage: CmdMessage(android.os.Parcel)
+com.fastchat.sdk.utils.UploadFileUtils: com.fastchat.sdk.utils.UploadFileUtils$UploadCallBack access$000(com.fastchat.sdk.utils.UploadFileUtils)
+com.fastchat.sdk.manager.GroupManager$CallBack: void onFailure()
+com.fastchat.sdk.model.CurrentUser: CurrentUser()
+com.fastchat.sdk.manager.HTPreferenceManager: void setUser(java.lang.String,java.lang.String)
+com.fastchat.sdk.model.HTGroup: com.fastchat.sdk.model.HTGroup getHTGroup(com.alibaba.fastjson.JSONObject)
+com.fastchat.sdk.manager.HTChatManager: void sendMessage(com.fastchat.sdk.model.HTMessage,com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack)
+com.fastchat.sdk.service.MessageService: MessageService()
+com.fastchat.sdk.model.HTMessageFileBody: long getSize()
+com.fastchat.sdk.model.HTConversation: java.util.List getAllMessages()
+com.fastchat.sdk.model.HTMessageBody: HTMessageBody(java.lang.String)
+com.fastchat.sdk.model.HTMessageVideoBody: java.lang.String getRemotePath()
+com.fastchat.sdk.model.HTGroup: void setTime(long)
+com.fastchat.sdk.manager.GroupManager$6: void onProgress()
+com.fastchat.sdk.client.HTClient: void register(java.lang.String,java.lang.String,com.fastchat.sdk.client.HTClient$HTCallBack)
+com.fastchat.sdk.utils.http.MyOnHttpResListener: MyOnHttpResListener()
+com.fastchat.sdk.utils.UploadFileUtils$8: UploadFileUtils$8(com.fastchat.sdk.utils.UploadFileUtils)
+com.fastchat.sdk.manager.HTPreferenceManager: java.lang.String getIMServer()
+com.fastchat.sdk.model.CmdMessage: java.lang.String getFrom()
+com.fastchat.sdk.model.HTMessage: void setFrom(java.lang.String)
+com.fastchat.sdk.manager.MmvkManger: void putDouble(java.lang.String,java.lang.Double)
+com.fastchat.sdk.R$color: R$color()
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$2: HTClient$ConnectionBroadcastReceiver$2(com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver,android.content.Intent,android.content.Context)
+com.fastchat.sdk.model.HTMessage: int compareTo(com.fastchat.sdk.model.HTMessage)
+com.fastchat.sdk.model.HTMessage: void setStatus(com.fastchat.sdk.model.HTMessage$Status)
+com.fastchat.sdk.manager.HTChatManager$3: void onSuccess(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.model.PutObjectResult)
+com.fastchat.sdk.manager.ConversationManager: void setConversationTop(com.fastchat.sdk.model.HTConversation,long)
+com.fastchat.sdk.listener.HTConnectionListener: void onDisconnected()
+com.fastchat.sdk.manager.HTPreferenceManager: java.lang.String getBucket()
+com.fastchat.sdk.model.CmdMessage: void setChatType(com.fastchat.sdk.ChatType)
+com.fastchat.sdk.manager.MmvkManger: long getAsLong(java.lang.String)
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$7: HTClient$ConnectionBroadcastReceiver$7(com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver,android.content.Intent)
+com.fastchat.sdk.db.YuRuanTalkDatabase: YuRuanTalkDatabase()
+com.fastchat.sdk.manager.ConversationManager$3: int compare(java.lang.Object,java.lang.Object)
+com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack: void onSuccess(long)
+com.fastchat.sdk.manager.HTPreferenceManager: void setAccessKeyId(java.lang.String)
+com.fastchat.sdk.manager.AndroidAdaptiveServerPingManager: void onConnectionCompleted()
+com.fastchat.sdk.utils.UploadFileUtils: UploadFileUtils(android.content.Context,java.lang.String,java.lang.String)
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$4: HTClient$ConnectionBroadcastReceiver$4(com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver,android.content.Intent)
+com.fastchat.sdk.manager.HTPreferenceManager: void setIMServer(java.lang.String)
+com.fastchat.sdk.client.HTOptions: boolean isDualProcess()
+com.fastchat.sdk.model.HTMessage: HTMessage()
+com.fastchat.sdk.client.HTClient$MessageListener: void onCMDMessgae(com.fastchat.sdk.model.CmdMessage)
+com.fastchat.sdk.model.HTGroup: void writeToParcel(android.os.Parcel,int)
+com.fastchat.sdk.manager.ConversationManager: com.fastchat.sdk.model.HTConversation getConversation(java.lang.String)
+com.fastchat.sdk.model.HTMessageFileBody: void setRemotePath(java.lang.String)
+com.fastchat.sdk.R$dimen: R$dimen()
+com.fastchat.sdk.model.HTConversation: int describeContents()
+com.fastchat.sdk.R$drawable: R$drawable()
+com.fastchat.sdk.model.HTMessageVideoBody: HTMessageVideoBody(java.lang.String)
+com.fastchat.sdk.client.HTClient: void initAllManager(com.fastchat.sdk.client.HTOptions)
+com.fastchat.sdk.model.CmdMessage: void setTo(java.lang.String)
+com.fastchat.sdk.model.HTGroup: java.lang.String getGroupDesc()
+com.fastchat.sdk.utils.MessageUtils: long getTimeStamp(java.lang.String)
+com.fastchat.sdk.model.HTMessageTextBody: HTMessageTextBody(com.alibaba.fastjson.JSONObject)
+com.fastchat.sdk.manager.HTChatManager$5: void onFailure(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.ClientException,com.alibaba.sdk.android.oss.ServiceException)
+com.fastchat.sdk.manager.HTChatManager$6: void onSuccess(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.model.PutObjectResult)
+com.fastchat.sdk.model.HTConversation: void setTopTimestamp(long)
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$6: HTClient$ConnectionBroadcastReceiver$6(com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver,android.content.Intent)
+com.fastchat.sdk.manager.GroupManager$2: void onComplete(com.alibaba.fastjson.JSONObject,int,java.lang.String)
+com.fastchat.sdk.model.HTMessageTextBody: void setContent(java.lang.String)
+com.fastchat.sdk.model.HTMessage: com.fastchat.sdk.model.HTMessage createVideoSendMessage(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)
+com.fastchat.sdk.model.CmdMessage: java.lang.String toXmppMessage()
+com.fastchat.sdk.model.HTMessageLocationBody: java.lang.String getRemotePath()
+com.fastchat.sdk.manager.HTChatManager$2: void onFailure(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.ClientException,com.alibaba.sdk.android.oss.ServiceException)
+com.fastchat.sdk.model.HTMessageVoiceBody: int getAudioDuration()
+com.fastchat.sdk.manager.AbstractAdaptiveServerPingManager: void setEnabled(boolean)
+com.fastchat.sdk.manager.ConversationManager: void updateConversation(com.fastchat.sdk.model.HTMessage,boolean)
+com.fastchat.sdk.manager.MmvkManger: void putString(java.lang.String,java.lang.String)
+com.fastchat.sdk.client.HTClient: void sendConfict()
+com.fastchat.sdk.model.HTGroup: HTGroup()
+com.fastchat.sdk.manager.GroupManager: void loadGroupListFromServer(com.fastchat.sdk.manager.GroupManager$GroupListCallBack)
+com.fastchat.sdk.manager.HTPreferenceManager: java.lang.String getAccessKeySecret()
+com.fastchat.sdk.model.HTMessageVoiceBody: java.lang.String getFileName()
+com.fastchat.sdk.model.HTMessage: void setBody(com.fastchat.sdk.model.HTMessageBody)
+com.fastchat.sdk.manager.ConversationManager: void sortConversationByLastChatTime(java.util.List)
+com.fastchat.sdk.manager.MessageManager: void deleteMessage(java.lang.String,java.lang.String)
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$5: HTClient$ConnectionBroadcastReceiver$5(com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver)
+com.fastchat.sdk.model.HTMessageVideoBody: void setLocalPathThumbnail(java.lang.String)
+com.fastchat.sdk.manager.GroupManager$1: void run()
+com.fastchat.sdk.model.HTMessageLocationBody: HTMessageLocationBody(com.alibaba.fastjson.JSONObject)
+com.fastchat.sdk.model.HTConversation: java.lang.String getUserId()
+com.fastchat.sdk.manager.GroupManager$GroupListCallBack: void onFailure()
+com.fastchat.sdk.model.HTMessage: void setLocalTime(long)
+com.fastchat.sdk.client.HTClient: void setMessageListener(com.fastchat.sdk.client.HTClient$MessageListener)
+com.fastchat.sdk.model.SendMessageInfo: SendMessageInfo()
+com.fastchat.sdk.manager.HTPreferenceManager: void setOssBaseUrl(java.lang.String)
+com.fastchat.sdk.model.HTMessageLocationBody: java.lang.String getAddress()
+com.fastchat.sdk.manager.MessageManager: void deleteMessageFromTimestamp(java.lang.String,long)
+com.fastchat.sdk.model.HTMessageBody: HTMessageBody()
+com.fastchat.sdk.model.HTMessage: java.lang.String toXmppMessageBody()
+com.fastchat.sdk.model.HTMessageVideoBody: void setSize(java.lang.String)
+com.fastchat.sdk.model.HTMessageImageBody: java.lang.String getLocalBody()
+com.fastchat.sdk.client.HTClient: void setGroupListener(com.fastchat.sdk.client.HTClient$GroupListener)
+com.fastchat.sdk.client.HTOptions: boolean isDebug()
+com.fastchat.sdk.model.HTMessage: com.alibaba.fastjson.JSONObject getJSONObjectAtrribute(java.lang.String)
+com.fastchat.sdk.model.HTMessageImageBody: void setLocalPath(java.lang.String)
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$3: HTClient$ConnectionBroadcastReceiver$3(com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver,android.content.Intent,android.content.Context)
+com.fastchat.sdk.model.HTMessage: com.fastchat.sdk.model.HTMessage$Type getType()
+com.fastchat.sdk.manager.AbstractAdaptiveServerPingManager: void onConnectivityChanged()
+com.fastchat.sdk.model.HTMessageLocationBody: void setLatitude(double)
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver: HTClient$ConnectionBroadcastReceiver(com.fastchat.sdk.client.HTClient)
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$1: void run()
+com.fastchat.sdk.client.HTClient: HTClient(android.content.Context,com.fastchat.sdk.client.HTOptions)
+com.fastchat.sdk.manager.HTPreferenceManager: void setDualProcess(boolean)
+com.fastchat.sdk.model.HTMessageLocationBody: HTMessageLocationBody(java.lang.String)
+com.fastchat.sdk.model.HTConversation: HTConversation()
+com.fastchat.sdk.manager.HTPreferenceManager: java.lang.String getOssBaseUrl()
+com.fastchat.sdk.manager.MessageManager: void saveMessage(com.fastchat.sdk.model.HTMessage,boolean)
+com.fastchat.sdk.model.HTMessage: com.alibaba.fastjson.JSONObject getAttributes()
+com.fastchat.sdk.manager.HTChatManager$4: void onSuccess(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.model.PutObjectResult)
+com.fastchat.sdk.model.CmdMessage: java.lang.String getBody()
+com.fastchat.sdk.model.HTConversation: void setUnReadCount(int)
+com.fastchat.sdk.manager.HTChatManager$3: void onFailure(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.ClientException,com.alibaba.sdk.android.oss.ServiceException)
+com.fastchat.sdk.model.HTMessage: HTMessage(com.alibaba.fastjson.JSONObject,com.fastchat.sdk.model.HTMessage$Direct,com.fastchat.sdk.model.HTMessage$Status,long,long)
+com.fastchat.sdk.manager.HTChatManager$6: void onFailure(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.ClientException,com.alibaba.sdk.android.oss.ServiceException)
+com.fastchat.sdk.client.HTOptions: void setDualProcess(boolean)
+com.fastchat.sdk.model.HTMessageVideoBody: HTMessageVideoBody(com.alibaba.fastjson.JSONObject)
+com.fastchat.sdk.model.HTMessageFileBody: java.lang.String getRemotePath()
+com.fastchat.sdk.R$layout: R$layout()
+com.fastchat.sdk.model.HTMessageLocationBody: HTMessageLocationBody()
+com.fastchat.sdk.model.HTConversation: void setLastMessage(com.fastchat.sdk.model.HTMessage)
+com.fastchat.sdk.model.HTMessageBody: java.lang.String getLocalBody()
+com.fastchat.sdk.client.SDKAction: SDKAction()
+com.fastchat.sdk.manager.HTChatManager$5$1: void onSuccess(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.model.PutObjectResult)
+com.fastchat.sdk.manager.HTPreferenceManager: void logout()
+com.fastchat.sdk.ChatType: com.fastchat.sdk.ChatType[] values()
+com.fastchat.sdk.manager.GroupManager$6: void onFailure()
+com.fastchat.sdk.model.HTGroup: void setGroupHeadImg(java.lang.String)
+com.fastchat.sdk.manager.ConversationManager$1: void run()
+com.fastchat.sdk.manager.GroupManager: void saveGroupList(java.util.List)
+com.fastchat.sdk.utils.UploadFileUtils: java.lang.String getOssBaseUrl()
+com.fastchat.sdk.manager.HTPreferenceManager: boolean isDualProcess()
+com.fastchat.sdk.model.HTGroup: java.lang.String getGroupImId()
+com.fastchat.sdk.manager.GroupManager$6: void onSuccess(long)
+com.fastchat.sdk.manager.HTChatManager$4: void onFailure(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.ClientException,com.alibaba.sdk.android.oss.ServiceException)
+com.fastchat.sdk.manager.MmvkManger: void remove(java.lang.String)
+com.fastchat.sdk.model.HTMessageVoiceBody: void setLocalPath(java.lang.String)
+com.fastchat.sdk.client.HTClient$MessageListener: void onHTMessage(com.fastchat.sdk.model.HTMessage)
+com.fastchat.sdk.model.CmdMessage: void setFrom(java.lang.String)
+com.fastchat.sdk.listener.HTConnectionListener: void onConnected(int)
+com.fastchat.sdk.R$attr: R$attr()
+com.fastchat.sdk.client.HTClient: void logout(com.fastchat.sdk.client.HTClient$HTCallBack)
+com.fastchat.sdk.manager.MessageManager: void deleteUserMessage(java.lang.String,boolean)
+com.fastchat.sdk.client.HTClient: void initAllManager()
+com.fastchat.sdk.model.HTGroup: java.lang.String getGroupHeadImg()
+com.fastchat.sdk.manager.MmvkManger: android.graphics.Bitmap getBitmap(java.lang.String)
+com.fastchat.sdk.model.CmdMessage: void setTime(long)
+com.fastchat.sdk.model.HTMessageLocationBody: void setAddress(java.lang.String)
+com.fastchat.sdk.receiver.NetworkStateReceiver: NetworkStateReceiver()
+com.fastchat.sdk.db.YuRuanTalkDatabase_Impl: YuRuanTalkDatabase_Impl()
+com.fastchat.sdk.model.HTMessage: com.alibaba.fastjson.JSONArray getJSONArrayAtrribute(java.lang.String)
+com.fastchat.sdk.manager.HTPreferenceManager: void setAccessKeySecret(java.lang.String)
+com.fastchat.sdk.model.HTMessageBody: HTMessageBody(com.alibaba.fastjson.JSONObject)
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.client.HTClient$GroupListener access$700(com.fastchat.sdk.client.HTClient)
+com.fastchat.sdk.manager.HTPreferenceManager: long getLastConnection(android.content.Context)
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$4: void run()
+com.fastchat.sdk.utils.UploadFileUtils: void asyncPutObjectWithServerCallback()
+com.fastchat.sdk.client.HTClient: void access$100(com.fastchat.sdk.client.HTClient)
+com.fastchat.sdk.model.HTMessageVideoBody: void setLocalPath(java.lang.String)
+com.fastchat.sdk.model.HTMessage: com.fastchat.sdk.model.HTMessage createImageSendMessage(java.lang.String,java.lang.String,java.lang.String)
+com.fastchat.sdk.model.HTMessageTextBody: java.lang.String getContent()
+com.fastchat.sdk.model.HTMessageTextBody: HTMessageTextBody(java.lang.String)
+com.fastchat.sdk.client.HTClient: void login(java.lang.String,java.lang.String,com.fastchat.sdk.client.HTClient$HTCallBack)
+com.fastchat.sdk.manager.HTChatManager$8: void run()
+com.fastchat.sdk.client.HTClient$GroupListener: void onGroupMemberLeaved(java.lang.String,java.lang.String,java.lang.String)
+com.fastchat.sdk.model.HTGroup: void setGroupImId(java.lang.String)
+com.fastchat.sdk.model.HTMessageVoiceBody: void setAudioDuration(int)
+com.fastchat.sdk.manager.HTChatManager$1: void run()
+com.fastchat.sdk.manager.HTPreferenceManager: java.lang.String getAccessKeyId()
+com.fastchat.sdk.model.HTConversation: java.util.List loadMoreMsgFromDB(long,int)
+com.fastchat.sdk.model.CmdMessage: com.fastchat.sdk.model.CmdMessage creatCmdMessage(java.lang.String,java.lang.String)
+com.fastchat.sdk.manager.AndroidAdaptiveServerPingManager: void onConnectivityChanged()
+com.fastchat.sdk.utils.UploadFileUtils: android.os.Handler access$100(com.fastchat.sdk.utils.UploadFileUtils)
+com.fastchat.sdk.model.HTMessage: HTMessage(android.os.Parcel)
+com.fastchat.sdk.model.HTMessage: void setTo(java.lang.String)
+com.fastchat.sdk.model.HTConversation: long getTime()
+com.fastchat.sdk.model.HTMessage: com.fastchat.sdk.model.HTMessage$Direct getDirect()
+com.fastchat.sdk.manager.AbstractAdaptiveServerPingManager: void pingFailed()
+com.fastchat.sdk.manager.ConversationManager$2: void run()
+com.fastchat.sdk.model.HTMessage: void setAttributes(com.alibaba.fastjson.JSONObject)
+com.fastchat.sdk.manager.HTChatManager: HTChatManager(android.content.Context)
+com.fastchat.sdk.manager.HTChatManager$5: void onProgress(com.alibaba.sdk.android.oss.model.PutObjectRequest,long,long)
+com.fastchat.sdk.manager.GroupManager: void updateGroupDesc(java.lang.String,java.lang.String,java.lang.String,com.fastchat.sdk.manager.GroupManager$CallBack)
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.listener.HTConnectionListener access$000(com.fastchat.sdk.client.HTClient)
+com.fastchat.sdk.R: R()
+com.fastchat.sdk.model.HTMessage: java.lang.String getFrom()
+com.fastchat.sdk.manager.HTPreferenceManager: java.lang.String getDeviceGet()
+com.fastchat.sdk.model.HTMessageVideoBody: void setRemotePath(java.lang.String)
+com.fastchat.sdk.manager.MessageManager: java.util.List searchMsgFromDB(java.lang.String)
+com.fastchat.sdk.ChatType: com.fastchat.sdk.ChatType valueOf(java.lang.String)
+com.fastchat.sdk.model.CmdMessage: CmdMessage(com.alibaba.fastjson.JSONObject,long)
+com.fastchat.sdk.model.HTGroup: void setGroupDesc(java.lang.String)
+com.fastchat.sdk.utils.MessageUtils: void sortMessageByLastChatTime(java.util.List)
+com.fastchat.sdk.manager.MmvkManger: java.util.Set getStringSet(java.lang.String)
+com.fastchat.sdk.model.HTMessage: void setMsgId(java.lang.String)
+com.fastchat.sdk.model.HTMessageLocationBody: double getLongitude()
+com.fastchat.sdk.model.HTGroup: java.lang.String getOwner()
+com.fastchat.sdk.manager.HTPreferenceManager: com.fastchat.sdk.model.CurrentUser getUser()
+com.fastchat.sdk.model.HTMessage$Status: com.fastchat.sdk.model.HTMessage$Status[] values()
+com.fastchat.sdk.model.HTMessageVideoBody: java.lang.String getFileName()
+com.fastchat.sdk.utils.MessageUtils: MessageUtils()
+com.fastchat.sdk.utils.http.MyOnHttpResListener: void onComplete(com.alibaba.fastjson.JSONObject,int,java.lang.String)
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.manager.MessageManager messageManager()
+com.fastchat.sdk.model.HTMessage: com.fastchat.sdk.model.HTMessage createVoiceSendMessage(java.lang.String,java.lang.String,int)
+com.fastchat.sdk.manager.ConversationManager: java.util.List getAllConversations()
+com.fastchat.sdk.manager.GroupManager: com.fastchat.sdk.model.HTGroup getGroup(java.lang.String)
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$6: void run()
+com.fastchat.sdk.model.HTMessage: java.lang.String getMsgId()
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.client.HTClient$MessageListener access$400(com.fastchat.sdk.client.HTClient)
+com.fastchat.sdk.manager.HTChatManager$2: void onSuccess(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.model.PutObjectResult)
+com.fastchat.sdk.model.HTGroup: void setOwner(java.lang.String)
+com.fastchat.sdk.model.HTMessageLocationBody: void setLongitude(double)
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.manager.GroupManager groupManager()
+com.fastchat.sdk.manager.HTChatManager$6: void onProgress(com.alibaba.sdk.android.oss.model.PutObjectRequest,long,long)
+com.fastchat.sdk.manager.ConversationManager: void markAllMessageRead(java.lang.String)
+com.fastchat.sdk.manager.GroupManager: boolean containsEmoji(java.lang.String)
+com.fastchat.sdk.manager.HTPreferenceManager: void setDebug(boolean)
+com.fastchat.sdk.model.HTMessage: com.fastchat.sdk.model.HTMessage createFileSendMessage(java.lang.String,java.lang.String,long)
+com.fastchat.sdk.manager.HTPreferenceManager: void setDeviceUpdate(java.lang.String)
+com.fastchat.sdk.manager.HTChatManager: void sendCmdMessage(com.fastchat.sdk.model.CmdMessage,com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack)
+com.fastchat.sdk.model.HTGroup: long getTime()
+com.fastchat.sdk.R$id: R$id()
+com.fastchat.sdk.manager.GroupManager: java.lang.String filterEmoji(java.lang.String,java.lang.String)
+com.fastchat.sdk.manager.HTPreferenceManager: boolean setPingAlarmBackoff(android.content.Context,long)
+com.fastchat.sdk.manager.AbstractAdaptiveServerPingManager: void onConnectionCompleted()
+com.fastchat.sdk.utils.MessageUtils: java.util.List loadMessageList(java.util.List)
+com.fastchat.sdk.model.HTConversation: void setChatType(com.fastchat.sdk.ChatType)
+com.fastchat.sdk.client.HTClient: void init(android.content.Context,com.fastchat.sdk.client.HTOptions)
+com.fastchat.sdk.model.HTConversation: long getTopTimestamp()
+com.fastchat.sdk.model.HTConversation: void setUserId(java.lang.String)
+com.fastchat.sdk.model.HTMessage$Status: com.fastchat.sdk.model.HTMessage$Status valueOf(java.lang.String)
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$7: void run()
+com.fastchat.sdk.client.HTClient: com.fastchat.sdk.manager.HTChatManager chatManager()
+com.fastchat.sdk.model.HTMessageImageBody: java.lang.String getSize()
+com.fastchat.sdk.client.HTClient$GroupListener: void onGroupListLoaded()
+com.fastchat.sdk.manager.GroupManager: void deleteGroupLocalOnly(java.lang.String)
+com.fastchat.sdk.model.HTMessage: int getIntAttribute(java.lang.String,int)
+com.fastchat.sdk.manager.GroupManager$CallBack: void onHTMessageSend(com.fastchat.sdk.model.HTMessage)
+com.fastchat.sdk.model.HTMessage$Direct: com.fastchat.sdk.model.HTMessage$Direct valueOf(java.lang.String)
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$1: HTClient$ConnectionBroadcastReceiver$1(com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver,com.fastchat.sdk.model.HTMessage)
+com.fastchat.sdk.model.HTMessageFileBody: void setSize(long)
+com.fastchat.sdk.manager.GroupManager$5: void onFailure()
+com.fastchat.sdk.manager.MmvkManger: java.lang.String getAsString(java.lang.String)
+com.fastchat.sdk.model.HTMessageVoiceBody: java.lang.String getRemotePath()
+com.fastchat.sdk.manager.HTChatManager$5: void onSuccess(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.model.PutObjectResult)
+com.fastchat.sdk.model.HTMessageFileBody: void setLocalPath(java.lang.String)
+com.fastchat.sdk.model.HTMessage: java.lang.String toString()
+com.fastchat.sdk.manager.AndroidAdaptiveServerPingManager: com.fastchat.sdk.manager.AndroidAdaptiveServerPingManager getInstanceFor(org.jivesoftware.smack.XMPPConnection,android.content.Context)
+com.fastchat.sdk.manager.ConversationManager: java.util.List loadConversationList(java.util.Map)
+com.fastchat.sdk.utils.UploadFileUtils: void asyncUploadFile(com.fastchat.sdk.utils.UploadFileUtils$UploadCallBack)
+com.fastchat.sdk.manager.HTChatManager$3: void onProgress(com.alibaba.sdk.android.oss.model.PutObjectRequest,long,long)
+com.fastchat.sdk.model.HTMessageImageBody: java.lang.String getLocalPath()
+com.fastchat.sdk.utils.UploadFileUtils: void putObjectFromByteArray()
+com.fastchat.sdk.model.HTMessageLocationBody: java.lang.String getFileName()
+com.fastchat.sdk.utils.MessageUtils: long dateToStamp(java.lang.String)
+com.fastchat.sdk.model.HTMessageBody: java.lang.String getXmppBody()
+com.fastchat.sdk.client.HTClient$GroupListener: void onGroupDestroyed(java.lang.String)
+com.fastchat.sdk.model.HTMessageLocationBody: void setLocalPath(java.lang.String)
+com.fastchat.sdk.manager.HTPreferenceManager: long getPingAlarmBackoff(android.content.Context,long)
+com.fastchat.sdk.model.HTMessage$Direct: com.fastchat.sdk.model.HTMessage$Direct[] values()
+com.fastchat.sdk.model.CmdMessage: com.fastchat.sdk.ChatType getChatType()
+com.fastchat.sdk.model.HTMessage: long getLocalTime()
+com.fastchat.sdk.model.HTMessage: java.lang.String getUsername()
+com.fastchat.sdk.model.HTMessage: void setJSONObjectAtrribute(java.lang.String,com.alibaba.fastjson.JSONObject)
+com.fastchat.sdk.utils.UploadFileUtils: void uploadFile(com.fastchat.sdk.utils.UploadFileUtils$UploadCallBack)
+com.fastchat.sdk.manager.AndroidAdaptiveServerPingManager: void onDestroy()
+com.fastchat.sdk.model.HTMessageImageBody: java.lang.String getFileName()
+com.fastchat.sdk.listener.HTConnectionListener: void onConflict()
+com.fastchat.sdk.model.HTMessageImageBody: void setFileName(java.lang.String)
+com.fastchat.sdk.model.HTMessage: boolean getBooleanAttribute(java.lang.String,boolean)
+com.fastchat.sdk.manager.HTChatManager$2: void onProgress(com.alibaba.sdk.android.oss.model.PutObjectRequest,long,long)
+com.fastchat.sdk.model.HTMessage: int compareTo(java.lang.Object)
+com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack: void onProgress()
+com.fastchat.sdk.manager.HTPreferenceManager: void setEndpoint(java.lang.String)
+com.fastchat.sdk.model.SendCallbackMessageInfo: SendCallbackMessageInfo_Chat()
+com.fastchat.sdk.model.HTMessage$Type: com.fastchat.sdk.model.HTMessage$Type valueOf(java.lang.String)
+com.fastchat.sdk.model.HTMessageVoiceBody: HTMessageVoiceBody(java.lang.String)
+com.fastchat.sdk.manager.HTChatManager$7: void run()
+com.fastchat.sdk.client.HTClient$ConnectionBroadcastReceiver$2: void run()
+com.fastchat.sdk.model.HTMessageFileBody: void setFileName(java.lang.String)
+com.fastchat.sdk.model.HTMessage: void setTime(long)
+com.fastchat.sdk.manager.GroupManager: void saveGroup(com.fastchat.sdk.model.HTGroup)
+com.fastchat.sdk.manager.MmvkManger: com.fastchat.sdk.manager.MmvkManger getInstance()

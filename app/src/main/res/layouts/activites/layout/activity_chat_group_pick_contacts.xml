@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zhengshuo.phoenix.widget.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/title_height"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleBarLeftImg="@mipmap/fanhui"
+        app:titleBarRightShowFlag="VISIBLE"
+        app:titleBarRightShowType="TEXT"
+        app:titleBarRightTxt="下一步"
+        app:titleBarTitle="选择好友" />
+
+    <EditText
+        android:id="@+id/query"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/dialog_edit_bg_shape"
+        android:drawableLeft="@mipmap/ease_search_icon"
+        android:drawablePadding="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="搜索"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="5dp"
+        android:singleLine="true"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar" />
+
+    <ImageButton
+        android:id="@+id/search_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:background="@android:color/transparent"
+        android:padding="6dp"
+        android:src="@mipmap/search_clear_normal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/query"
+        app:layout_constraintRight_toRightOf="@id/query"
+        app:layout_constraintTop_toTopOf="@id/query" />
+
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/query"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/toast_dialog"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_toast"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:visibility="invisible" />
+
+        <com.lzj.sidebar.SideBarLayout
+            android:id="@+id/sideBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_gravity="right|center_vertical"
+            app:sidebarSelectTextColor="#1F8FE5"
+            app:sidebarUnSelectTextColor="#1F8FE5"
+            app:sidebarSelectTextSize="12sp"
+            app:sidebarUnSelectTextSize="10sp"
+            app:sidebarWordBackground="@drawable/bg_toast"
+            app:sidebarWordTextColor="@color/white"
+            app:sidebarWordTextSize="45sp"/>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

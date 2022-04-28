@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_new_friend"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:duplicateParentState="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_newFriend_avatar"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:src="@mipmap/xindepengyou"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <TextView
+                    android:id="@+id/tv_newFriend_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="新朋友"
+                    android:textColor="@color/text_color_212121"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_newFriend_avatar"
+                    app:layout_constraintStart_toEndOf="@id/iv_newFriend_avatar"
+                    app:layout_constraintTop_toTopOf="@id/iv_newFriend_avatar" />
+
+
+                <View
+                    android:id="@+id/tv_newFriend_unread_msg"
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:background="@drawable/shape_no_read_point"
+                    android:visibility="gone"
+                    app:layout_constraintCircle="@id/tv_newFriend_name"
+                    app:layout_constraintCircleAngle="75"
+                    app:layout_constraintCircleRadius="28dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/bottom_line"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="73dp"
+                    style="@style/app_line"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_group"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:duplicateParentState="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_group_avatar"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/qunliao"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="群组"
+                    android:textColor="@color/text_color_212121"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_group_avatar"
+                    app:layout_constraintStart_toEndOf="@id/iv_group_avatar"
+                    app:layout_constraintTop_toTopOf="@id/iv_group_avatar" />
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="73dp"
+                    style="@style/app_line"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_customer"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:duplicateParentState="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_customer_avatar"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/kefu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="客服"
+                    android:textColor="@color/text_color_212121"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_customer_avatar"
+                    app:layout_constraintStart_toEndOf="@id/iv_customer_avatar"
+                    app:layout_constraintTop_toTopOf="@id/iv_customer_avatar" />
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="73dp"
+                    style="@style/app_line"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dp_10">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+
+                <TextView
+                    android:id="@+id/group_dialog"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_toast"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:visibility="invisible" />
+
+                <com.lzj.sidebar.SideBarLayout
+                    android:id="@+id/sideBarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_gravity="right|center_vertical"
+                    app:sidebarSelectTextColor="@color/text_color_6F6F6F"
+                    app:sidebarUnSelectTextColor="@color/text_color_6F6F6F"
+                    app:sidebarSelectTextSize="12sp"
+                    app:sidebarUnSelectTextSize="10sp"
+                    app:sidebarWordBackground="@drawable/bg_toast"
+                    app:sidebarWordTextColor="@color/white"
+                    app:sidebarWordTextSize="45sp"/>
+            </FrameLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

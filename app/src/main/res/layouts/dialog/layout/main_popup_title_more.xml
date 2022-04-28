@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="@dimen/main_title_popup_width"
+        android:layout_height="@dimen/main_title_popup_height"
+        android:background="@mipmap/juxing"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/btn_add_friends"
+            android:layout_marginTop="19dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:drawableStart="@mipmap/tianjiahaoyou"
+            android:drawablePadding="12dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:text="添加好友"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#707070"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="20dp"/>
+
+        <TextView
+            android:id="@+id/btn_create_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:paddingTop="14dp"
+            android:drawableStart="@mipmap/qunliao_add"
+            android:drawablePadding="12dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:text="创建群组"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#707070"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="20dp"/>
+
+        <TextView
+            android:id="@+id/btn_start_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:paddingTop="14dp"
+            android:drawableStart="@mipmap/qunliao_add"
+            android:drawablePadding="12dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:text="添加群聊"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#707070"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="20dp"/>
+
+        <TextView
+            android:id="@+id/btn_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:paddingTop="14dp"
+            android:drawableStart="@mipmap/saoyisao"
+            android:drawablePadding="12dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:text="扫一扫"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

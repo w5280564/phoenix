@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f0f0f6"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/search_search_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/search_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:drawablePadding="5dip"
+                android:hint="手机号"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:paddingStart="10dip"
+                android:paddingEnd="10dip"
+                android:textColor="#333333"
+                android:textColorHint="#666666" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/search_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/yuruan_login_btn_selector"
+            android:clickable="false"
+            android:paddingStart="24dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="8dp"
+            android:text="搜索"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</LinearLayout>

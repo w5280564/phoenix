@@ -1,0 +1,134 @@
+<resources>
+    <string name="app_name">蓝凤凰</string>
+
+    <string name="HttpSender_FWQKXC">服务器开小差啦</string>
+    <string name="HttpSender_FWQCS">网络请求超时，请稍后再试</string>
+    <string name="HttpSender_FWQDW">无法连接到服务器,请检查网络连接</string>
+    <string name="HttpSender_ERROR_404">服务维护中，请稍后再试...</string>
+
+    <string name="yuruan_login_private_service_error">登录失败 Status :34005</string>
+    <string name="login_register_phone_already_existed">手机号已经注册</string>
+    <string name="yuruan_login_toast_no_register">当前手机号还没进行注册</string>
+    <string name="yuruan_login_toast_phone_or_psw_error">手机或者密码错误</string>
+    <string name="login_error_send_message_frequency">短信发送频率超限</string>
+    <string name="login_error_captcha_overdue">短信验证码已过期</string>
+    <string name="login_verification_code_error">验证码错误</string>
+    <string name="profile_group_has_no_notice">暂无群公告</string>
+    <string name="common_network_error_and_retry_after">网络问题请稍后重试</string>
+    <string name="common_network_unavailable">当前网络不可用，请检查你的网络设置</string>
+    <string name="yuruan_group_manager_copy_in_protect">该群处于保护期，7日内无法复制</string>
+    <string name="yuruan_group_manager_copy_copied_7">一个群7天内只能被复制一次</string>
+    <string name="yuruan_group_manager_copy_not_exist">群不存在或被解散</string>
+    <string name="yuruan_group_manager_copy_fail">复制失败</string>
+    <string name="yuruan_error_other">服务维护中</string>
+
+
+    <string name="sent_a_message">发来一条消息</string>
+    <string name="sent_a_picture">发来一张图片</string>
+    <string name="sent_a_voice">发来一段语音</string>
+    <string name="sent_a_location">发来位置信息</string>
+    <string name="sent_a_video">发来一个视频</string>
+    <string name="sent_a_file">发来一个文件</string>
+    <string name="contacts_messages">%1$s个联系人发来%2$i条消息</string>
+    <string name="zhongkuohao">[</string>
+    <string name="zhongkuohao_msg">条]</string>
+
+    <!--Main-->
+    <string-array name="tab_names">
+        <item>消息</item>
+        <item>通讯录</item>
+        <item>我的</item>
+    </string-array>
+
+    <string name="Days_ago">天前</string>
+    <string name="An_hour_ago">小时前</string>
+    <string name="just">刚刚</string>
+    <string name="just_15">15分钟前</string>
+    <string name="just_30">30分钟前</string>
+    <string name="just_1hour">1小时前</string>
+
+
+    <string name="button_pushtotalk">按住说话</string>
+    <string name="button_pushtotalk_pressed">松开发送</string>
+    <string name="button_send">发送</string>
+    <string name="move_up_to_cancel">手指上滑，取消发送</string>
+    <string name="release_to_cancel">松开手指，取消发送</string>
+    <string name="Send_voice_need_sdcard_support">发送语音需要sdcard支持</string>
+    <string name="Recording_without_permission">无录音权限</string>
+    <string name="The_recording_time_is_too_short">说话时间太短</string>
+    <string name="send_failure_please">说话时间太短</string>
+    <string name="recoding_fail">录音失败，请重试！</string>
+
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="prompt">提示</string>
+
+    <string name="Delete_the_contact">删除联系人</string>
+
+    <string name="attach_picture">相册</string>
+    <string name="attach_take_pic">拍摄</string>
+    <string name="attach_voice">语音</string>
+    <string name="attach_video">视频</string>
+    <string name="attach_file">文件</string>
+    <string name="attach_location">位置</string>
+    <string name="attach_card">名片</string>
+    <string name="attach_read_hot">阅后即焚</string>
+
+    <string name="miss_permission_storage">无相册权限</string>
+    <string name="miss_permission_camera">无拍照权限</string>
+
+    <string name="just_delete_friend">您已被对方移除好友!</string>
+    <string name="just_delete_group">您已被移除该群组!</string>
+    <string name="no_more_msg">无更多消息</string>
+    <string name="size_10M">视频文件不能大于10M</string>
+    <string name="video_path_error">视频文件路劲获取错误</string>
+    <string name="self_card">个人名片</string>
+    <string name="send_too_much">发言频率太快！</string>
+    <string name="has_no_talk">已被禁言,暂不能聊天!</string>
+
+    <string name="apply_fail">申请好友失败</string>
+    <string name="apply_fail_2">申请成功，但通知对方失败</string>
+    <string name="apply_success">申请成功</string>
+
+    <string name="stick_conversation">置顶会话</string>
+    <string name="cancle_stick_conversation">取消置顶</string>
+
+    <string name="copy">复制</string>
+    <string name="delete">删除</string>
+    <string name="the_current_network">当前网络不可用，请检查网络设置</string>
+    <string name="were_mentioned">[有人@我]</string>
+
+    <string name="main_chat_tab_more_read_message">20000+</string>
+
+    <string name="Logoff_notification">下线通知</string>
+    <string name="connect_conflict">您的帐号在其他设备上登录</string>
+
+    <string name="no_permission">无拍摄权限</string>
+
+    <string name="action_play_receiver">听筒播放</string>
+    <string name="action_play_speaker">扬声器播放</string>
+    <string name="action_copy">复制</string>
+    <string name="action_forward">转发</string>
+    <string name="action_recall">撤回</string>
+    <string name="action_delete">删除</string>
+    <string name="action_yinyong">引用</string>
+
+    <string name="conversation_menu_make_top">置顶</string>
+    <string name="conversation_menu_cancel_top">取消置顶</string>
+    <string name="conversation_menu_delete">删除会话</string>
+
+
+    <string name="message_text_noData_default">暂无数据</string>
+    <string name="message_text_noData_message">暂无消息</string>
+
+    <string name="save">保存</string>
+    <string name="saving">保存中...</string>
+    <string name="saving_successful">保存成功</string>
+    <string name="saving_failed">保存失败</string>
+    <string name="need_sdcard_permission">该功能需要SD卡权限,请打开SD卡权限</string>
+    <string name="marker_animation_grow">生长动画</string>
+    <string name="marker_animation_jump">移动动画</string>
+    <string name="marker_animation_breathe">呼吸动画</string>
+
+
+</resources>

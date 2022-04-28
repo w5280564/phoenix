@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.zhengshuo.phoenix.widget.RoundImageView
+        android:id="@+id/head_Simple"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:borderType="rectangle"
+        app:borderRadius="@dimen/dp_4"
+        />
+
+    <TextView
+        android:id="@+id/name_Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="小乐"
+        android:textColor="#444444"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/head_Simple"
+        app:layout_constraintTop_toTopOf="@id/head_Simple" />
+
+
+    <TextView
+        android:id="@+id/friend_Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="#ffa1a1a1"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/head_Simple"
+        app:layout_constraintStart_toStartOf="@+id/name_Txt"
+        app:layout_constraintTop_toBottomOf="@id/name_Txt" />
+
+
+    <TextView
+        android:id="@+id/apply_Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="#ffa1a1a1"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/friend_Txt"
+        app:layout_constraintTop_toBottomOf="@+id/friend_Txt" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/greyline"
+        app:layout_constraintStart_toStartOf="@+id/name_Txt"
+        app:layout_constraintTop_toBottomOf="@+id/apply_Txt" />
+
+
+    <TextView
+        android:id="@+id/refuse_Btn"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:text="拒绝"
+        android:textColor="#333333"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/add_Btn"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="接受"
+        android:textColor="#333333"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/refuse_Btn"
+        app:layout_constraintEnd_toStartOf="@+id/refuse_Btn"
+        app:layout_constraintTop_toTopOf="@+id/refuse_Btn"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/result_Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="15dp"
+        android:text="已接受"
+        android:textColor="#ff6f6f6f"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/time_Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="05/01"
+        android:textColor="#ffa1a1a1"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/result_Txt"
+        app:layout_constraintTop_toBottomOf="@+id/result_Txt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

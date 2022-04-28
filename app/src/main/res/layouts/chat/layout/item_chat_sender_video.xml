@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp">
+
+        <com.zhengshuo.phoenix.widget.RoundImageView
+            android:id="@+id/iv_header"
+            style="@style/row_sender_iv_userHeader_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:borderType="rectangle"
+            app:borderRadius="@dimen/chat_item_header_radius_size"/>
+
+        <RelativeLayout
+            android:id="@+id/bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:minWidth="30dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintEnd_toStartOf="@id/iv_header"
+            app:layout_constraintTop_toTopOf="@id/iv_header">
+
+            <com.zhengshuo.phoenix.widget.RoundImageView
+                android:id="@+id/iv_image_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:maxWidth="225dp"
+                android:scaleType="fitCenter"
+                app:borderRadius="9dp"
+                app:borderType="rectangle" />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/icon_play" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/msg_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:clickable="true"
+            android:src="@drawable/msg_state_failed_resend"
+            app:layout_constraintBottom_toBottomOf="@+id/bubble"
+            app:layout_constraintEnd_toStartOf="@id/bubble"
+            app:layout_constraintTop_toTopOf="@id/bubble"
+            android:visibility="invisible"/>
+
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/mProgress_circle"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="6dp"
+            app:layout_constraintBottom_toBottomOf="@+id/msg_status"
+            app:layout_constraintEnd_toStartOf="@id/msg_status"
+            app:layout_constraintTop_toTopOf="@id/msg_status"
+            android:visibility="invisible"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,617 @@
+# compiler: R8
+# compiler_version: 3.0.64
+# pg_map_id: 008fb32
+# common_typos_disable
+com.fastchat.sdk.ChatType -> com.fastchat.sdk.ChatType:
+    com.fastchat.sdk.ChatType[] $VALUES -> a
+    com.fastchat.sdk.ChatType[] $values() -> a
+com.fastchat.sdk.db.DBManager -> a.a:
+    android.content.Context context -> a
+    com.fastchat.sdk.db.DBManager instance -> d
+    com.fastchat.sdk.db.YuRuanTalkDatabase database -> b
+    java.lang.String currentUserId -> c
+    void closeDb() -> a
+    com.fastchat.sdk.db.DBManager getInstance(android.content.Context) -> a
+    void openDb(java.lang.String) -> a
+    com.fastchat.sdk.db.dao.ConversationDao getConversationDao() -> b
+    java.lang.String getFileName() -> c
+    com.fastchat.sdk.db.dao.GroupDao getGroupDao() -> d
+    com.fastchat.sdk.db.dao.MessageDao getMessageDao() -> e
+com.fastchat.sdk.db.YuRuanTalkDatabase -> com.fastchat.sdk.db.YuRuanTalkDatabase:
+    com.fastchat.sdk.db.dao.ConversationDao getConversationDao() -> a
+    com.fastchat.sdk.db.dao.GroupDao getGroupDao() -> b
+    com.fastchat.sdk.db.dao.MessageDao getMessageDao() -> c
+com.fastchat.sdk.db.YuRuanTalkDatabase_Impl -> com.fastchat.sdk.db.YuRuanTalkDatabase_Impl:
+    com.fastchat.sdk.db.dao.MessageDao _messageDao -> c
+    com.fastchat.sdk.db.dao.ConversationDao _conversationDao -> a
+    com.fastchat.sdk.db.dao.GroupDao _groupDao -> b
+    java.util.List access$000(com.fastchat.sdk.db.YuRuanTalkDatabase_Impl) -> a
+    androidx.sqlite.db.SupportSQLiteDatabase access$602(com.fastchat.sdk.db.YuRuanTalkDatabase_Impl,androidx.sqlite.db.SupportSQLiteDatabase) -> a
+    com.fastchat.sdk.db.dao.ConversationDao getConversationDao() -> a
+    java.util.List access$100(com.fastchat.sdk.db.YuRuanTalkDatabase_Impl) -> b
+    void access$700(com.fastchat.sdk.db.YuRuanTalkDatabase_Impl,androidx.sqlite.db.SupportSQLiteDatabase) -> b
+    com.fastchat.sdk.db.dao.GroupDao getGroupDao() -> b
+    java.util.List access$1000(com.fastchat.sdk.db.YuRuanTalkDatabase_Impl) -> c
+    com.fastchat.sdk.db.dao.MessageDao getMessageDao() -> c
+    java.util.List access$200(com.fastchat.sdk.db.YuRuanTalkDatabase_Impl) -> d
+    java.util.List access$300(com.fastchat.sdk.db.YuRuanTalkDatabase_Impl) -> e
+    java.util.List access$400(com.fastchat.sdk.db.YuRuanTalkDatabase_Impl) -> f
+    java.util.List access$500(com.fastchat.sdk.db.YuRuanTalkDatabase_Impl) -> g
+    java.util.List access$800(com.fastchat.sdk.db.YuRuanTalkDatabase_Impl) -> h
+    java.util.List access$900(com.fastchat.sdk.db.YuRuanTalkDatabase_Impl) -> i
+com.fastchat.sdk.db.YuRuanTalkDatabase_Impl$1 -> com.fastchat.sdk.db.YuRuanTalkDatabase_Impl$a:
+    com.fastchat.sdk.db.YuRuanTalkDatabase_Impl this$0 -> a
+com.fastchat.sdk.db.dao.ConversationDao -> b.a:
+    void deleteConversation(java.lang.String) -> a
+    java.util.List getConversationList() -> a
+    void saveConversation(com.fastchat.sdk.db.model.ConversationModel) -> a
+com.fastchat.sdk.db.dao.ConversationDao_Impl -> b.b:
+    androidx.room.RoomDatabase __db -> a
+    androidx.room.SharedSQLiteStatement __preparedStmtOfDeleteConversation -> c
+    androidx.room.EntityInsertionAdapter __insertionAdapterOfConversationModel -> b
+    void deleteConversation(java.lang.String) -> a
+    java.util.List getConversationList() -> a
+    void saveConversation(com.fastchat.sdk.db.model.ConversationModel) -> a
+    java.util.List getRequiredConverters() -> b
+com.fastchat.sdk.db.dao.ConversationDao_Impl$1 -> b.b$a:
+    void bind(androidx.sqlite.db.SupportSQLiteStatement,com.fastchat.sdk.db.model.ConversationModel) -> a
+com.fastchat.sdk.db.dao.ConversationDao_Impl$2 -> b.b$b:
+com.fastchat.sdk.db.dao.GroupDao -> b.c:
+    void deleteGroup(java.lang.String) -> a
+    java.util.List getAllGroups() -> a
+    void saveGroup(com.fastchat.sdk.db.model.GroupModel) -> a
+    void saveGroupList(java.util.List) -> a
+com.fastchat.sdk.db.dao.GroupDao_Impl -> b.d:
+    androidx.room.RoomDatabase __db -> a
+    androidx.room.SharedSQLiteStatement __preparedStmtOfDeleteGroup -> c
+    androidx.room.EntityInsertionAdapter __insertionAdapterOfGroupModel -> b
+    void deleteGroup(java.lang.String) -> a
+    java.util.List getAllGroups() -> a
+    void saveGroup(com.fastchat.sdk.db.model.GroupModel) -> a
+    void saveGroupList(java.util.List) -> a
+    java.util.List getRequiredConverters() -> b
+com.fastchat.sdk.db.dao.GroupDao_Impl$1 -> b.d$a:
+    void bind(androidx.sqlite.db.SupportSQLiteStatement,com.fastchat.sdk.db.model.GroupModel) -> a
+com.fastchat.sdk.db.dao.GroupDao_Impl$2 -> b.d$b:
+com.fastchat.sdk.db.dao.MessageDao -> b.e:
+    void deleteHTMessageFromTimestamp(java.lang.String,long) -> a
+    java.util.List getAllMessages(java.lang.String,int) -> a
+    com.fastchat.sdk.db.model.MessageModel getMessage(java.lang.String) -> a
+    java.util.List loadMoreMsgFromDB(java.lang.String,long,int,int) -> a
+    void saveMessage(com.fastchat.sdk.db.model.MessageModel) -> a
+    com.fastchat.sdk.db.model.MessageModel getLastMessage(java.lang.String,int) -> b
+    java.util.List searchMsgFromDB(java.lang.String) -> b
+    void deleteHTMessage(java.lang.String) -> c
+    void deleteUserHTMessage(java.lang.String) -> d
+com.fastchat.sdk.db.dao.MessageDao_Impl -> b.f:
+    androidx.room.SharedSQLiteStatement __preparedStmtOfDeleteHTMessageFromTimestamp -> e
+    androidx.room.RoomDatabase __db -> a
+    androidx.room.SharedSQLiteStatement __preparedStmtOfDeleteHTMessage -> c
+    androidx.room.SharedSQLiteStatement __preparedStmtOfDeleteUserHTMessage -> d
+    androidx.room.EntityInsertionAdapter __insertionAdapterOfMessageModel -> b
+    void deleteHTMessageFromTimestamp(java.lang.String,long) -> a
+    java.util.List getAllMessages(java.lang.String,int) -> a
+    com.fastchat.sdk.db.model.MessageModel getMessage(java.lang.String) -> a
+    java.util.List getRequiredConverters() -> a
+    java.util.List loadMoreMsgFromDB(java.lang.String,long,int,int) -> a
+    void saveMessage(com.fastchat.sdk.db.model.MessageModel) -> a
+    com.fastchat.sdk.db.model.MessageModel getLastMessage(java.lang.String,int) -> b
+    java.util.List searchMsgFromDB(java.lang.String) -> b
+    void deleteHTMessage(java.lang.String) -> c
+    void deleteUserHTMessage(java.lang.String) -> d
+com.fastchat.sdk.db.dao.MessageDao_Impl$1 -> b.f$a:
+    void bind(androidx.sqlite.db.SupportSQLiteStatement,com.fastchat.sdk.db.model.MessageModel) -> a
+com.fastchat.sdk.db.dao.MessageDao_Impl$2 -> b.f$b:
+com.fastchat.sdk.db.dao.MessageDao_Impl$3 -> b.f$c:
+com.fastchat.sdk.db.dao.MessageDao_Impl$4 -> b.f$d:
+com.fastchat.sdk.db.model.ConversationModel -> c.a:
+    long time_top -> f
+    long time -> e
+    java.lang.String userId -> a
+    int chatType -> d
+    java.lang.String msgId -> b
+    int unReadCount -> c
+    int getChatType() -> a
+    void setChatType(int) -> a
+    void setMsgId(java.lang.String) -> a
+    void setTime(long) -> a
+    java.lang.String getMsgId() -> b
+    void setTime_top(long) -> b
+    void setUnReadCount(int) -> b
+    void setUserId(java.lang.String) -> b
+    long getTime() -> c
+    long getTime_top() -> d
+    int getUnReadCount() -> e
+    java.lang.String getUserId() -> f
+com.fastchat.sdk.db.model.GroupModel -> c.b:
+    long time -> e
+    java.lang.String groupId -> a
+    java.lang.String desc -> c
+    java.lang.String groupName -> b
+    java.lang.String owner -> d
+    java.lang.String getDesc() -> a
+    void setDesc(java.lang.String) -> a
+    void setTime(long) -> a
+    java.lang.String getGroupId() -> b
+    void setGroupId(java.lang.String) -> b
+    java.lang.String getGroupName() -> c
+    void setGroupName(java.lang.String) -> c
+    java.lang.String getOwner() -> d
+    void setOwner(java.lang.String) -> d
+    long getTime() -> e
+com.fastchat.sdk.db.model.MessageModel -> c.c:
+    java.lang.String body -> h
+    long localTime -> f
+    long msgTime -> e
+    java.lang.String attribute -> j
+    int type -> k
+    int direct -> i
+    int status -> g
+    java.lang.String msgId -> a
+    int chatType -> d
+    java.lang.String msgTo -> c
+    java.lang.String msgFrom -> b
+    java.lang.String getAttribute() -> a
+    void setAttribute(java.lang.String) -> a
+    void setChatType(int) -> a
+    void setLocalTime(long) -> a
+    java.lang.String getBody() -> b
+    void setBody(java.lang.String) -> b
+    void setDirect(int) -> b
+    void setMsgTime(long) -> b
+    int getChatType() -> c
+    void setMsgFrom(java.lang.String) -> c
+    void setStatus(int) -> c
+    int getDirect() -> d
+    void setMsgId(java.lang.String) -> d
+    void setType(int) -> d
+    long getLocalTime() -> e
+    void setMsgTo(java.lang.String) -> e
+    java.lang.String getMsgFrom() -> f
+    java.lang.String getMsgId() -> g
+    long getMsgTime() -> h
+    java.lang.String getMsgTo() -> i
+    int getStatus() -> j
+    int getType() -> k
+com.fastchat.sdk.logcollect.logcat.LogcatHelper -> d.a:
+    java.io.File file -> b
+    com.fastchat.sdk.logcollect.logcat.LogcatHelper mInstance -> c
+    com.fastchat.sdk.logcollect.logcat.LogcatHelper$LogDumper mLogDumper -> a
+    java.lang.String getFileName() -> a
+    void init(android.content.Context) -> a
+    com.fastchat.sdk.logcollect.logcat.LogcatHelper getInstance() -> b
+    boolean isSDCardExist() -> c
+    void start() -> d
+    void stop() -> e
+com.fastchat.sdk.logcollect.logcat.LogcatHelper$LogDumper -> d.a$a:
+    java.io.File file -> b
+    java.io.FileOutputStream output -> d
+    com.fastchat.sdk.logcollect.logcat.LogcatHelper this$0 -> f
+    java.lang.String pid -> a
+    java.io.BufferedReader mReader -> e
+    boolean mRunning -> c
+    void initStart() -> a
+    void stopLogs() -> b
+com.fastchat.sdk.logcollect.utils.FileSizeUtil -> e.a:
+    double FormetFileSize(long,int) -> a
+    double getFileOrFilesSize(java.io.File,int) -> a
+    long getFileSize(java.io.File) -> a
+    long getFileSizes(java.io.File) -> b
+com.fastchat.sdk.manager.AbstractAdaptiveServerPingManager -> com.fastchat.sdk.manager.AbstractAdaptiveServerPingManager:
+    long mPingStreak -> f
+    long mNextIncrease -> e
+    long mInterval -> b
+    long mLastSuccessInterval -> d
+    long mLastSuccess -> c
+    boolean mEnabled -> a
+    long getElapsedRealtime() -> a
+    void setNextIncreaseInterval(long) -> a
+    void setupPing(long) -> b
+com.fastchat.sdk.manager.AndroidAdaptiveServerPingManager -> com.fastchat.sdk.manager.AndroidAdaptiveServerPingManager:
+    android.app.AlarmManager sAlarmManager -> l
+    android.app.PendingIntent mPendingIntent -> i
+    android.content.BroadcastReceiver mReceiver -> g
+    java.util.logging.Logger LOGGER -> j
+    android.content.Context mContext -> h
+    java.util.Map INSTANCES -> k
+    void ensureAlarmManager(android.content.Context) -> a
+    long getElapsedRealtime() -> a
+    void setNextIncreaseInterval(long) -> a
+    java.util.logging.Logger access$000() -> b
+    void setupPing(long) -> b
+    void disable() -> c
+    void enable() -> d
+    void setupOnConnectionCompleted() -> e
+com.fastchat.sdk.manager.AndroidAdaptiveServerPingManager$1 -> com.fastchat.sdk.manager.AndroidAdaptiveServerPingManager$1:
+    com.fastchat.sdk.manager.AndroidAdaptiveServerPingManager this$0 -> a
+com.fastchat.sdk.manager.ConversationManager -> com.fastchat.sdk.manager.ConversationManager:
+    com.fastchat.sdk.db.DBManager dbManager -> a
+    java.util.Map allConversations -> c
+    com.fastchat.sdk.db.dao.ConversationDao htConversationDao -> b
+    com.fastchat.sdk.db.dao.ConversationDao access$000() -> a
+    java.util.Map access$102(java.util.Map) -> a
+    void saveConversation(com.fastchat.sdk.model.HTConversation) -> a
+    void initAllConversations() -> b
+com.fastchat.sdk.manager.ConversationManager$2 -> com.fastchat.sdk.manager.ConversationManager$2:
+    com.fastchat.sdk.model.HTConversation val$htConversation -> a
+com.fastchat.sdk.manager.GroupManager -> com.fastchat.sdk.manager.GroupManager:
+    android.content.Context context -> a
+    com.fastchat.sdk.db.DBManager dbManager -> c
+    java.util.Map allGroups -> d
+    com.fastchat.sdk.db.dao.GroupDao groupDao -> b
+    com.fastchat.sdk.db.dao.GroupDao access$000(com.fastchat.sdk.manager.GroupManager) -> a
+    void access$300(com.fastchat.sdk.manager.GroupManager,boolean,com.fastchat.sdk.manager.GroupManager$GroupListCallBack) -> a
+    com.fastchat.sdk.db.model.GroupModel convertHTGroupToGroupModel(com.fastchat.sdk.model.HTGroup) -> a
+    void getGroupList(boolean,com.fastchat.sdk.manager.GroupManager$GroupListCallBack) -> a
+    void initAllGroup() -> a
+    void updateGroupInfo(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.fastchat.sdk.manager.GroupManager$CallBack) -> a
+    java.util.Map access$100(com.fastchat.sdk.manager.GroupManager) -> b
+    android.content.Context access$200(com.fastchat.sdk.manager.GroupManager) -> c
+com.fastchat.sdk.manager.GroupManager$1 -> com.fastchat.sdk.manager.GroupManager$1:
+    com.fastchat.sdk.manager.GroupManager this$0 -> a
+com.fastchat.sdk.manager.GroupManager$2 -> com.fastchat.sdk.manager.GroupManager$2:
+    boolean val$isNotify -> a
+    com.fastchat.sdk.manager.GroupManager$GroupListCallBack val$groupListCallBack -> b
+    com.fastchat.sdk.manager.GroupManager this$0 -> c
+com.fastchat.sdk.manager.GroupManager$3 -> com.fastchat.sdk.manager.GroupManager$3:
+    java.util.List val$groupModelList -> a
+    com.fastchat.sdk.manager.GroupManager this$0 -> b
+com.fastchat.sdk.manager.GroupManager$4 -> com.fastchat.sdk.manager.GroupManager$4:
+    com.fastchat.sdk.manager.GroupManager this$0 -> a
+com.fastchat.sdk.manager.GroupManager$5 -> com.fastchat.sdk.manager.GroupManager$5:
+    com.fastchat.sdk.manager.GroupManager$CallBack val$callBack -> b
+    com.fastchat.sdk.model.HTMessage val$htMessage -> a
+com.fastchat.sdk.manager.HTChatManager -> com.fastchat.sdk.manager.HTChatManager:
+    android.content.Context context -> a
+    com.fastchat.sdk.manager.HTChatManager$MyReceiver receiver -> b
+    java.util.Map htMessageCallBackMap -> c
+    java.lang.String baseOssUrl -> d
+    java.util.Map access$100(com.fastchat.sdk.manager.HTChatManager) -> a
+    void access$200(com.fastchat.sdk.manager.HTChatManager,com.fastchat.sdk.model.HTMessage) -> a
+    void access$300(com.fastchat.sdk.manager.HTChatManager,com.fastchat.sdk.model.HTMessage,com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack,java.lang.String) -> a
+    void access$400(com.fastchat.sdk.manager.HTChatManager,com.fastchat.sdk.model.HTMessage,com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack) -> a
+    void sendFileMessage(com.fastchat.sdk.model.HTMessage,com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack) -> a
+    void sendImageMessage(com.fastchat.sdk.model.HTMessage,com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack,java.lang.String) -> a
+    void sendXmppMessage(com.fastchat.sdk.model.HTMessage) -> a
+    void access$500(com.fastchat.sdk.manager.HTChatManager,com.fastchat.sdk.model.HTMessage,com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack) -> b
+    java.lang.String access$800(com.fastchat.sdk.manager.HTChatManager) -> b
+    void sendLocationMessage(com.fastchat.sdk.model.HTMessage,com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack) -> b
+    void access$600(com.fastchat.sdk.manager.HTChatManager,com.fastchat.sdk.model.HTMessage,com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack) -> c
+    android.content.Context access$900(com.fastchat.sdk.manager.HTChatManager) -> c
+    void sendVideoMessage(com.fastchat.sdk.model.HTMessage,com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack) -> c
+    void access$700(com.fastchat.sdk.manager.HTChatManager,com.fastchat.sdk.model.HTMessage,com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack) -> d
+    void sendVoiceMessage(com.fastchat.sdk.model.HTMessage,com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack) -> d
+com.fastchat.sdk.manager.HTChatManager$1 -> com.fastchat.sdk.manager.HTChatManager$1:
+    com.fastchat.sdk.model.HTMessage val$htMessage -> b
+    com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack val$htMessageCallBack -> a
+    com.fastchat.sdk.manager.HTChatManager this$0 -> c
+com.fastchat.sdk.manager.HTChatManager$2 -> com.fastchat.sdk.manager.HTChatManager$2:
+    com.fastchat.sdk.model.HTMessageFileBody val$htMessageFileBody -> a
+    com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack val$htMessageCallBack -> c
+    com.fastchat.sdk.model.HTMessage val$htMessage -> b
+    com.fastchat.sdk.manager.HTChatManager this$0 -> d
+com.fastchat.sdk.manager.HTChatManager$3 -> com.fastchat.sdk.manager.HTChatManager$3:
+    com.fastchat.sdk.model.HTMessageImageBody val$htMessageImageBody -> a
+    com.fastchat.sdk.model.HTMessage val$htMessage -> c
+    com.fastchat.sdk.manager.HTChatManager this$0 -> e
+    com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack val$htMessageCallBack -> d
+    java.lang.String val$fileName -> b
+com.fastchat.sdk.manager.HTChatManager$4 -> com.fastchat.sdk.manager.HTChatManager$4:
+    com.fastchat.sdk.model.HTMessageVoiceBody val$htMessageVoiceBody -> a
+    com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack val$htMessageCallBack -> c
+    com.fastchat.sdk.model.HTMessage val$htMessage -> b
+    com.fastchat.sdk.manager.HTChatManager this$0 -> d
+com.fastchat.sdk.manager.HTChatManager$5 -> com.fastchat.sdk.manager.HTChatManager$5:
+    com.fastchat.sdk.model.HTMessage val$htMessage -> d
+    com.fastchat.sdk.model.HTMessageVideoBody val$htMessageVideoBody -> a
+    com.fastchat.sdk.manager.HTChatManager this$0 -> f
+    com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack val$htMessageCallBack -> e
+    java.lang.String val$fileNameThumbnail -> c
+    java.lang.String val$filePath -> b
+com.fastchat.sdk.manager.HTChatManager$5$1 -> com.fastchat.sdk.manager.HTChatManager$5$1:
+    com.fastchat.sdk.manager.HTChatManager$5 this$1 -> a
+com.fastchat.sdk.manager.HTChatManager$6 -> com.fastchat.sdk.manager.HTChatManager$6:
+    com.fastchat.sdk.model.HTMessageLocationBody val$htMessageLocationBody -> a
+    com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack val$htMessageCallBack -> c
+    com.fastchat.sdk.model.HTMessage val$htMessage -> b
+    com.fastchat.sdk.manager.HTChatManager this$0 -> d
+com.fastchat.sdk.manager.HTChatManager$7 -> com.fastchat.sdk.manager.HTChatManager$7:
+    com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack val$htMessageCallBack -> b
+    com.fastchat.sdk.model.CmdMessage val$cmdMessage -> a
+    com.fastchat.sdk.manager.HTChatManager this$0 -> c
+com.fastchat.sdk.manager.HTChatManager$8 -> com.fastchat.sdk.manager.HTChatManager$8:
+    com.fastchat.sdk.manager.HTChatManager$HTMessageCallBack val$htMessageCallBack -> b
+    com.fastchat.sdk.model.CallMessage val$callMessage -> a
+    com.fastchat.sdk.manager.HTChatManager this$0 -> c
+com.fastchat.sdk.manager.HTChatManager$MyReceiver -> com.fastchat.sdk.manager.HTChatManager$MyReceiver:
+    com.fastchat.sdk.manager.HTChatManager this$0 -> a
+com.fastchat.sdk.manager.HTChatManager$MyReceiver$1 -> com.fastchat.sdk.manager.HTChatManager$MyReceiver$1:
+    com.fastchat.sdk.manager.HTChatManager$MyReceiver this$1 -> b
+    android.content.Intent val$intent -> a
+com.fastchat.sdk.manager.HTPreferenceManager -> com.fastchat.sdk.manager.HTPreferenceManager:
+    android.content.SharedPreferences mSharedPreferences -> a
+    com.fastchat.sdk.manager.HTPreferenceManager mPreferencemManager -> b
+    android.content.SharedPreferences$Editor editor -> c
+    android.content.Context context -> d
+    long getLong(android.content.Context,java.lang.String,long) -> a
+com.fastchat.sdk.manager.MessageManager -> com.fastchat.sdk.manager.MessageManager:
+    com.fastchat.sdk.db.dao.MessageDao messageDao -> a
+    com.fastchat.sdk.db.DBManager dbManager -> b
+    com.fastchat.sdk.model.HTMessage convertMessageModelToHTMessage(com.fastchat.sdk.db.model.MessageModel) -> a
+com.fastchat.sdk.manager.MmvkManger -> com.fastchat.sdk.manager.MmvkManger:
+    com.tencent.mmkv.MMKV mmkv -> a
+    com.fastchat.sdk.manager.MmvkManger mmvkManger -> b
+com.fastchat.sdk.model.CmdMessage -> com.fastchat.sdk.model.CmdMessage:
+    java.lang.String msgId -> f
+    java.lang.String from -> a
+    long time -> c
+    com.fastchat.sdk.ChatType chatType -> e
+    java.lang.String to -> b
+    java.lang.String body -> d
+    com.fastchat.sdk.model.CmdMessage creatCmdMessage(java.lang.String) -> a
+com.fastchat.sdk.model.CmdMessage$1 -> com.fastchat.sdk.model.CmdMessage$a:
+    com.fastchat.sdk.model.CmdMessage createFromParcel(android.os.Parcel) -> a
+    com.fastchat.sdk.model.CmdMessage[] newArray(int) -> a
+com.fastchat.sdk.model.CurrentUser -> com.fastchat.sdk.model.CurrentUser:
+    java.lang.String password -> a
+    java.lang.String username -> b
+    java.lang.String getPassword() -> a
+    void setPassword(java.lang.String) -> a
+    java.lang.String getUsername() -> b
+    void setUsername(java.lang.String) -> b
+com.fastchat.sdk.model.HTConversation -> com.fastchat.sdk.model.HTConversation:
+    long topTimestamp -> e
+    java.lang.String userId -> a
+    com.fastchat.sdk.model.HTMessage lastMessage -> f
+    long time -> c
+    int unReadCount -> b
+    com.fastchat.sdk.ChatType chatType -> d
+com.fastchat.sdk.model.HTConversation$1 -> com.fastchat.sdk.model.HTConversation$a:
+    com.fastchat.sdk.model.HTConversation createFromParcel(android.os.Parcel) -> a
+    com.fastchat.sdk.model.HTConversation[] newArray(int) -> a
+com.fastchat.sdk.model.HTGroup -> com.fastchat.sdk.model.HTGroup:
+    long time -> f
+    java.lang.String groupImId -> a
+    java.lang.String groupHeadImg -> c
+    java.lang.String groupName -> b
+    java.lang.String owner -> e
+    java.lang.String groupDesc -> d
+com.fastchat.sdk.model.HTGroup$1 -> com.fastchat.sdk.model.HTGroup$a:
+    com.fastchat.sdk.model.HTGroup createFromParcel(android.os.Parcel) -> a
+    com.fastchat.sdk.model.HTGroup[] newArray(int) -> a
+com.fastchat.sdk.model.HTMessage -> com.fastchat.sdk.model.HTMessage:
+    com.alibaba.fastjson.JSONObject attributes -> j
+    java.lang.String msgId -> f
+    com.fastchat.sdk.model.HTMessage$Type type -> i
+    long localTime -> e
+    java.lang.String from -> a
+    com.fastchat.sdk.model.HTMessage$Status status -> d
+    long time -> c
+    com.fastchat.sdk.model.HTMessage$Direct direct -> h
+    java.lang.String to -> b
+    com.fastchat.sdk.ChatType chatType -> g
+    com.fastchat.sdk.model.HTMessageBody body -> k
+    com.fastchat.sdk.model.HTMessage commonSet(java.lang.String) -> a
+com.fastchat.sdk.model.HTMessage$1 -> com.fastchat.sdk.model.HTMessage$a:
+    com.fastchat.sdk.model.HTMessage createFromParcel(android.os.Parcel) -> a
+    com.fastchat.sdk.model.HTMessage[] newArray(int) -> a
+com.fastchat.sdk.model.HTMessage$Direct -> com.fastchat.sdk.model.HTMessage$Direct:
+    com.fastchat.sdk.model.HTMessage$Direct[] $VALUES -> a
+    com.fastchat.sdk.model.HTMessage$Direct[] $values() -> a
+com.fastchat.sdk.model.HTMessage$Status -> com.fastchat.sdk.model.HTMessage$Status:
+    com.fastchat.sdk.model.HTMessage$Status[] $VALUES -> a
+    com.fastchat.sdk.model.HTMessage$Status[] $values() -> a
+com.fastchat.sdk.model.HTMessage$Type -> com.fastchat.sdk.model.HTMessage$Type:
+    com.fastchat.sdk.model.HTMessage$Type[] $VALUES -> a
+    com.fastchat.sdk.model.HTMessage$Type[] $values() -> a
+com.fastchat.sdk.model.HTMessageBody$1 -> com.fastchat.sdk.model.HTMessageBody$a:
+    com.fastchat.sdk.model.HTMessageBody createFromParcel(android.os.Parcel) -> a
+    com.fastchat.sdk.model.HTMessageBody[] newArray(int) -> a
+com.fastchat.sdk.model.HTMessageFileBody -> com.fastchat.sdk.model.HTMessageFileBody:
+    java.lang.String localPath -> a
+    long fileSize -> d
+    java.lang.String remotePath -> c
+    java.lang.String fileName -> b
+com.fastchat.sdk.model.HTMessageImageBody -> com.fastchat.sdk.model.HTMessageImageBody:
+    java.lang.String size -> a
+    java.lang.String fileName -> c
+    java.lang.String localPath -> b
+    java.lang.String thumbnailRemotePath -> e
+    java.lang.String remotePath -> d
+com.fastchat.sdk.model.HTMessageLocationBody -> com.fastchat.sdk.model.HTMessageLocationBody:
+    java.lang.String fileName -> f
+    double latitude -> a
+    double longitude -> b
+    java.lang.String address -> c
+    java.lang.String remotePath -> e
+    java.lang.String localPath -> d
+com.fastchat.sdk.model.HTMessageTextBody -> com.fastchat.sdk.model.HTMessageTextBody:
+    java.lang.String content -> a
+com.fastchat.sdk.model.HTMessageVideoBody -> com.fastchat.sdk.model.HTMessageVideoBody:
+    int videoDuration -> f
+    java.lang.String localPath -> a
+    java.lang.String remotePath -> c
+    java.lang.String fileName -> b
+    java.lang.String localPathThumbnail -> e
+    java.lang.String thumbnailRemotePath -> d
+com.fastchat.sdk.model.HTMessageVoiceBody -> com.fastchat.sdk.model.HTMessageVoiceBody:
+    java.lang.String localPath -> a
+    int audioDuration -> d
+    java.lang.String remotePath -> c
+    java.lang.String fileName -> b
+com.fastchat.sdk.model.SendCallbackMessageInfo -> com.fastchat.sdk.model.SendCallbackMessageInfo:
+    java.lang.String msgId -> a
+    void setMsgId(java.lang.String) -> a
+com.fastchat.sdk.model.SendCallbackMessageInfo_GroupChat -> com.fastchat.sdk.model.SendCallbackMessageInfo_GroupChat:
+    long timeStamp -> a
+com.fastchat.sdk.model.SendMessageInfo -> com.fastchat.sdk.model.SendMessageInfo:
+    java.lang.String body -> a
+    void setBody(java.lang.String) -> a
+com.fastchat.sdk.receiver.NetworkStateReceiver -> com.fastchat.sdk.receiver.NetworkStateReceiver:
+    java.lang.String TAG -> a
+    boolean shouldReconnect(android.content.Context) -> a
+com.fastchat.sdk.receiver.NetworkStateReceiver$1 -> com.fastchat.sdk.receiver.NetworkStateReceiver$a:
+    int[] $SwitchMap$android$net$NetworkInfo$State -> a
+com.fastchat.sdk.service.MessageService -> com.fastchat.sdk.service.MessageService:
+    boolean pingResult -> m
+    java.lang.String loginPassword -> f
+    org.jivesoftware.smack.StanzaListener stanzaListenerMessage -> k
+    android.os.Handler handler -> q
+    long firstLoginMsgTime -> d
+    androidx.localbroadcastmanager.content.LocalBroadcastManager localBroadcastManager -> c
+    org.jivesoftware.smack.tcp.XMPPTCPConnection xmppConnection -> r
+    com.fastchat.sdk.service.MessageService$MyBinder myBinder -> a
+    com.fastchat.sdk.model.CurrentUser currentUser -> j
+    com.fastchat.sdk.service.MessageService$MyServiceConnection myServiceConnection -> b
+    android.os.Handler timerHandler -> n
+    boolean isLogining -> g
+    android.net.ConnectivityManager$NetworkCallback networkCallback -> h
+    android.net.ConnectivityManager connectivityManager -> i
+    android.os.Handler xmppHandler -> l
+    java.lang.String loginUsername -> e
+    java.lang.Runnable runnable -> o
+    org.jivesoftware.smack.ConnectionListener connectionListener -> p
+    org.jivesoftware.smack.tcp.XMPPTCPConnection access$000() -> a
+    org.jivesoftware.smack.tcp.XMPPTCPConnection access$002(org.jivesoftware.smack.tcp.XMPPTCPConnection) -> a
+    org.jivesoftware.smack.StanzaListener access$100(com.fastchat.sdk.service.MessageService) -> a
+    boolean access$1002(com.fastchat.sdk.service.MessageService,boolean) -> a
+    void access$1500(com.fastchat.sdk.service.MessageService,boolean,java.lang.String,long) -> a
+    void access$1700(com.fastchat.sdk.service.MessageService,java.lang.String,java.lang.String,java.lang.String,int) -> a
+    void access$1800(com.fastchat.sdk.service.MessageService,boolean,int) -> a
+    java.lang.String access$1902(com.fastchat.sdk.service.MessageService,java.lang.String) -> a
+    com.fastchat.sdk.model.CurrentUser access$602(com.fastchat.sdk.service.MessageService,com.fastchat.sdk.model.CurrentUser) -> a
+    void access$700(com.fastchat.sdk.service.MessageService,java.lang.String,java.lang.String,boolean) -> a
+    void login(java.lang.String,java.lang.String,boolean) -> a
+    void pingTest(com.fastchat.sdk.service.MessageService$CallBack) -> a
+    void sendConnectionConState(boolean,int) -> a
+    void sendLoginResult(boolean) -> a
+    void sendMessage(java.lang.String,java.lang.String,java.lang.String,int) -> a
+    void sendMessageResult(boolean,java.lang.String,long) -> a
+    boolean access$1000(com.fastchat.sdk.service.MessageService) -> b
+    void access$1100(com.fastchat.sdk.service.MessageService,boolean) -> b
+    java.lang.String access$2002(com.fastchat.sdk.service.MessageService,java.lang.String) -> b
+    void addListener() -> b
+    void sendLogoutResult(boolean) -> b
+    void sendStanza(java.lang.String,java.lang.String,java.lang.String,int) -> b
+    android.os.Handler access$1200(com.fastchat.sdk.service.MessageService) -> c
+    void access$1600(com.fastchat.sdk.service.MessageService,boolean) -> c
+    void cancelNotification() -> c
+    void access$1300(com.fastchat.sdk.service.MessageService) -> d
+    boolean access$802(com.fastchat.sdk.service.MessageService,boolean) -> d
+    void checkConnection() -> d
+    long access$1400(com.fastchat.sdk.service.MessageService) -> e
+    void connectInForeground() -> e
+    java.lang.String access$1900(com.fastchat.sdk.service.MessageService) -> f
+    void disconnectInBackground() -> f
+    org.jivesoftware.smack.ConnectionListener access$200(com.fastchat.sdk.service.MessageService) -> g
+    org.jivesoftware.smack.tcp.XMPPTCPConnectionConfiguration getConfig() -> g
+    java.lang.String access$2000(com.fastchat.sdk.service.MessageService) -> h
+    void logoutXmpp() -> h
+    androidx.localbroadcastmanager.content.LocalBroadcastManager access$2100(com.fastchat.sdk.service.MessageService) -> i
+    void stopConnection() -> i
+    void access$300(com.fastchat.sdk.service.MessageService) -> j
+    java.lang.Runnable access$400(com.fastchat.sdk.service.MessageService) -> k
+    android.os.Handler access$500(com.fastchat.sdk.service.MessageService) -> l
+    com.fastchat.sdk.model.CurrentUser access$600(com.fastchat.sdk.service.MessageService) -> m
+com.fastchat.sdk.service.MessageService$1 -> com.fastchat.sdk.service.MessageService$e:
+    com.fastchat.sdk.service.MessageService this$0 -> a
+com.fastchat.sdk.service.MessageService$10 -> com.fastchat.sdk.service.MessageService$a:
+    java.lang.String val$chatTo -> a
+    int val$chatType -> d
+    java.lang.String val$msgId -> c
+    java.lang.String val$body -> b
+    com.fastchat.sdk.service.MessageService this$0 -> e
+com.fastchat.sdk.service.MessageService$11 -> com.fastchat.sdk.service.MessageService$b:
+    com.fastchat.sdk.service.MessageService this$0 -> a
+com.fastchat.sdk.service.MessageService$12 -> com.fastchat.sdk.service.MessageService$c:
+    com.fastchat.sdk.service.MessageService this$0 -> a
+com.fastchat.sdk.service.MessageService$13 -> com.fastchat.sdk.service.MessageService$d:
+com.fastchat.sdk.service.MessageService$2 -> com.fastchat.sdk.service.MessageService$f:
+    com.fastchat.sdk.service.MessageService this$0 -> a
+com.fastchat.sdk.service.MessageService$3 -> com.fastchat.sdk.service.MessageService$g:
+    com.fastchat.sdk.service.MessageService this$0 -> d
+    org.jivesoftware.smack.tcp.XMPPTCPConnection val$xmpptcpConnection -> a
+    java.lang.String val$password -> c
+    java.lang.String val$username -> b
+com.fastchat.sdk.service.MessageService$4 -> com.fastchat.sdk.service.MessageService$h:
+    com.fastchat.sdk.service.MessageService this$0 -> a
+    void onFailure(java.lang.String) -> a
+com.fastchat.sdk.service.MessageService$5 -> com.fastchat.sdk.service.MessageService$i:
+    com.fastchat.sdk.service.MessageService$CallBack val$callBack -> a
+com.fastchat.sdk.service.MessageService$6 -> com.fastchat.sdk.service.MessageService$j:
+    com.fastchat.sdk.service.MessageService this$0 -> a
+com.fastchat.sdk.service.MessageService$7 -> com.fastchat.sdk.service.MessageService$k:
+    com.fastchat.sdk.service.MessageService this$0 -> a
+com.fastchat.sdk.service.MessageService$8 -> com.fastchat.sdk.service.MessageService$l:
+com.fastchat.sdk.service.MessageService$9 -> com.fastchat.sdk.service.MessageService$m:
+    com.fastchat.sdk.service.MessageService this$0 -> a
+com.fastchat.sdk.service.MessageService$CallBack -> com.fastchat.sdk.service.MessageService$n:
+    void onFailure(java.lang.String) -> a
+com.fastchat.sdk.service.MessageService$MyBinder -> com.fastchat.sdk.service.MessageService$o:
+com.fastchat.sdk.service.MessageService$MyServiceConnection -> com.fastchat.sdk.service.MessageService$p:
+com.fastchat.sdk.service.MessageService$NetworkCallbackImpl -> com.fastchat.sdk.service.MessageService$q:
+    com.fastchat.sdk.service.MessageService this$0 -> a
+com.fastchat.sdk.utils.JsonUtil -> com.fastchat.sdk.utils.a:
+    java.util.Map Obj2Map(java.lang.Object) -> a
+    java.util.Map json2Map(java.lang.String) -> a
+    java.lang.String toJson(java.lang.Object) -> b
+com.fastchat.sdk.utils.Logger -> com.fastchat.sdk.utils.b:
+    boolean isDebug -> a
+    void d(java.lang.String,java.lang.String) -> a
+    void e(java.lang.String,java.lang.String) -> b
+com.fastchat.sdk.utils.MessageUtils$1 -> com.fastchat.sdk.utils.MessageUtils$a:
+    int compare(android.util.Pair,android.util.Pair) -> a
+com.fastchat.sdk.utils.NetWorkUtil -> com.fastchat.sdk.utils.c:
+    boolean isNetworkConnected(android.content.Context) -> a
+com.fastchat.sdk.utils.SystemUtils -> com.fastchat.sdk.utils.d:
+    java.lang.String getCurrentNetworkName(android.content.Context) -> a
+    int getCurrentNetworkType(android.content.Context) -> b
+    boolean isOnWifi(android.content.Context) -> c
+com.fastchat.sdk.utils.UploadFileUtils$1 -> com.fastchat.sdk.utils.UploadFileUtils$b:
+    com.fastchat.sdk.utils.UploadFileUtils this$0 -> a
+com.fastchat.sdk.utils.UploadFileUtils$10 -> com.fastchat.sdk.utils.UploadFileUtils$a:
+    void onFailure(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.ClientException,com.alibaba.sdk.android.oss.ServiceException) -> a
+    void onSuccess(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.model.PutObjectResult) -> a
+com.fastchat.sdk.utils.UploadFileUtils$2 -> com.fastchat.sdk.utils.UploadFileUtils$c:
+    com.fastchat.sdk.utils.UploadFileUtils$UploadCallBack val$uploadCallBack -> a
+    void onProgress(com.alibaba.sdk.android.oss.model.PutObjectRequest,long,long) -> a
+com.fastchat.sdk.utils.UploadFileUtils$3 -> com.fastchat.sdk.utils.UploadFileUtils$d:
+    com.fastchat.sdk.utils.UploadFileUtils$UploadCallBack val$uploadCallBack -> a
+    void onFailure(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.ClientException,com.alibaba.sdk.android.oss.ServiceException) -> a
+    void onSuccess(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.model.PutObjectResult) -> a
+com.fastchat.sdk.utils.UploadFileUtils$4 -> com.fastchat.sdk.utils.UploadFileUtils$e:
+    com.fastchat.sdk.utils.UploadFileUtils this$0 -> a
+    void onProgress(com.alibaba.sdk.android.oss.model.PutObjectRequest,long,long) -> a
+com.fastchat.sdk.utils.UploadFileUtils$5 -> com.fastchat.sdk.utils.UploadFileUtils$f:
+    com.fastchat.sdk.utils.UploadFileUtils this$0 -> a
+    void onFailure(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.ClientException,com.alibaba.sdk.android.oss.ServiceException) -> a
+    void onSuccess(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.model.PutObjectResult) -> a
+com.fastchat.sdk.utils.UploadFileUtils$6 -> com.fastchat.sdk.utils.UploadFileUtils$g:
+    void onProgress(com.alibaba.sdk.android.oss.model.PutObjectRequest,long,long) -> a
+com.fastchat.sdk.utils.UploadFileUtils$7 -> com.fastchat.sdk.utils.UploadFileUtils$h:
+    void onFailure(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.ClientException,com.alibaba.sdk.android.oss.ServiceException) -> a
+    void onSuccess(com.alibaba.sdk.android.oss.model.PutObjectRequest,com.alibaba.sdk.android.oss.model.PutObjectResult) -> a
+com.fastchat.sdk.utils.UploadFileUtils$9 -> com.fastchat.sdk.utils.UploadFileUtils$i:
+    void onProgress(com.alibaba.sdk.android.oss.model.PutObjectRequest,long,long) -> a
+com.fastchat.sdk.utils.UploadFileUtils$UploadCallBack -> com.fastchat.sdk.utils.UploadFileUtils$j:
+com.fastchat.sdk.utils.http.HttpSender -> f.a:
+    java.lang.String TAG_API -> f
+    java.util.Map paramsMap -> d
+    com.fastchat.sdk.utils.http.OnHttpResListener mListener -> a
+    java.lang.String requestName -> c
+    java.util.Map headerMap -> e
+    java.lang.String requestUrl -> b
+    java.lang.String access$000(com.fastchat.sdk.utils.http.HttpSender) -> a
+    void requestPost() -> a
+    com.fastchat.sdk.utils.http.OnHttpResListener access$100(com.fastchat.sdk.utils.http.HttpSender) -> b
+    void sendPost() -> b
+    void setRequestData_POST() -> c
+com.fastchat.sdk.utils.http.HttpSender$StringDialogCallback -> f.a$a:
+    com.fastchat.sdk.utils.http.HttpSender this$0 -> a
+    void onResponse(java.lang.String,int) -> a
+com.fastchat.sdk.utils.http.MyOnHttpResListener -> f.b:
+com.fastchat.sdk.utils.http.OkhttpInitUtil -> f.c:
+    com.fastchat.sdk.utils.http.OkhttpInitUtil mOkhttpUtilInstance -> a
+    void init(android.content.Context) -> a
+    void initOkHttpSender() -> a
+com.fastchat.sdk.utils.http.OnHttpResListener -> f.d:

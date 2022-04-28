@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomTitleBar">
+        <attr name="titleBarTitle" format="string" />
+        <attr name="titleSize" format="dimension" />
+        <attr name="titleColor" format="color" />
+        <attr name="titleBarLeftShowFlag">
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+        </attr>
+        <attr name="titleBarLeftShowType">
+            <enum name="IMG" value="0"/>
+            <enum name="TEXT" value="1"/>
+        </attr>
+        <attr name="titleBarLeftTxt" format="string" />
+        <attr name="titleBarLeftTxtSize" format="dimension" />
+        <attr name="titleBarLeftTxtColor" format="color" />
+        <attr name="titleBarLeftImg" format="reference" />
+        <attr name="titleBarRightShowFlag">
+            <enum name="VISIBLE" value="0"/>
+            <enum name="INVISIBLE" value="4"/>
+        </attr>
+        <attr name="titleBarRightShowType">
+            <enum name="IMG" value="0"/>
+            <enum name="TEXT" value="1"/>
+        </attr>
+        <attr name="titleBarRightTxt" format="string" />
+        <attr name="titleBarRightTxtSize" format="dimension" />
+        <attr name="titleBarRightTxtColor" format="color" />
+        <attr name="titleBarRightImg" format="reference" />
+        <attr name="titleBarRightTextBackground" format="reference" />
+        <attr name="titleBarBackgroundShowType">
+            <enum name="COLOR" value="2"/>
+            <enum name="RES" value="3"/>
+        </attr>
+        <attr name="titleBarBackgroundColor" format="color" />
+        <attr name="titleBarBackgroundResource" format="reference" />
+        <attr name="titleBarShowBottomLine" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CarMoreTitleBar">
+        <attr name="title" format="string" />
+    </declare-styleable>
+
+
+    <!--加载框-->
+    <declare-styleable name="ProgressWheel">
+        <attr name="matProg_progressIndeterminate" format="boolean" />
+        <attr name="matProg_barColor" format="color" />
+        <attr name="matProg_rimColor" format="color" />
+        <attr name="matProg_rimWidth" format="dimension" />
+        <attr name="matProg_spinSpeed" format="float" />
+        <attr name="matProg_barSpinCycleTime" format="integer" />
+        <attr name="matProg_circleRadius" format="dimension" />
+        <attr name="matProg_fillRadius" format="boolean" />
+        <attr name="matProg_barWidth" format="dimension" />
+        <attr name="matProg_linearProgress" format="boolean" />
+    </declare-styleable>
+
+    <!--自定义圆角图片-->
+    <declare-styleable name="YRImageView">
+        <attr name="yr_border_color" format="color" />
+        <attr name="yr_border_width" format="dimension" />
+        <attr name="yr_press_alpha" format="integer" />
+        <attr name="yr_press_color" format="color" />
+        <attr name="yr_radius" format="dimension" />
+        <attr name="yr_shape_type" format="enum">
+            <enum name="none" value="0" />
+            <enum name="round" value="1" />
+            <enum name="rectangle" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="ChatExtendMenu">
+        <attr name="numColumns" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="PswInputView">
+        <attr name="count" format="integer"/>
+        <attr name="border_color" format="color"/>
+        <attr name="dot_color" format="color"/>
+    </declare-styleable>
+
+</resources>

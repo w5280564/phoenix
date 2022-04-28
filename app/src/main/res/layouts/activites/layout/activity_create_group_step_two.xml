@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.zhengshuo.phoenix.widget.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        app:titleBarLeftImg="@mipmap/fanhui"
+        app:titleBarShowBottomLine="false"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="请完善您的群资料"
+            android:textColor="@color/text_color_444444"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="全部完善后点击提交系统审核，审核通过后完成最终创建"
+            android:textColor="#a1a1a1"
+            android:textSize="12sp"/>
+
+
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="15dp"
+            android:background="@drawable/backgrond_register_bank"
+            android:layout_marginTop="45dp"
+            android:hint="群名称  |  最多可输入10个字"
+            android:maxLength="10"
+            android:textColorHint="#a1a1a1"
+            android:textColor="@color/text_color_444444"
+            android:textSize="15sp"/>
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="确定"
+            android:layout_marginTop="65dp"
+            android:gravity="center"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

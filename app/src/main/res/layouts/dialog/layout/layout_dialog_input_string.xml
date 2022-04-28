@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_background_white_radius9_all"
+    android:padding="24dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置频率"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#444444"/>
+
+    <EditText
+        android:id="@+id/et_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="设置发送频率（毫秒）"
+        android:layout_marginTop="17dp"
+        android:textSize="16sp"
+        android:inputType="number"
+        android:maxLength="6"
+        android:background="@null"/>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:background="#EFEFEF"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="设置条数"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#444444"/>
+
+    <EditText
+        android:id="@+id/et_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="设置发送频率（毫秒）"
+        android:layout_marginTop="17dp"
+        android:textSize="16sp"
+        android:inputType="number"
+        android:maxLength="6"
+        android:background="@null"/>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:background="#EFEFEF"/>
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:background="#2391F3"
+        android:layout_marginTop="54dp"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+
+
+</LinearLayout>

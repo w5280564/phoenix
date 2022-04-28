@@ -1,0 +1,92 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdk 31
+    defaultConfig {
+        minSdk 23
+        targetSdk 31
+        ndk {
+            abiFilters 'armeabi-v7a', 'x86'
+        }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                //room的数据库概要、记录
+                arguments = ["room.schemaLocation":
+                                     "$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lint {
+        abortOnError false
+    }
+}
+ext {
+    smackVersion = '4.1.9'
+}
+dependencies {
+    implementation 'com.tencent:mmkv:1.2.12'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.12'
+    api 'com.zhy:okhttputils:2.6.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "org.igniterealtime.smack:smack-android-extensions:4.4.5"
+    implementation "org.igniterealtime.smack:smack-tcp:4.4.5"
+    implementation 'com.aliyun.dpa:oss-android-sdk:2.8.5'
+    implementation 'com.alibaba:fastjson:1.2.79'
+
+    implementation 'com.tencent.wcdb:room:1.0.8'  // 代替 room-runtime，同时也不需要再引用 wcdb-android
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1' // compiler 需要用 room 的
+    implementation 'androidx.room:room-runtime:2.4.0'
+    annotationProcessor 'androidx.room:room-compiler:2.3.0-rc01'
+}
+configurations {
+    all*.exclude group: 'xpp3', module: 'xpp3'
+}
+
+
+task makeJar(type: Copy) {
+    //删除存在的
+    delete 'build/libs/htmessage.jar'
+    //设置拷贝的文件
+    from('build/intermediates/intermediate-jars/release')
+    //打进jar包后的文件目录
+    into('build/libs/')
+    //将classes.jar放入build/libs/目录下
+    //include ,exclude参数来设置过滤
+    //（我们只关心classes.jar这个文件）
+    include('classes.jar')
+    //重命名
+    rename('classes.jar', 'qingliao_1227.jar')
+}
+//task showMeCache << {
+//    configurations.compile.each { println it }
+//}
+//
+//task makeJar(type: Copy) {
+//    //删除存在的
+//    delete 'build/libs/htmessage_dj.jar'
+//    //设置拷贝的文件
+//    from('build/intermediates/bundles/release/')
+//    //打进jar包后的文件目录
+//    into('build/libs/')
+//    //将classes.jar放入build/libs/目录下
+//    //include ,exclude参数来设置过滤
+//    //（我们只关心classes.jar这个文件）
+//    include('classes.jar')
+//    //重命名
+//    rename ('classes.jar', 'htmessage_dj.jar')
+//}
+
+
+makeJar.dependsOn(build)
+
+
+

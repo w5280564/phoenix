@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="172dp"
+    android:layout_height="156dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/drawable_toast_view_bg"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="28dp"
+    android:paddingBottom="28dp">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@mipmap/tingtong" />
+
+    <TextView
+        android:id="@+id/tv_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2dp"
+        android:gravity="center"
+        android:layout_marginTop="22dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="已切换听筒播放模式\n请贴近手机聆听"/>
+</LinearLayout>

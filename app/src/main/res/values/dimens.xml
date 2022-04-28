@@ -1,0 +1,78 @@
+<resources>
+
+    <!-- 按钮高度 -->
+    <dimen name="button_height">44dp</dimen>
+    <!-- 标题高度 -->
+    <dimen name="title_height">44dp</dimen>
+    <!-- 距离屏幕左右的距离 -->
+    <dimen name="activity_horizontal_margin">15dp</dimen>
+
+    <!-- 标题文字大小 -->
+    <dimen name="text_title_size">18sp</dimen>
+    <!-- 按钮文字大小 -->
+    <dimen name="text_button_size">16sp</dimen>
+
+    <dimen name="main_title_popup_width">112dp</dimen>
+
+    <dimen name="main_title_popup_height">173dp</dimen>
+
+    <dimen name="emoji_size">19sp</dimen>
+
+    <!-- 按钮圆角大小 -->
+    <dimen name="button_main_radius">22dp</dimen>
+
+    <!-- 聊天昵称文字大小 -->
+    <dimen name="chat_nick_text_size">13sp</dimen>
+
+    <!-- 聊天昵称文字距离头像左边距 -->
+    <dimen name="chat_nick_margin_left">12dp</dimen>
+
+
+
+    <!--photopicker-->
+    <dimen name="actionBarSize">48dp</dimen>
+
+
+    <!-- 聊天页加好区域的文字大小 -->
+    <dimen name="menu_item_size">12sp</dimen>
+
+    <!-- 会话列表名字大小 -->
+    <dimen name="conversation_item_name_size">15sp</dimen>
+
+    <!-- 会话列表内容大小 -->
+    <dimen name="conversation_item_content_size">12sp</dimen>
+
+
+    <!-- 会话列表时间大小 -->
+    <dimen name="conversation_item_time_size">12sp</dimen>
+
+    <!-- 会话列表提示文字大小 -->
+    <dimen name="conversation_item_mentioned_size">12sp</dimen>
+
+    <!-- 会话列表头像大小 -->
+    <dimen name="conversation_item_header_size">44dp</dimen>
+
+    <!-- 会话列表头像圆角大小 -->
+    <dimen name="conversation_item_header_radius_size">5dp</dimen>
+
+    <!-- 聊天页时间文字大小 -->
+    <dimen name="chat_item_time_size">12sp</dimen>
+
+    <!-- 聊天页内容文字大小 -->
+    <dimen name="chat_item_content_size">15sp</dimen>
+
+    <!-- 聊天页名称文字大小 -->
+    <dimen name="chat_item_name_size">12sp</dimen>
+
+    <!-- 聊天通知消息内容文字大小 -->
+    <dimen name="chat_item_notice_size">12sp</dimen>
+
+    <!-- 聊天页头像大小-->
+    <dimen name="chat_user_header_size">38dp</dimen>
+
+    <!-- 聊天页头像圆角大小 -->
+    <dimen name="chat_item_header_radius_size">5dp</dimen>
+
+    <!-- 通讯录页头像大小-->
+    <dimen name="contact_user_header_size">38dp</dimen>
+</resources>

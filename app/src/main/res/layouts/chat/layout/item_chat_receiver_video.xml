@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp">
+
+
+        <com.zhengshuo.phoenix.widget.RoundImageView
+            android:id="@+id/iv_header"
+            style="@style/row_receiver_iv_userHeader_style"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:borderType="rectangle"
+            app:borderRadius="@dimen/chat_item_header_radius_size"/>
+
+        <TextView
+            android:id="@+id/tv_userName"
+            style="@style/chat_text_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxEms="15"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/chat_nick_margin_left"
+            app:layout_constraintStart_toEndOf="@id/iv_header"
+            app:layout_constraintTop_toTopOf="@id/iv_header"
+            />
+
+        <RelativeLayout
+            android:id="@+id/bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:minWidth="30dp"
+            app:layout_constraintStart_toEndOf="@id/iv_header"
+            app:layout_constraintTop_toBottomOf="@id/tv_userName">
+
+            <com.zhengshuo.phoenix.widget.RoundImageView
+                android:id="@+id/iv_image_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:maxWidth="225dp"
+                android:scaleType="fitCenter"
+                app:borderType="rectangle"
+                app:borderRadius="9dp"/>
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/icon_play" />
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

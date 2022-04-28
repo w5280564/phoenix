@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <corners android:radius="5dp"/>
+    <solid android:color="@color/chat_item_notice_bag_color"/>
+    <padding android:right="10dp" android:top="6dp" android:left="10dp" android:bottom="6dp"/>
+
+</shape>

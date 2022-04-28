@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/volume_animation"
+    android:oneshot="false" >
+
+    <item
+        android:drawable="@drawable/yuyin1_receiver"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/yuyin2_receiver"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/yuyin3_receiver"
+        android:duration="300"/>
+
+</animation-list>
