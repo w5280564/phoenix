@@ -4,11 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
-
 import com.zhengshuo.phoenix.R;
+import com.zhengshuo.phoenix.common.manager.UserManager;
 import com.zhengshuo.phoenix.ui.login.LoginActivity;
-import com.fastchat.sdk.client.HTClient;
 import com.gyf.barlibrary.ImmersionBar;
+import com.zhengshuo.phoenix.util.StringUtil;
 
 /**
  * 欢迎页
@@ -44,11 +44,7 @@ public class SplashActivity extends FragmentActivity {
 	 * 根据情况跳转
 	 */
 	private void goToWhere() {
-		if (HTClient.getInstance().isLoginEd()) {
-			jumpToMainActivity();
-		}else{
-			jumpToLoginActivity();
-		}
+		jumpToMainActivity();
 		finish();
 	}
 
