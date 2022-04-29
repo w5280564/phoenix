@@ -1,4 +1,4 @@
-package com.zhengshuo.phoenix.ui;
+package com.zhengshuo.phoenix.ui.start;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 import com.zhengshuo.phoenix.R;
 import com.zhengshuo.phoenix.common.manager.UserManager;
+import com.zhengshuo.phoenix.ui.MainActivity;
 import com.zhengshuo.phoenix.ui.login.LoginActivity;
 import com.gyf.barlibrary.ImmersionBar;
 import com.zhengshuo.phoenix.util.StringUtil;
@@ -14,14 +15,13 @@ import com.zhengshuo.phoenix.util.StringUtil;
  * 欢迎页
  */
 public class SplashActivity extends FragmentActivity {
-
-
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setStatusBar();
 		goToWhere();
 	}
+
 
 	/**
 	 * 设置状态栏
@@ -32,8 +32,6 @@ public class SplashActivity extends FragmentActivity {
 				.statusBarDarkFont(true)
 				.init();
 	}
-
-
 	@Override
 	public void onBackPressed() {
 
@@ -53,7 +51,7 @@ public class SplashActivity extends FragmentActivity {
 	 * 跳转到首页或欢迎页
 	 */
 	private void jumpToMainActivity() {
-		Intent intent = new Intent(this, MainActivity.class);
+		Intent intent = new Intent(this, GuideActivity.class);
 		startActivity(intent);
 	}
 

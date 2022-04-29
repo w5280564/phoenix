@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/background_begin.xml" value="0.2485" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/activites/layout/activity_main.xml" value="0.35052083333333334" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/activites/layout/item_guidepage.xml" value="0.35052083333333334" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/activites/layout/splash_activity.xml" value="0.35052083333333334" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/chat/layout/activity_guide.xml" value="0.35052083333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
