@@ -10,29 +10,21 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.zhengshuo.phoenix.R;
-import com.zhengshuo.phoenix.base.BaseActivity;
+import com.zhengshuo.phoenix.base.BaseBindingActivity;
+import com.zhengshuo.phoenix.databinding.ActivityGuideBinding;
 
 /**
  * 引导页
  */
-public class GuideActivity extends BaseActivity {
+public class GuideActivity extends BaseBindingActivity<ActivityGuideBinding> {
     /**
      * 存放图片数组
      */
     private int mPageList[] = {R.mipmap.guide_one, R.mipmap.guide_two, R.mipmap.guide_three};
 
-
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_guide;
-    }
-
     @Override
     protected void initView() {
-        ViewPager mViewPager = findViewById(R.id.mViewPager);
-
-
-        mViewPager.setAdapter(new GuideViewPagerAdapter(mPageList));
+        getBinding().mViewPager.setAdapter(new GuideViewPagerAdapter(mPageList));
     }
 
 
