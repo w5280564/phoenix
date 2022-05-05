@@ -10,8 +10,8 @@ dependencyResolutionManagement {
             url 'https://maven.aliyun.com/repository/google'
             name 'Google'
         }
-        maven { url "https://jitpack.io" }
         jcenter() //
+        maven { url "https://jitpack.io" }
     }
 }
 rootProject.name = "Phoenix"

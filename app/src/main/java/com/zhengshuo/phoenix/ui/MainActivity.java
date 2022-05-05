@@ -3,15 +3,19 @@ package com.zhengshuo.phoenix.ui;
 import android.annotation.SuppressLint;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
+import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
@@ -27,6 +31,8 @@ import com.zhengshuo.phoenix.databinding.ActivityMainBinding;
 import com.zhengshuo.phoenix.model.AppMenuBean;
 import com.zhengshuo.phoenix.ui.homemy.fragment.HomeMy;
 import com.zhengshuo.phoenix.ui.mine.MeFragment;
+import com.zhengshuo.phoenix.util.DisplayUtil;
+import com.zhengshuo.phoenix.util.StringUtil;
 import com.zhengshuo.phoenix.util.ToastUtil;
 
 import java.util.ArrayList;
@@ -40,14 +46,13 @@ import java.util.List;
 public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
     protected List<AppMenuBean> menuList = new ArrayList<>();
     protected List<Fragment> fragments = new ArrayList<>();
+    int[] ivTabs = new int[]{R.drawable.tab_home, R.drawable.tab_home, R.mipmap.homepage_add, R.drawable.tab_home, R.drawable.tab_home};
 
     @Override
     protected void initView() {
 //        getBinding().tabFind.setBackgroundTintMode(PorterDuff.Mode.ADD);
 //        getBinding().tabGroup.setOnCheckedChangeListener(new tabClick());
-
         initMenuData();
-
     }
 
     private void initMenuData() {
@@ -68,11 +73,15 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
         fragments.add(new HomeMy());
         fragments.add(new HomeMy());
         fragments.add(new HomeMy());
-        TabLayout mTab = getBinding().mTab;
-        ViewPager viewpager = getBinding().viewpager;
-        initViewPager(mTab, viewpager, 0);
-
+        initViewPager(0);
     }
+
+    @Override
+    protected void initEvent() {
+        getBinding().mTab.addOnTabSelectedListener(new MyOnTabSelectedListener());
+    }
+
+
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -83,19 +92,19 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
         return super.onKeyDown(keyCode, event);
     }
 
-    private class tabClick implements RadioGroup.OnCheckedChangeListener {
-        @SuppressLint("NonConstantResourceId")
-        @Override
-        public void onCheckedChanged(RadioGroup group, int checkedId) {
-            switch (checkedId) {
-//                case R.id.tab_home:
-//                    ToastUtil.s("点击首页",2000);
-//                    getBinding().tabHome.setChecked(true);
-//                    break;
-
-            }
-        }
-    }
+//    private class tabClick implements RadioGroup.OnCheckedChangeListener {
+//        @SuppressLint("NonConstantResourceId")
+//        @Override
+//        public void onCheckedChanged(RadioGroup group, int checkedId) {
+//            switch (checkedId) {
+////                case R.id.tab_home:
+////                    ToastUtil.s("点击首页",2000);
+////                    getBinding().tabHome.setChecked(true);
+////                    break;
+//
+//            }
+//        }
+//    }
 
     /**
      * 添加右上角的红点
@@ -111,7 +120,10 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
     }
 
 
-    protected void initViewPager(TabLayout mTabLayout, ViewPager mViewPager, int position) {
+    protected void initViewPager(int position) {
+        TabLayout mTabLayout = getBinding().mTab;
+        ViewPager mViewPager = getBinding().viewpager;
+
         NormalFragmentAdapter mFragmentAdapter = new NormalFragmentAdapter(mActivity.getSupportFragmentManager(), fragments, menuList);
         //给ViewPager设置适配器
         mViewPager.setAdapter(mFragmentAdapter);
@@ -126,20 +138,22 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
             }
         }
         View view = mTabLayout.getTabAt(position).getCustomView();
-        if (null != view) {
-            setTextViewStyle(view, 12, R.color.text_color_444444, Typeface.DEFAULT_BOLD, View.VISIBLE);
-        }
-        mViewPager.setCurrentItem(position);
+//        if (null != view) {
+//            setTextViewStyle(view,  R.color.text_color_444444, false);
+//        }
     }
 
-    private void setTextViewStyle(View view, int size, int color, Typeface textStyle, int visibility) {
-        TextView mTextView = view.findViewById(R.id.tab_item_textview);
-        View line = view.findViewById(R.id.line);
-        mTextView.setTextSize(size);
-        mTextView.setTextColor(ContextCompat.getColor(mContext, color));
-        mTextView.setTypeface(textStyle);
-        line.setVisibility(visibility);
+    private void setTextViewStyle(View view, int color,boolean isSelect) {
+        TextView tab_Txt = view.findViewById(R.id.tab_Txt);
+        tab_Txt.setTextColor(ContextCompat.getColor(mActivity, color));
+        tab_Txt.setSelected(isSelect);
+//        TextView mTextView = view.findViewById(R.id.tab_item_textview);
+//        View line = view.findViewById(R.id.line);
+//        mTextView.setTextSize(size);
+//        mTextView.setTypeface(textStyle);
+//        line.setVisibility(visibility);
     }
+
 
 
     /**
@@ -149,11 +163,62 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
      * @return
      */
     private View getTabView(int currentPosition) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.main_tab, null);
-        TextView textView = view.findViewById(R.id.tab_item_textview);
+        View view = LayoutInflater.from(mActivity).inflate(R.layout.main_tab, null);
+//        TextView textView = view.findViewById(R.id.tab_item_textview);
 //        textView.setTextSize(normalSize);
-        textView.setText(menuList.get(currentPosition).getName());
+        TextView tab_Txt = view.findViewById(R.id.tab_Txt);
+        setTopBg(tab_Txt, ivTabs[currentPosition], R.color.white);
+        tab_Txt.setText(menuList.get(currentPosition).getName());
         return view;
     }
 
+    /**
+     * 修改按钮背景色
+     * @param button
+     * @param drawable
+     * @param color
+     */
+    public void setTint(Button button, int drawable, int color) {
+        Drawable originalDrawable = ContextCompat.getDrawable(this, drawable);
+        Drawable wrappedDrawable = DrawableCompat.wrap(originalDrawable).mutate();
+        DrawableCompat.setTint(wrappedDrawable, ContextCompat.getColor(this, color));
+        button.setBackground(wrappedDrawable);
+    }
+
+    /**
+     * 修改top图片颜色
+     * @param textView
+     * @param resourceId
+     * @param color
+     */
+    private void setTopBg(TextView textView,int resourceId,int color){
+        Drawable drawable = getResources().getDrawable(resourceId);
+        drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
+//        DrawableCompat.setTint(drawable, ContextCompat.getColor(this, color));
+        textView.setCompoundDrawables(null, drawable, null, null);
+    }
+
+    private class MyOnTabSelectedListener implements TabLayout.OnTabSelectedListener {
+        @Override
+        public void onTabSelected(TabLayout.Tab tab) {
+            //在这里可以设置选中状态下  tab字体显示样式
+            View view = tab.getCustomView();
+            if (null != view) {
+                setTextViewStyle(view,  R.color.text_color_4f59ff, true);
+            }
+        }
+
+        @Override
+        public void onTabUnselected(TabLayout.Tab tab) {
+            View view = tab.getCustomView();
+            if (null != view) {
+                setTextViewStyle(view, R.color.text_color_535353, false);
+            }
+        }
+
+        @Override
+        public void onTabReselected(TabLayout.Tab tab) {
+
+        }
+    }
 }

@@ -1,11 +1,13 @@
 package com.zhengshuo.phoenix.ui.homemy.fragment;
 
-import com.zhengshuo.phoenix.R;
-import com.zhengshuo.phoenix.base.BaseFragment;
+import android.view.View;
 
-public class HomeMy extends BaseFragment {
+import com.zhengshuo.phoenix.base.BaseBindingFragment;
+import com.zhengshuo.phoenix.databinding.HomemyBinding;
+
+public class HomeMy extends BaseBindingFragment<HomemyBinding> {
     @Override
-    protected int getLayoutId() {
-        return R.layout.homemy;
+    protected void initView(View mRootView) {
+        super.initView(mRootView);
     }
 }

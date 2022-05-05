@@ -10,8 +10,8 @@ buildscript {
             url 'https://maven.aliyun.com/repository/google'
             name 'Google'
         }
+        jcenter()
         maven { url "https://jitpack.io" }
-        jcenter() //
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.1.3'

@@ -108,32 +108,21 @@ dependencies {
     implementation project(':sdk')
 //    //RecyclerView多功能适配器
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
-
     implementation 'com.github.lzjin:SideBarView:1.0'//字母索引
-
     //树状结构RecyclerView
     implementation 'com.github.Jlanglang:TreeRecyclerView:1.3.1-androidx'
-
     //图片查看器
     implementation 'com.github.chrisbanes.photoview:library:+'
-
     //动态申请权限
     implementation 'pub.devrel:easypermissions:1.0.1'
-
     // PictureSelector 基础 (必须)
     implementation 'io.github.lucksiege:pictureselector:v3.0.9'
-
     // 图片压缩 (按需引入)
     implementation 'io.github.lucksiege:compress:v3.0.9'
-
     // 图片裁剪 (按需引入)
     implementation 'io.github.lucksiege:ucrop:v3.0.9'
-
     //点击拍照，长按摄像
     implementation 'cjt.library.wheel:camera:1.1.9'
-
-    //今日头条
-    implementation 'me.jessyan:autosize:1.2.1'
 
     //视频播放器
     implementation 'cn.jzvd:jiaozivideoplayer:7.0.5'
@@ -143,4 +132,7 @@ dependencies {
     implementation 'com.amap.api:search:7.9.0'
 
     implementation 'com.github.DylanCaiCoding.ViewBindingKTX:viewbinding-base:2.0.5' //viewbinding使用封装
+
+//    implementation 'me.jessyan:autosize:1.2.1'//今日头条适配
+    implementation 'com.github.JessYanCoding:AndroidAutoSize:v1.2.1'//今日头条适配
 }
