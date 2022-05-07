@@ -1,39 +1,24 @@
 package com.zhengshuo.phoenix.ui;
 
-import android.annotation.SuppressLint;
-import android.graphics.PorterDuff;
-import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TableLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
-import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 
-import com.google.android.material.bottomnavigation.BottomNavigationItemView;
-import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.tabs.TabLayout;
 import com.zhengshuo.phoenix.R;
-import com.zhengshuo.phoenix.base.BaseActivity;
 import com.zhengshuo.phoenix.base.BaseBindingActivity;
-import com.zhengshuo.phoenix.base.PhotoFragment;
-import com.zhengshuo.phoenix.base.baseview.NormalFragmentAdapter;
 import com.zhengshuo.phoenix.databinding.ActivityMainBinding;
 import com.zhengshuo.phoenix.model.AppMenuBean;
+import com.zhengshuo.phoenix.ui.homemy.fragment.Home;
+import com.zhengshuo.phoenix.ui.homemy.fragment.HomeMessage;
 import com.zhengshuo.phoenix.ui.homemy.fragment.HomeMy;
-import com.zhengshuo.phoenix.ui.mine.MeFragment;
-import com.zhengshuo.phoenix.util.DisplayUtil;
-import com.zhengshuo.phoenix.util.StringUtil;
-import com.zhengshuo.phoenix.util.ToastUtil;
+import com.zhengshuo.phoenix.ui.homemy.fragment.HomeSquare;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,14 +29,12 @@ import java.util.List;
  * @CreateDate: 2022/3/10 0009
  */
 public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
+    int fragmentId = R.id.act_main_fragment;
     protected List<AppMenuBean> menuList = new ArrayList<>();
-    protected List<Fragment> fragments = new ArrayList<>();
-    int[] ivTabs = new int[]{R.drawable.tab_home, R.drawable.tab_home, R.mipmap.homepage_add, R.drawable.tab_home, R.drawable.tab_home};
+    int[] ivTabs = new int[]{R.drawable.tab_home, R.drawable.tab_square, R.mipmap.homepage_add, R.drawable.tab_mes, R.drawable.tab_my};
 
     @Override
     protected void initView() {
-//        getBinding().tabFind.setBackgroundTintMode(PorterDuff.Mode.ADD);
-//        getBinding().tabGroup.setOnCheckedChangeListener(new tabClick());
         initMenuData();
     }
 
@@ -62,18 +45,18 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
         tabName.add("");
         tabName.add("消息");
         tabName.add("我的");
-
         for (int i = 0; i < tabName.size(); i++) {
             AppMenuBean bean = new AppMenuBean();
             bean.setName(tabName.get(i));
             menuList.add(bean);
         }
-        fragments.add(new HomeMy());
-        fragments.add(new HomeMy());
-        fragments.add(new HomeMy());
-        fragments.add(new HomeMy());
-        fragments.add(new HomeMy());
         initViewPager(0);
+
+        addFragment(new Home());
+        addFragment(new HomeSquare());
+        addFragment(new HomeMessage());
+        addFragment(new HomeMy());
+        showFragment(0, fragmentId);
     }
 
     @Override
@@ -81,7 +64,172 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
         getBinding().mTab.addOnTabSelectedListener(new MyOnTabSelectedListener());
     }
 
+    protected void initViewPager(int position) {
+        TabLayout mTabLayout = getBinding().mTab;
+        mTabLayout.setBackgroundColor(ContextCompat.getColor(mActivity, R.color.homeTab_color_80));
+        int size = menuList.size();
+        for (int i = 0; i < size; i++) {
+            TabLayout.Tab tab = mTabLayout.newTab();
+            if (tab != null) {
+                String name = menuList.get(i).getName();
+                tab.setCustomView(getTabView(i, name));
+//                tab.setText(name);
+                mTabLayout.addTab(tab);
+            }
+        }
+    }
 
+    /**
+     * 自定义Tab的View 初始化控件 颜色
+     * @param currentPosition
+     * @return
+     */
+    private View getTabView(int currentPosition, String tabName) {
+        View view = LayoutInflater.from(mActivity).inflate(R.layout.main_tab, null);
+        TextView tab_Txt = view.findViewById(R.id.tab_Txt);
+        if (TextUtils.equals(tabName, "")) {
+            tab_Txt.setBackgroundResource(R.mipmap.homepage_add);
+        } else if (TextUtils.equals(tabName, "首页")) {
+            setTopBg(tab_Txt, ivTabs[currentPosition]);
+        } else {
+            setTopBg(tab_Txt, ivTabs[currentPosition], R.color.white);
+        }
+        tab_Txt.setText(menuList.get(currentPosition).getName());
+        return view;
+    }
+
+    /**
+     * 选中的颜色
+     * @param tab
+     * @param color
+     * @param isSelect
+     */
+    private void selectStyle(TabLayout.Tab tab, int color, boolean isSelect) {
+        View view = tab.getCustomView();
+        TextView tab_Txt = view.findViewById(R.id.tab_Txt);
+        int position = tab.getPosition();
+        String tabName = menuList.get(tab.getPosition()).getName();
+        if (TextUtils.equals(tabName, "")) {//空字符点击的是加号
+        } else if (TextUtils.equals(tabName, "首页")) {
+            getBinding().mTab.setBackgroundColor(ContextCompat.getColor(mActivity, R.color.homeTab_color_80));
+            changeTabView(R.color.white);
+            setTopBg(tab_Txt, ivTabs[position]);
+        } else {
+            getBinding().mTab.setBackgroundColor(ContextCompat.getColor(mActivity, R.color.white));
+            changeTabView(R.color.text_color_535353);
+            setTopBg(tab_Txt, ivTabs[position]);
+        }
+        tab_Txt.setSelected(isSelect);
+        tab_Txt.setTextColor(ContextCompat.getColor(mActivity, color));
+    }
+
+    /**
+     * 未点击的tab
+     * @param tab
+     * @param color
+     */
+    private void unSelectStyle(TabLayout.Tab tab, int color) {
+        View view = tab.getCustomView();
+        TextView tab_Txt = view.findViewById(R.id.tab_Txt);
+        tab_Txt.setSelected(true);
+        int position = tab.getPosition();
+        setTopBg(tab_Txt, ivTabs[position]);
+        tab_Txt.setTextColor(ContextCompat.getColor(mActivity, color));
+    }
+
+    /**
+     * tab已初始化切换 修改默认字体颜色
+     */
+    private void changeTabView(int color) {
+        TabLayout mTab = getBinding().mTab;
+        for (int i = 0; i < mTab.getTabCount(); i++) {
+            TabLayout.Tab tab = mTab.getTabAt(i);
+            if (tab != null) {
+                String name = menuList.get(i).getName();
+                tab.setCustomView(getUnTabView(tab, i, name, color));
+            }
+        }
+    }
+
+    private View getUnTabView(TabLayout.Tab tab, int currentPosition, String tabName, int color) {
+        View view = tab.getCustomView();
+        TextView tab_Txt = view.findViewById(R.id.tab_Txt);
+        tab_Txt.setSelected(false);
+        tab_Txt.setTextColor(ContextCompat.getColor(mActivity, color));
+        if (!TextUtils.equals(tabName, "")) {
+            setTopBg(tab_Txt, ivTabs[currentPosition], color);
+        }
+        return view;
+    }
+
+    /**
+     * 修改top图片颜色
+     * @param textView
+     * @param resourceId
+     * @param color
+     */
+    private void setTopBg(TextView textView, int resourceId, int color) {
+        Drawable drawable = getResources().getDrawable(resourceId);
+        drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
+        DrawableCompat.setTint(drawable, ContextCompat.getColor(this, color));
+        textView.setCompoundDrawables(null, drawable, null, null);
+    }
+
+    /**
+     * 选中颜色
+     * @param textView
+     * @param resourceId
+     */
+    private void setTopBg(TextView textView, int resourceId) {
+        Drawable drawable = getResources().getDrawable(resourceId);
+        drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
+        textView.setCompoundDrawables(null, drawable, null, null);
+    }
+    private class MyOnTabSelectedListener implements TabLayout.OnTabSelectedListener {
+        @Override
+        public void onTabSelected(TabLayout.Tab tab) {
+            //在这里可以设置选中状态下  tab字体显示样式
+            View view = tab.getCustomView();
+            if (null != view) {
+                selectStyle(tab, R.color.text_color_4f59ff, true);
+                changeFragment(tab);
+            }
+        }
+        @Override
+        public void onTabUnselected(TabLayout.Tab tab) {
+            View view = tab.getCustomView();
+            if (null != view) {
+                int selectedTabPosition = getBinding().mTab.getSelectedTabPosition();
+                String name = menuList.get(selectedTabPosition).getName();
+                if (TextUtils.equals(name, "")) {
+                    unSelectStyle(tab, R.color.text_color_4f59ff);
+                }
+            }
+        }
+        @Override
+        public void onTabReselected(TabLayout.Tab tab) {
+            View view = tab.getCustomView();
+        }
+    }
+
+    /**
+     * 点击切换页面
+     * @param tab
+     */
+    private void changeFragment(TabLayout.Tab tab){
+        int position = tab.getPosition();
+        String name = menuList.get(position).getName();
+        if (TextUtils.equals(name,"首页")){
+            position = 0;
+        }else if (TextUtils.equals(name,"广场")){
+            position = 1;
+        }else if (TextUtils.equals(name,"消息")){
+            position = 2;
+        }else if (TextUtils.equals(name,"我的")){
+            position = 3;
+        }
+        showFragment(position, fragmentId);
+    }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -92,133 +240,4 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
         return super.onKeyDown(keyCode, event);
     }
 
-//    private class tabClick implements RadioGroup.OnCheckedChangeListener {
-//        @SuppressLint("NonConstantResourceId")
-//        @Override
-//        public void onCheckedChanged(RadioGroup group, int checkedId) {
-//            switch (checkedId) {
-////                case R.id.tab_home:
-////                    ToastUtil.s("点击首页",2000);
-////                    getBinding().tabHome.setChecked(true);
-////                    break;
-//
-//            }
-//        }
-//    }
-
-    /**
-     * 添加右上角的红点
-     */
-    private void addTabBadge() {
-//        BottomNavigationMenuView menuView = (BottomNavigationMenuView) mBottomNavigationView.getChildAt(0);
-//        BottomNavigationItemView itemTab = (BottomNavigationItemView) menuView.getChildAt(3);
-//        RadioGroup tabGroup = getBinding().tabGroup;
-//        RadioButton tabMes = getBinding().tabMes;
-//        View badge = LayoutInflater.from(mContext).inflate(R.layout.layout_home_badge, tabGroup, false);
-//        tv_unread_msg_number = badge.findViewById(R.id.tv_unread_msg_number);
-//        tabMes.addView(badge);
-    }
-
-
-    protected void initViewPager(int position) {
-        TabLayout mTabLayout = getBinding().mTab;
-        ViewPager mViewPager = getBinding().viewpager;
-
-        NormalFragmentAdapter mFragmentAdapter = new NormalFragmentAdapter(mActivity.getSupportFragmentManager(), fragments, menuList);
-        //给ViewPager设置适配器
-        mViewPager.setAdapter(mFragmentAdapter);
-        mViewPager.setOffscreenPageLimit(menuList.size());
-        //将TabLayout和ViewPager关联起来。
-        mTabLayout.setupWithViewPager(mViewPager);
-        mViewPager.setCurrentItem(position);
-        for (int i = 0; i < mTabLayout.getTabCount(); i++) {
-            TabLayout.Tab tab = mTabLayout.getTabAt(i);
-            if (tab != null) {
-                tab.setCustomView(getTabView(i));
-            }
-        }
-        View view = mTabLayout.getTabAt(position).getCustomView();
-//        if (null != view) {
-//            setTextViewStyle(view,  R.color.text_color_444444, false);
-//        }
-    }
-
-    private void setTextViewStyle(View view, int color,boolean isSelect) {
-        TextView tab_Txt = view.findViewById(R.id.tab_Txt);
-        tab_Txt.setTextColor(ContextCompat.getColor(mActivity, color));
-        tab_Txt.setSelected(isSelect);
-//        TextView mTextView = view.findViewById(R.id.tab_item_textview);
-//        View line = view.findViewById(R.id.line);
-//        mTextView.setTextSize(size);
-//        mTextView.setTypeface(textStyle);
-//        line.setVisibility(visibility);
-    }
-
-
-
-    /**
-     * 自定义Tab的View
-     *
-     * @param currentPosition
-     * @return
-     */
-    private View getTabView(int currentPosition) {
-        View view = LayoutInflater.from(mActivity).inflate(R.layout.main_tab, null);
-//        TextView textView = view.findViewById(R.id.tab_item_textview);
-//        textView.setTextSize(normalSize);
-        TextView tab_Txt = view.findViewById(R.id.tab_Txt);
-        setTopBg(tab_Txt, ivTabs[currentPosition], R.color.white);
-        tab_Txt.setText(menuList.get(currentPosition).getName());
-        return view;
-    }
-
-    /**
-     * 修改按钮背景色
-     * @param button
-     * @param drawable
-     * @param color
-     */
-    public void setTint(Button button, int drawable, int color) {
-        Drawable originalDrawable = ContextCompat.getDrawable(this, drawable);
-        Drawable wrappedDrawable = DrawableCompat.wrap(originalDrawable).mutate();
-        DrawableCompat.setTint(wrappedDrawable, ContextCompat.getColor(this, color));
-        button.setBackground(wrappedDrawable);
-    }
-
-    /**
-     * 修改top图片颜色
-     * @param textView
-     * @param resourceId
-     * @param color
-     */
-    private void setTopBg(TextView textView,int resourceId,int color){
-        Drawable drawable = getResources().getDrawable(resourceId);
-        drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
-//        DrawableCompat.setTint(drawable, ContextCompat.getColor(this, color));
-        textView.setCompoundDrawables(null, drawable, null, null);
-    }
-
-    private class MyOnTabSelectedListener implements TabLayout.OnTabSelectedListener {
-        @Override
-        public void onTabSelected(TabLayout.Tab tab) {
-            //在这里可以设置选中状态下  tab字体显示样式
-            View view = tab.getCustomView();
-            if (null != view) {
-                setTextViewStyle(view,  R.color.text_color_4f59ff, true);
-            }
-        }
-
-        @Override
-        public void onTabUnselected(TabLayout.Tab tab) {
-            View view = tab.getCustomView();
-            if (null != view) {
-                setTextViewStyle(view, R.color.text_color_535353, false);
-            }
-        }
-
-        @Override
-        public void onTabReselected(TabLayout.Tab tab) {
-
-        }
-    }
 }

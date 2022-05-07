@@ -103,5 +103,7 @@
     <color name="text_color_4f59ff">#4F59FF</color>
     <color name="line_color">#DCDCDC</color>
 
+    <color name="homeTab_color_80">#80000000</color>
+
 
 </resources>

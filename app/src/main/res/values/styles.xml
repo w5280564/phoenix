@@ -79,7 +79,6 @@
     </style>
 
 
-
     <!-- 橙色Button样式 -->
     <style name="ButtonStyle">
         <item name="android:textSize">@dimen/text_button_size</item>
@@ -98,10 +97,6 @@
         <item name="android:layout_marginBottom">15dp</item>
         <item name="android:layout_gravity">center_horizontal</item>
     </style>
-
-
-
-
 
 
     <style name="chat_text_name_style">
@@ -194,5 +189,12 @@
     </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- 替换字体-->
+    <style name="MyTextAppearance">
+        <item name="android:fontFamily">@font/myfont</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
 
 </resources>

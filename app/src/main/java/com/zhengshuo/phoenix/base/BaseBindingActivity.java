@@ -12,7 +12,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewbinding.ViewBinding;
 
 import com.dylanc.viewbinding.base.ViewBindingUtil;
@@ -21,6 +24,9 @@ import com.zhengshuo.phoenix.R;
 import com.zhengshuo.phoenix.ui.MainActivity;
 import com.zhengshuo.phoenix.util.ToastUtil;
 import com.zhengshuo.phoenix.widget.CustomTitleBar;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -207,6 +213,49 @@ public abstract class BaseBindingActivity<VB extends ViewBinding> extends Fragme
             }
         }
     }
+    protected List<BaseBindingFragment> mFragmentList = new ArrayList<BaseBindingFragment>();
+    private int cuurent = 0x001;
+
+    protected void addFragment(BaseBindingFragment fragment) {
+        if (mFragmentList == null) {
+            mFragmentList = new ArrayList<BaseBindingFragment>();
+        }
+        mFragmentList.add(fragment);
+    }
+
+
+    protected void showFragment(int index, int fragmentId) {
+        if (cuurent != 0x001 && getCurrentFrl() == mFragmentList.get(index)) {
+            return;
+        }
+        FragmentManager manage = getSupportFragmentManager();
+        FragmentTransaction transaction = manage.beginTransaction();
+        BaseBindingFragment frl = mFragmentList.get(index);
+        if (frl.isAdded()) {
+            frl.onResume();
+        } else {
+            transaction.add(fragmentId, frl);
+        }
+
+        for (int i = 0; i < mFragmentList.size(); i++) {
+            Fragment fragment = mFragmentList.get(i);
+            FragmentTransaction ft = this.getSupportFragmentManager().beginTransaction();
+            if (index == i) {
+                ft.show(fragment);
+            } else {
+                ft.hide(fragment);
+            }
+            ft.commitAllowingStateLoss();
+        }
+        transaction.commitAllowingStateLoss();
+        cuurent = index;
+    }
+
+    protected BaseBindingFragment getCurrentFrl() {
+
+        return mFragmentList.get(cuurent);
+    }
+
 
 
 }
