@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    tools:ignore="MissingConstraints">
+    
+    
+    <ImageView
+        android:id="@+id/remove_Img"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@mipmap/chacha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="16dp"/>
+
+    <ImageView
+        android:id="@+id/head_Img"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="林允儿的迷妹 "
+        android:textColor="@color/text_color_212121"
+        android:textFontWeight="700"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/head_Img"
+        app:layout_constraintTop_toTopOf="@+id/head_Img" />
+
+    <TextView
+        android:id="@+id/time_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="21-07-12"
+        android:textColor="@color/text_color_A6A6A6"
+        android:textFontWeight="500"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/name_Tv"
+        app:layout_constraintTop_toBottomOf="@+id/name_Tv" />
+
+    <TextView
+        android:id="@+id/content_Tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:maxLines="3"
+        android:text="果然人类的快乐并不相通，多少有点不知道怎么和你解释。一看你的自拍和文案，就知道你很有套路。改天有机会一定来当面请教，精益求精！"
+        android:textColor="@color/text_color_535353"
+        android:textFontWeight="500"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_Img" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/nine_grid"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/content_Tv" />
+
+    <TextView
+        android:id="@+id/tagTv"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/dynamic_lable"
+        android:paddingStart="9dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="3dp"
+        android:text="#一起旅游吧#"
+        android:textColor="#ff4f59ff"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nine_grid" />
+
+    <ImageView
+        android:id="@+id/zan_Img"
+        android:layout_width="18dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="10dp"
+        android:background="@mipmap/dainzan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tagTv" />
+
+    <TextView
+        android:id="@+id/zanCount_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1234"
+        android:textColor="@color/text_color_8A8A8A"
+        android:textFontWeight="500"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/zan_Img"
+        android:layout_marginStart="9dp"
+        app:layout_constraintStart_toEndOf="@id/zan_Img" />
+
+    <ImageView
+        android:id="@+id/comment_Img"
+        android:layout_width="16dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="10dp"
+        android:background="@mipmap/pinglun"
+        app:layout_constraintTop_toTopOf="@id/zanCount_Tv"
+        app:layout_constraintBottom_toBottomOf="@id/zanCount_Tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tagTv" />
+
+    <TextView
+        android:id="@+id/commentCount_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1234"
+        android:textColor="@color/text_color_8A8A8A"
+        android:textFontWeight="500"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/comment_Img"
+        app:layout_constraintTop_toTopOf="@id/comment_Img"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/comment_Img" />
+
+    <ImageView
+        android:id="@+id/share_Img"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="254dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="10dp"
+        android:background="@mipmap/zhaunfa"
+        app:layout_constraintTop_toTopOf="@id/zanCount_Tv"
+        app:layout_constraintBottom_toBottomOf="@id/zanCount_Tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tagTv" />
+
+    <TextView
+        android:id="@+id/shareCount_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1234"
+        android:textColor="@color/text_color_8A8A8A"
+        android:textFontWeight="500"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/share_Img"
+        app:layout_constraintTop_toTopOf="@id/share_Img"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/share_Img" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/text_color_F8F8F8"
+        app:layout_constraintTop_toBottomOf="@id/zan_Img"
+        android:layout_marginTop="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

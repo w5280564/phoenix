@@ -23,7 +23,7 @@ import java.security.MessageDigest;
  * ================================================
  *
  * @Description: 设置图片部分圆角
- * @Author: Zhangliangliang
+ * @Author:
  * @CreateDate: 2021/8/4 14:04
  * <p>
  * ================================================
@@ -144,7 +144,6 @@ public class RoundedCornersTransform implements Transformation<Bitmap> {
         if (!isRightBottom) {
             canvas.drawRect(canvas.getWidth() - radius, canvas.getHeight() - radius, canvas.getWidth(), canvas.getHeight(), paint);
         }
-
         return BitmapResource.obtain(outBitmap, this.mBitmapPool);
     }
 

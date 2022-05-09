@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginBottom="5dp"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/videoBg_Img"
+        android:layout_width="111dp"
+        android:layout_height="140dp"
+        android:scaleType="centerCrop"
+        android:background="@mipmap/mycard_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/zan_Img"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:background="@mipmap/dainzan"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/videoBg_Img"
+        app:layout_constraintStart_toStartOf="@id/videoBg_Img" />
+
+    <TextView
+        android:id="@+id/zanCount_Tv"
+        android:layout_width="26dp"
+        android:layout_height="15dp"
+        android:text="1234"
+        app:layout_constraintStart_toEndOf="@id/zan_Img"
+        app:layout_constraintTop_toTopOf="@id/zan_Img"
+        app:layout_constraintBottom_toBottomOf="@id/zan_Img"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/suoShow_Img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/suo"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="@id/videoBg_Img"
+        app:layout_constraintStart_toStartOf="@id/videoBg_Img"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

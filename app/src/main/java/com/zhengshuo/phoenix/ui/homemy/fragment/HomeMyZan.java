@@ -2,18 +2,18 @@ package com.zhengshuo.phoenix.ui.homemy.fragment;
 
 import android.view.View;
 
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.viewbinding.ViewBinding;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.zhengshuo.phoenix.base.BaseRecyclerBindingSplitFragment;
 import com.zhengshuo.phoenix.databinding.HomemydynamicBinding;
-import com.zhengshuo.phoenix.databinding.HomemyvideoBinding;
+import com.zhengshuo.phoenix.databinding.HomemyzanBinding;
 import com.zhengshuo.phoenix.model.MyVideoBean;
-import com.zhengshuo.phoenix.ui.homemy.adapter.MyVideo_Adapter;
+import com.zhengshuo.phoenix.ui.homemy.adapter.MyDynamic_Adapter;
+import com.zhengshuo.phoenix.ui.homemy.adapter.MyZan_Adapter;
 
 import java.util.ArrayList;
 
-public class HomeMyVideo extends BaseRecyclerBindingSplitFragment<HomemyvideoBinding> {
+public class HomeMyZan extends BaseRecyclerBindingSplitFragment<HomemyzanBinding> {
 
     @Override
     protected void initView(View mRootView) {
@@ -21,11 +21,6 @@ public class HomeMyVideo extends BaseRecyclerBindingSplitFragment<HomemyvideoBin
         mRecyclerView = getBinding().cardRecycler;
         initRecyclerView();
         initSwipeRefreshLayoutAndAdapter("暂无数据", 0, false);
-    }
-
-    @Override
-    protected void initBinding(ViewBinding binding) {
-
     }
 
     @Override
@@ -40,11 +35,11 @@ public class HomeMyVideo extends BaseRecyclerBindingSplitFragment<HomemyvideoBin
 
 
     public void initRecyclerView() {
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(requireActivity(), 3);
-        mRecyclerView.setLayoutManager(gridLayoutManager);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(mActivity);
+        mRecyclerView.setLayoutManager(layoutManager);
         //如果可以确定每个item的高度是固定的，设置这个选项可以提高性能
         mRecyclerView.setHasFixedSize(true);
-        mAdapter = new MyVideo_Adapter();
+        mAdapter = new MyZan_Adapter();
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.setOnItemClickListener((adapter, view, position) -> {
 

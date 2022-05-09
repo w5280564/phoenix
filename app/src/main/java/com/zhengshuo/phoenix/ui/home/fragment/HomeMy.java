@@ -1,35 +1,41 @@
 package com.zhengshuo.phoenix.ui.home.fragment;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
+import android.widget.ImageView;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.Toolbar;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.tabs.TabLayout;
 import com.gyf.barlibrary.ImmersionBar;
 import com.zhengshuo.phoenix.R;
 import com.zhengshuo.phoenix.base.BaseTabLayoutBindingFragment;
-import com.zhengshuo.phoenix.base.baseview.glide.GlideUtils;
 import com.zhengshuo.phoenix.base.behavior.AppBarLayoutOverScrollViewBehavior;
 import com.zhengshuo.phoenix.databinding.HomemyBinding;
 import com.zhengshuo.phoenix.model.AppMenuBean;
+import com.zhengshuo.phoenix.ui.MainActivity;
+import com.zhengshuo.phoenix.ui.homemy.fragment.HomeMyDynamic;
 import com.zhengshuo.phoenix.ui.homemy.fragment.HomeMyVideo;
+import com.zhengshuo.phoenix.ui.homemy.fragment.HomeMyZan;
+import com.zhengshuo.phoenix.util.DisplayUtil;
 
 import java.util.ArrayList;
+
+import jp.wasabeef.glide.transformations.ColorFilterTransformation;
 
 public class HomeMy extends BaseTabLayoutBindingFragment<HomemyBinding> {
     private Toolbar mToolbar;
@@ -58,29 +64,55 @@ public class HomeMy extends BaseTabLayoutBindingFragment<HomemyBinding> {
     @Override
     protected void initView(View mRootView) {
         super.initView(mRootView);
-
         mTabLayout = getBinding().cardTab;
         mViewPager = getBinding().cardViewPager;
         mToolbar = getBinding().mToolbar;
-//        LinearLayout.LayoutParams itemParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-//        itemParams.setMargins(0, -30, 0, 0);
-//        getBinding().botLin.setLayoutParams(itemParams);
 
         mTabLayout.setTabMode(TabLayout.MODE_FIXED);
         initMenuData();
         changeAppLayout();
-
         changeView();
     }
 
+    @Override
+    protected void initEvent() {
+        super.initEvent();
+        getBinding().settingBtn.setOnClickListener(new drawer_left_ImgClick());
+    }
+
+    private class drawer_left_ImgClick implements View.OnClickListener {
+        @Override
+        public void onClick(View v) {
+            ((MainActivity) requireActivity()).LeftDL();
+        }
+    }
+
+
+
     private void changeView() {
+//        String url = "https://static.pictureknow.com/cb13b3b7222c419aa3cdc9130f9c4fbc.png";
+        String url = "";
+        loadImage(requireActivity(), getBinding().ivImg, url, R.mipmap.mycard_bg);
+
+        getBinding().cardHeadInclude.editUserTv.setVisibility(View.VISIBLE);
         getBinding().ivImg.setTag("overScroll"); //BaseApplication中添加了ViewTarget
 //        getBinding().ivImg.setBackgroundResource(R.mipmap.mycard_bg);
 //        getBinding().ivImg.setBackgroundColor(ContextCompat.getColor(requireActivity(),R.color.text_color_4f59ff));
-        GlideUtils.loadImage(requireActivity(), getBinding().ivImg, null, R.mipmap.mycard_bg);
-        getBinding().cardHeadInclude.tvName.setTextColor(ContextCompat.getColor(requireActivity(), R.color.black));
-        getBinding().cardHeadInclude.tvName.setText("呵呵哈哈哈");
+//
+//        getBinding().cardHeadInclude.tvName.setTextColor(ContextCompat.getColor(requireActivity(), R.color.black));
+//        getBinding().cardHeadInclude.tvName.setText("呵呵哈哈哈");
     }
+
+    public static void loadImage(Context context, ImageView iv, String url, @DrawableRes int errorImg) {
+        ColorFilterTransformation colorFilterTransformation = new ColorFilterTransformation(ContextCompat.getColor(context, R.color.color_33));
+        if (TextUtils.isEmpty(url)) {
+//            Glide.with(context).load(R.mipmap.mycard_bg).transform(colorFilterTransformation).into(iv);
+        } else {
+            Glide.with(context).load(url).transform(colorFilterTransformation).error(errorImg).placeholder(errorImg).into(iv);
+        }
+
+    }
+
 
     /**
      * 滑动显示 /下拉完成刷新
@@ -121,36 +153,37 @@ public class HomeMy extends BaseTabLayoutBindingFragment<HomemyBinding> {
         mToolbar.setAlpha(1);//一直需要展示的状态
         switch (state) {
             case 1://完全展开 显示白色
-//                mToolbar.setBackgroundColor(ContextCompat.getColor(mActivity, R.color.transparent));
                 ImmersionBar.with(requireActivity()).titleBar(mToolbar).statusBarDarkFont(false).init();//状态栏浅色字体
-//                setTint(share_Btn, R.mipmap.person_zhaunfa, R.color.white);
-//                setTint(setting_Btn, R.mipmap.card_settings, R.color.white);
+                setTint(getBinding().settingBtn, R.mipmap.gengduo, R.color.white);
 //                mViewPager.setNoScroll(false);
-
+                getBinding().ivImg.setVisibility(View.VISIBLE);
                 getBinding().toolbarHeadImg.setVisibility(View.GONE);
                 getBinding().toolbarNameTv.setVisibility(View.GONE);
                 break;
             case 2://完全关闭 显示黑色
                 ImmersionBar.with(requireActivity()).titleBar(mToolbar).statusBarDarkFont(true).init();//状态栏深色字体
-//                setTint(share_Btn, R.mipmap.person_zhaunfa, R.color.text_color_6f6f6f);
-//                setTint(setting_Btn, R.mipmap.card_settings, R.color.text_color_6f6f6f);
-//                ConstraintLayout.LayoutParams itemParams = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.MATCH_PARENT, ConstraintLayout.LayoutParams.WRAP_CONTENT);
-//                itemParams.setMargins(0, 0, 0, 0);
-//                getBinding().botLin.setLayoutParams(itemParams);
-
+                setTint(getBinding().settingBtn, R.mipmap.gengduo, R.color.text_color_535353);
+                getBinding().ivImg.setVisibility(View.INVISIBLE);
                 getBinding().toolbarHeadImg.setVisibility(View.VISIBLE);
                 getBinding().toolbarNameTv.setVisibility(View.VISIBLE);
 //                mViewPager.setNoScroll(false);
-
                 break;
             case 0://介于两种临界值之间 显示黑色
                 if (lastState != 0) {
-//                    setTint(share_Btn, R.mipmap.person_zhaunfa, R.color.text_color_6f6f6f);
+                    getBinding().ivImg.setVisibility(View.VISIBLE);
+                    setTint(getBinding().settingBtn, R.mipmap.gengduo, R.color.text_color_535353);
                 }
                 //为什么禁止滑动？在介于开关状态之间，不允许滑动，开启可能会导致不好的体验
 //                mViewPager.setNoScroll(true);
                 break;
         }
+    }
+
+    private void setMargins(int top) {
+        int i = DisplayUtil.dip2px(requireActivity(), top);
+        CoordinatorLayout.LayoutParams itemParams = new CoordinatorLayout.LayoutParams(CoordinatorLayout.LayoutParams.MATCH_PARENT, CoordinatorLayout.LayoutParams.WRAP_CONTENT);
+        itemParams.setMargins(0, i, 0, 0);
+        getBinding().botLin.setLayoutParams(itemParams);
     }
 
 
@@ -187,12 +220,8 @@ public class HomeMy extends BaseTabLayoutBindingFragment<HomemyBinding> {
             menuList.add(bean);
         }
         fragments.add(new HomeMyVideo());
-        fragments.add(new HomeMyVideo());
-        fragments.add(new HomeMyVideo());
-//        if (isMe()) {
-//            fragments.add(MyCollect_Fragment.newInstance(userID));
-//        }
-//        fragments.add(MyArchives_Fragment.newInstance(userID));
+        fragments.add(new HomeMyDynamic());
+        fragments.add(new HomeMyZan());
 
         int selectedTabPosition = mTabLayout.getSelectedTabPosition();
         if (selectedTabPosition == -1) {

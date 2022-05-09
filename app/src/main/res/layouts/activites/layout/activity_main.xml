@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dl_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:ignore="MissingConstraints">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,30 +23,74 @@
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewpager"
-            android:visibility="gone"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:visibility="gone" />
 
         <FrameLayout
             android:id="@+id/act_main_fragment"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/line"/>
+            app:layout_constraintBottom_toTopOf="@id/line"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/mTab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:tabBackground="@color/transparent"
-            app:tabRippleColor="@color/transparent"
-            app:tabIndicatorFullWidth="false"
             app:tabIndicatorColor="@color/transparent"
+            app:tabIndicatorFullWidth="false"
             app:tabIndicatorHeight="0dp"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:tabRippleColor="@color/transparent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lv_drawer_left"
+        android:layout_width="229dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@color/white">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content" />-->
+
+            <!--            android:background="@drawable/shape_background_white_radius4_no_line"-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_Con"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1111111111111" />
+
+                <!--                    <com.xunda.lib.common.view.MyArrowItemView-->
+                <!--                        android:id="@+id/focus_MyView"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="@dimen/dp_43"-->
+                <!--                        app:arrowItemAvatarHeight="@dimen/dp_12"-->
+                <!--                        app:arrowItemAvatarSrc="@mipmap/guanzhu"-->
+                <!--                        app:arrowItemShowAvatar="true"-->
+                <!--                        app:arrowItemTitle="关注"-->
+                <!--                        app:arrowItemTitleColor="@color/text_color_6f6f6f" />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

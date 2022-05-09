@@ -7,8 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.tabs.TabLayout;
 import com.zhengshuo.phoenix.R;
@@ -238,6 +240,16 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    public void LeftDL() {
+        DrawerLayout dlLayout = getBinding().dlLayout;
+        ConstraintLayout lvDrawerLeft = getBinding().lvDrawerLeft;
+        if (dlLayout.isDrawerOpen(lvDrawerLeft)) { // 左侧菜单列表已打开
+            dlLayout.closeDrawer(lvDrawerLeft); // 关闭左侧抽屉
+        } else { // 左侧菜单列表未打开
+            dlLayout.openDrawer(lvDrawerLeft); // 打开左侧抽屉
+        }
     }
 
 }

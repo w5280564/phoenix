@@ -1,6 +1,7 @@
 package com.zhengshuo.phoenix.base.baseview.glide;
 
 import android.content.Context;
+import android.graphics.ColorFilter;
 import android.widget.ImageView;
 
 import androidx.annotation.DrawableRes;
@@ -16,7 +17,7 @@ import com.zhengshuo.phoenix.util.DisplayUtil;
  * ================================================
  *
  * @Description: 图片加载工具类
- * @Author: Zhangliangliang
+ * @Author:
  * @CreateDate: 2021/8/4 9:58
  * <p>
  * ================================================
@@ -47,11 +48,7 @@ public class GlideUtils {
      * @param errorImg
      */
     public static void loadImage(Context context, ImageView iv, String url, @DrawableRes int errorImg) {
-        Glide.with(context)
-                .load(url)
-                .error(errorImg)
-                .placeholder(errorImg)
-                .into(iv);
+        Glide.with(context).load(url).error(errorImg).placeholder(errorImg).into(iv);
     }
 
 
@@ -64,11 +61,12 @@ public class GlideUtils {
      * @param url
      * @param radius
      */
-//    public static void loadRoundImage(Context context, ImageView iv, String url, int radius) {
-//        RoundedCornersTransform transform = new RoundedCornersTransform(context, DisplayUtil.dip2px(context, radius));
-//        transform.setNeedCorner(true, true, true, true);
+    public static void loadRoundImage(Context context, ImageView iv, String url, int radius) {
+        RoundedCornersTransform transform = new RoundedCornersTransform(context, DisplayUtil.dip2px(context, radius));
+        transform.setNeedCorner(true, true, true, true);
 //        Glide.with(context).load(url).error(R.mipmap.img_pic_none_square).placeholder(R.mipmap.img_pic_none_square).transforms(transform).into(iv);
-//    }
+        Glide.with(context).load(url).transforms(transform).into(iv);
+    }
 
 
 

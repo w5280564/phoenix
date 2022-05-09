@@ -16,7 +16,7 @@ import com.zhengshuo.phoenix.base.baseview.DisInterceptNestedScrollView;
 
 
 /**
- * Created by gjm on 2017/5/24.
+ *
  * 目前包括的事件：
  * 图片放大回弹
  * 个人信息布局的top和botoom跟随图片位移
@@ -170,7 +170,6 @@ public class AppBarLayoutOverScrollViewBehavior extends AppBarLayout.Behavior {
                 ValueAnimator anim = ValueAnimator.ofFloat(mLastScale, 1f).setDuration(200);
                 anim.addUpdateListener(
                         animation -> {
-
                             float value = (float) animation.getAnimatedValue();
                             ViewCompat.setScaleX(mTargetView, value);
                             ViewCompat.setScaleY(mTargetView, value);
@@ -207,8 +206,8 @@ public class AppBarLayoutOverScrollViewBehavior extends AppBarLayout.Behavior {
                 ViewCompat.setScaleX(mTargetView, 1f);
                 ViewCompat.setScaleY(mTargetView, 1f);
                 abl.setBottom(mParentHeight);
-//                middleLayout.setTop(mParentHeight - mMiddleHeight);
                 middleLayout.setTop(0);
+//                middleLayout.setTop(mParentHeight - mMiddleHeight);
 //                middleLayout.setBottom(mParentHeight);
                 isRecovering = false;
 

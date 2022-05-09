@@ -104,6 +104,7 @@
     <color name="line_color">#DCDCDC</color>
 
     <color name="homeTab_color_80">#80000000</color>
+    <color name="color_33">#33000000</color>
 
 
 </resources>

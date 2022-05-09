@@ -238,7 +238,7 @@ public class StringUtil {
     /**
      * 邮箱验证_新
      *
-     * author zhangliangliang
+     * author
      *
      * @param strEmail
      * @return

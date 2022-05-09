@@ -135,4 +135,6 @@ dependencies {
 
 //    implementation 'me.jessyan:autosize:1.2.1'//今日头条适配
     implementation 'com.github.JessYanCoding:AndroidAutoSize:v1.2.1'//今日头条适配
+    implementation 'jp.wasabeef:glide-transformations:4.3.0' // Glide图形转换工具
+
 }

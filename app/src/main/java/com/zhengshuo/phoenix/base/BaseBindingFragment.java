@@ -57,12 +57,17 @@ public abstract class BaseBindingFragment<VB extends ViewBinding> extends Simple
         mContext = mApplication.getContext();
         mActivity = (BaseBindingActivity) getActivity();
         initLocalData();
+        initBinding(binding);
         //view与数据绑定
         initView(binding.getRoot());
         //设置监听
         initEvent();
         InitViewModel();
         return binding.getRoot();
+    }
+
+    protected  void  initBinding(VB binding){
+
     }
 
 
