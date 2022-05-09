@@ -76,10 +76,10 @@ public class AppBarLayoutOverScrollViewBehavior extends AppBarLayout.Behavior {
     }
 
     @Override
-    public boolean onStartNestedScroll(CoordinatorLayout parent, AppBarLayout child, View directTargetChild, View target, int nestedScrollAxes,int type) {
+    public boolean onStartNestedScroll(CoordinatorLayout parent, AppBarLayout child, View directTargetChild, View target, int nestedScrollAxes, int type) {
         isAnimate = true;
         if (target instanceof DisInterceptNestedScrollView) return true;//这个布局就是middleLayout
-        return super.onStartNestedScroll(parent, child, directTargetChild, target, nestedScrollAxes,type);
+        return super.onStartNestedScroll(parent, child, directTargetChild, target, nestedScrollAxes, type);
     }
 
     @Override
@@ -91,13 +91,16 @@ public class AppBarLayoutOverScrollViewBehavior extends AppBarLayout.Behavior {
                 return;
             }
         }
-        super.onNestedPreScroll(coordinatorLayout, child, target, dx, dy, consumed,type);
+        super.onNestedPreScroll(coordinatorLayout, child, target, dx, dy, consumed, type);
     }
 
     @Override
     public boolean onNestedPreFling(CoordinatorLayout coordinatorLayout, AppBarLayout child, View target, float velocityX, float velocityY) {
         if (velocityY > 100) {//当y速度>100,就秒弹回
             isAnimate = false;
+            if (target instanceof DisInterceptNestedScrollView) {//下拉的时候屏蔽
+                return true;
+            }
         }
         return super.onNestedPreFling(coordinatorLayout, child, target, velocityX, velocityY);
     }
@@ -106,7 +109,7 @@ public class AppBarLayoutOverScrollViewBehavior extends AppBarLayout.Behavior {
     @Override
     public void onStopNestedScroll(CoordinatorLayout coordinatorLayout, AppBarLayout abl, View target, int type) {
         recovery(abl);
-        super.onStopNestedScroll(coordinatorLayout, abl, target,type);
+        super.onStopNestedScroll(coordinatorLayout, abl, target, type);
     }
 
     private void initial(AppBarLayout abl) {
@@ -126,7 +129,8 @@ public class AppBarLayoutOverScrollViewBehavior extends AppBarLayout.Behavior {
         abl.setBottom(mLastBottom);
         target.setScrollY(0);
 
-        middleLayout.setTop(mLastBottom - mMiddleHeight);
+//        middleLayout.setTop(mLastBottom - mMiddleHeight);
+        middleLayout.setTop(mLastBottom - mTargetViewHeight);
         middleLayout.setBottom(mLastBottom);
 
         if (onProgressChangeListener != null) {
@@ -152,6 +156,11 @@ public class AppBarLayoutOverScrollViewBehavior extends AppBarLayout.Behavior {
 
     onProgressChangeListener onProgressChangeListener;
 
+    /**
+     * 回弹
+     *
+     * @param abl
+     */
     private void recovery(final AppBarLayout abl) {
         if (isRecovering) return;
         if (mTotalDy > 0) {
@@ -166,8 +175,8 @@ public class AppBarLayoutOverScrollViewBehavior extends AppBarLayout.Behavior {
                             ViewCompat.setScaleX(mTargetView, value);
                             ViewCompat.setScaleY(mTargetView, value);
                             abl.setBottom((int) (mLastBottom - (mLastBottom - mParentHeight) * animation.getAnimatedFraction()));
-                            middleLayout.setTop((int) (mLastBottom -
-                                    (mLastBottom - mParentHeight) * animation.getAnimatedFraction() - mMiddleHeight));
+//                            middleLayout.setTop((int) (mLastBottom -(mLastBottom - mParentHeight) * animation.getAnimatedFraction() - mMiddleHeight));
+                            middleLayout.setTop(0);
 
                             if (onProgressChangeListener != null) {
                                 float progress = Math.min((value - 1) / MAX_REFRESH_LIMIT, 1);//计算0~1的进度
@@ -198,7 +207,8 @@ public class AppBarLayoutOverScrollViewBehavior extends AppBarLayout.Behavior {
                 ViewCompat.setScaleX(mTargetView, 1f);
                 ViewCompat.setScaleY(mTargetView, 1f);
                 abl.setBottom(mParentHeight);
-                middleLayout.setTop(mParentHeight - mMiddleHeight);
+//                middleLayout.setTop(mParentHeight - mMiddleHeight);
+                middleLayout.setTop(0);
 //                middleLayout.setBottom(mParentHeight);
                 isRecovering = false;
 

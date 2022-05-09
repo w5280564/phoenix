@@ -6,7 +6,9 @@ import android.content.Intent;
 
 import androidx.multidex.MultiDexApplication;
 
+import com.bumptech.glide.request.target.ViewTarget;
 import com.fastchat.sdk.utils.PathUtil;
+import com.zhengshuo.phoenix.R;
 import com.zhengshuo.phoenix.util.ToastUtil;
 import com.fastchat.sdk.client.HTClient;
 import com.fastchat.sdk.db.DBManager;
@@ -37,7 +39,8 @@ public class BaseApplication extends MultiDexApplication {
         registerActivityLifecycleCallbacks();
         NotifierManager.init(instance);
         MMKV.initialize(instance);//初始化MMKV
-        HTClientHelper.init(instance);
+//        HTClientHelper.init(instance);
+        ViewTarget.setTagId(R.id.glideIndexTag);
     }
 
     /**

@@ -9,7 +9,7 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/headLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:clipChildren="false"
         android:clipToPadding="false" >
 
@@ -31,18 +31,21 @@
 
                 <com.zhengshuo.phoenix.base.baseview.DisInterceptNestedScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
+                    android:layout_height="@dimen/dp_260">
                     <ImageView
                         android:id="@+id/iv_img"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp_260"
+                        android:layout_height="260dp"
                         android:scaleType="centerCrop"
-                        app:layout_collapseMode="parallax"
-                        android:src="@mipmap/mycard_bg"/>
+                        android:background="@color/black"
+                        app:layout_collapseMode="parallax" />
+
                 </com.zhengshuo.phoenix.base.baseview.DisInterceptNestedScrollView>
 
-                <include layout="@layout/card_head_middle" />
+                <include
+                    android:id="@+id/cardHead_include"
+                    layout="@layout/card_head_middle"
+                    />
 
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/mToolbar"
@@ -52,8 +55,7 @@
                     android:tag="toolbar"
                     app:contentInsetStart="0dp"
                     app:layout_collapseMode="pin"
-                    app:layout_scrollFlags="scroll|enterAlways"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+                    app:layout_scrollFlags="scroll|enterAlways">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/title_Con"
@@ -135,10 +137,9 @@
         <LinearLayout
             android:id="@+id/bot_Lin"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="-30dp"
             android:background="@drawable/base_gradual_top"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -153,7 +154,7 @@
 
                     <com.google.android.material.tabs.TabLayout
                         android:id="@+id/card_Tab"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="50dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/title_bar"

@@ -191,10 +191,12 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <!-- 替换字体-->
-    <style name="MyTextAppearance">
-        <item name="android:fontFamily">@font/myfont</item>
-        <item name="android:includeFontPadding">false</item>
-        <item name="android:lineSpacingExtra">2dp</item>
-    </style>
+<!--    <style name="MyTextAppearance">-->
+<!--        <item name="android:fontFamily">@font/myfont</item>-->
+<!--        <item name="android:includeFontPadding">false</item>-->
+<!--        <item name="android:lineSpacingExtra">2dp</item>-->
+<!--    </style>-->
+
+    <item name="glideIndexTag" type="id"/>
 
 </resources>

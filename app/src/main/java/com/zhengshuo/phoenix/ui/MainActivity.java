@@ -15,10 +15,10 @@ import com.zhengshuo.phoenix.R;
 import com.zhengshuo.phoenix.base.BaseBindingActivity;
 import com.zhengshuo.phoenix.databinding.ActivityMainBinding;
 import com.zhengshuo.phoenix.model.AppMenuBean;
-import com.zhengshuo.phoenix.ui.homemy.fragment.Home;
-import com.zhengshuo.phoenix.ui.homemy.fragment.HomeMessage;
-import com.zhengshuo.phoenix.ui.homemy.fragment.HomeMy;
-import com.zhengshuo.phoenix.ui.homemy.fragment.HomeSquare;
+import com.zhengshuo.phoenix.ui.home.fragment.Home;
+import com.zhengshuo.phoenix.ui.home.fragment.HomeMessage;
+import com.zhengshuo.phoenix.ui.home.fragment.HomeMy;
+import com.zhengshuo.phoenix.ui.home.fragment.HomeSquare;
 
 import java.util.ArrayList;
 import java.util.List;

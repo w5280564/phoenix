@@ -20,6 +20,7 @@ import androidx.viewbinding.ViewBinding;
 
 import com.dylanc.viewbinding.base.ViewBindingUtil;
 import com.gyf.barlibrary.ImmersionBar;
+import com.gyf.barlibrary.SimpleImmersionFragment;
 import com.zhengshuo.phoenix.R;
 import com.zhengshuo.phoenix.ui.MainActivity;
 import com.zhengshuo.phoenix.util.ToastUtil;
@@ -213,12 +214,12 @@ public abstract class BaseBindingActivity<VB extends ViewBinding> extends Fragme
             }
         }
     }
-    protected List<BaseBindingFragment> mFragmentList = new ArrayList<BaseBindingFragment>();
+    protected List<Fragment> mFragmentList = new ArrayList<Fragment>();
     private int cuurent = 0x001;
 
-    protected void addFragment(BaseBindingFragment fragment) {
+    protected void addFragment(Fragment fragment) {
         if (mFragmentList == null) {
-            mFragmentList = new ArrayList<BaseBindingFragment>();
+            mFragmentList = new ArrayList<Fragment>();
         }
         mFragmentList.add(fragment);
     }
@@ -230,7 +231,7 @@ public abstract class BaseBindingActivity<VB extends ViewBinding> extends Fragme
         }
         FragmentManager manage = getSupportFragmentManager();
         FragmentTransaction transaction = manage.beginTransaction();
-        BaseBindingFragment frl = mFragmentList.get(index);
+        Fragment frl = mFragmentList.get(index);
         if (frl.isAdded()) {
             frl.onResume();
         } else {
@@ -251,7 +252,7 @@ public abstract class BaseBindingActivity<VB extends ViewBinding> extends Fragme
         cuurent = index;
     }
 
-    protected BaseBindingFragment getCurrentFrl() {
+    protected Fragment getCurrentFrl() {
 
         return mFragmentList.get(cuurent);
     }

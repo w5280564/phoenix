@@ -25,7 +25,6 @@ import com.zhengshuo.phoenix.ui.video.VideoPlayActivity;
 import java.io.Serializable;
 import java.util.List;
 
-import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
@@ -47,11 +46,6 @@ public abstract class BaseBindingFragment<VB extends ViewBinding> extends Simple
         return binding;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
 
     @Nullable
     @Override
@@ -114,6 +108,7 @@ public abstract class BaseBindingFragment<VB extends ViewBinding> extends Simple
         super.onDestroyView();
         // 建议在`自定义页面`的页面结束函数中调用
         unbinder.unbind();
+        binding = null;
     }
 
 
