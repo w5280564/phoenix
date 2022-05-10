@@ -90,7 +90,7 @@
         android:paddingEnd="10dp"
         android:paddingBottom="3dp"
         android:text="#一起旅游吧#"
-        android:textColor="#ff4f59ff"
+        android:textColor="@color/text_color_4f59ff"
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nine_grid" />
@@ -104,7 +104,9 @@
         android:layout_marginBottom="10dp"
         android:background="@mipmap/dainzan"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tagTv" />
+        app:layout_constraintTop_toBottomOf="@id/tagTv"
+        android:backgroundTint="@color/text_color_8A8A8A"
+        app:tint="@color/text_color_8A8A8A" />
 
     <TextView
         android:id="@+id/zanCount_Tv"
@@ -123,13 +125,9 @@
         android:layout_width="16dp"
         android:layout_height="15dp"
         android:layout_marginStart="135dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginBottom="10dp"
         android:background="@mipmap/pinglun"
-        app:layout_constraintTop_toTopOf="@id/zanCount_Tv"
-        app:layout_constraintBottom_toBottomOf="@id/zanCount_Tv"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tagTv" />
+        app:layout_constraintBottom_toBottomOf="@+id/zan_Img"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/commentCount_Tv"

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="214dp"
+    android:layout_height="224dp"
+    android:background="@drawable/drawer_radius17_shape"
+    tools:ignore="MissingConstraints">
+
+
+    <TextView
+        android:layout_width="148dp"
+        android:layout_height="142dp"
+        android:background="@drawable/zanbg_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/zanImg"
+        android:layout_width="131dp"
+        android:layout_height="142dp"
+        android:background="@mipmap/huozan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="林允儿…共获得1.3w个赞"
+        android:textColor="@color/text_color_535353"
+        android:textSize="12sp"
+        android:maxLines="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/zanImg" />
+
+    <TextView
+        android:id="@+id/tvBtn"
+        android:layout_width="151dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="12sp"
+        android:text="确定"
+        android:background="@drawable/gradualbtn_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

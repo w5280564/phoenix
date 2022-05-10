@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    tools:ignore="MissingConstraints">
+
+
+
+    <com.zhengshuo.phoenix.widget.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        app:titleBarLeftImg="@mipmap/fanhui"
+        app:titleBarTitle="设置"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/drawer_radius10_shape"
+        app:layout_constraintTop_toBottomOf="@id/title_bar">
+
+
+        <com.zhengshuo.phoenix.widget.baseview.MyArrowItemView
+            android:id="@+id/phoenixCoin_MyView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            app:arrowItemAvatarHeight="@dimen/dp_12"
+            app:arrowItemShowAvatar="false"
+            app:arrowItemShowDivider="false"
+            app:arrowItemTitle="账号与安全"
+            app:arrowItemTitleColor="@color/text_color_535353"
+            app:arrowItemTitleSize="15sp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_min="51dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.zhengshuo.phoenix.widget.baseview.MyArrowItemView
+            android:id="@+id/Coin_MyView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            app:arrowItemAvatarHeight="@dimen/dp_12"
+            app:arrowItemShowAvatar="false"
+            app:arrowItemShowDivider="false"
+            app:arrowItemTitle="隐私设置"
+            app:arrowItemTitleColor="@color/text_color_535353"
+            app:arrowItemTitleSize="15sp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_min="51dp"
+            app:layout_constraintTop_toBottomOf="@id/phoenixCoin_MyView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/drawer_radius10_shape"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <com.zhengshuo.phoenix.widget.baseview.MyArrowItemView
+            android:id="@+id/pay_MyView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            app:arrowItemAvatarHeight="@dimen/dp_12"
+            app:arrowItemShowAvatar="false"
+            app:arrowItemShowDivider="false"
+            app:arrowItemTitle="支付设置"
+            app:arrowItemTitleColor="@color/text_color_535353"
+            app:arrowItemTitleSize="15sp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_min="51dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.zhengshuo.phoenix.widget.baseview.MyArrowItemView
+            android:id="@+id/setup_MyView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            app:arrowItemAvatarHeight="@dimen/dp_12"
+            app:arrowItemShowAvatar="false"
+            app:arrowItemShowDivider="false"
+            app:arrowItemTitle="通用设置"
+            app:arrowItemTitleColor="@color/text_color_535353"
+            app:arrowItemTitleSize="15sp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_min="51dp"
+            app:layout_constraintTop_toBottomOf="@id/pay_MyView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/drawer_radius10_shape"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <com.zhengshuo.phoenix.widget.baseview.MyArrowItemView
+            android:id="@+id/ming_MyView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            app:arrowItemAvatarHeight="@dimen/dp_12"
+            app:arrowItemContent="已实名"
+            app:arrowItemContentColor="@color/text_color_212121"
+            app:arrowItemContentSize="15sp"
+            app:arrowItemShowAvatar="false"
+            app:arrowItemShowDivider="false"
+            app:arrowItemTitle="实名认证"
+            app:arrowItemTitleColor="@color/text_color_535353"
+            app:arrowItemTitleSize="15sp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_min="51dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.zhengshuo.phoenix.widget.baseview.MyArrowItemView
+            android:id="@+id/about_MyView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            app:arrowItemAvatarHeight="@dimen/dp_12"
+            app:arrowItemContent="V 1.0"
+            app:arrowItemContentColor="@color/text_color_212121"
+            app:arrowItemContentSize="15sp"
+            app:arrowItemShowAvatar="false"
+            app:arrowItemShowDivider="false"
+            app:arrowItemTitle="关于"
+            app:arrowItemTitleColor="@color/text_color_535353"
+            app:arrowItemTitleSize="15sp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_min="51dp"
+            app:layout_constraintTop_toBottomOf="@id/ming_MyView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/drawer_radius10_shape"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <com.zhengshuo.phoenix.widget.baseview.MyArrowItemView
+            android:id="@+id/change_MyView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            app:arrowItemAvatarHeight="@dimen/dp_12"
+            app:arrowItemShowAvatar="false"
+            app:arrowItemShowDivider="false"
+            app:arrowItemTitle="切换账号登录"
+            app:arrowItemTitleColor="@color/text_color_535353"
+            app:arrowItemTitleSize="15sp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_min="51dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.zhengshuo.phoenix.widget.baseview.MyArrowItemView
+            android:id="@+id/quit_MyView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            app:arrowItemAvatarHeight="@dimen/dp_12"
+            app:arrowItemShowAvatar="false"
+            app:arrowItemShowDivider="false"
+            app:arrowItemTitle="退出登录"
+            app:arrowItemTitleColor="@color/text_color_535353"
+            app:arrowItemTitleSize="15sp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_min="51dp"
+            app:layout_constraintTop_toBottomOf="@id/change_MyView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

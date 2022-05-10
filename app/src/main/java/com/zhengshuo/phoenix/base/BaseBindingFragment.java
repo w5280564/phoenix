@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewbinding.ViewBinding;
 
@@ -35,8 +36,7 @@ import butterknife.Unbinder;
 public abstract class BaseBindingFragment<VB extends ViewBinding> extends SimpleImmersionFragment {
     protected BaseApplication mApplication;
     protected Context mContext;
-    protected BaseBindingActivity mActivity;
-    private Unbinder unbinder;
+    protected FragmentActivity mActivity;
     private LoadingDialog mLoadingDialog;
     private Handler handler = new Handler();
 
@@ -51,24 +51,16 @@ public abstract class BaseBindingFragment<VB extends ViewBinding> extends Simple
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = ViewBindingUtil.inflateWithGeneric(this, inflater, container, false);
-//        View mRootView = inflater.inflate(getLayoutId(), container, false);
-//        unbinder = ButterKnife.bind(this, mRootView);
         mApplication = BaseApplication.getInstance();
         mContext = mApplication.getContext();
-        mActivity = (BaseBindingActivity) getActivity();
+        mActivity =  requireActivity();
         initLocalData();
-        initBinding(binding);
-        //view与数据绑定
-        initView(binding.getRoot());
-        //设置监听
-        initEvent();
+        initView(binding.getRoot());//view与数据绑定
+        initEvent();//设置监听
         InitViewModel();
         return binding.getRoot();
     }
 
-    protected  void  initBinding(VB binding){
-
-    }
 
 
     /**
@@ -111,8 +103,6 @@ public abstract class BaseBindingFragment<VB extends ViewBinding> extends Simple
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        // 建议在`自定义页面`的页面结束函数中调用
-        unbinder.unbind();
         binding = null;
     }
 

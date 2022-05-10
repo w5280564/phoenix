@@ -37,7 +37,7 @@ import java.util.List;
 public abstract class BaseBindingActivity<VB extends ViewBinding> extends FragmentActivity implements CustomTitleBar.TitleBarClickListener {
     protected BaseApplication mApplication;
     protected Context mContext;
-    protected BaseBindingActivity mActivity;
+    protected FragmentActivity mActivity;
     protected CustomTitleBar titleBar;
     protected String title;
     private VB binding;

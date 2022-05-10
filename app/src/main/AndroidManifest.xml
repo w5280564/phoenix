@@ -38,6 +38,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Base">
         <activity
+            android:name=".ui.homemy.activity.Person_FansAndFollow"
+            android:exported="false" />
+        <activity
+            android:name=".ui.homemy.activity.Person_Set"
+            android:exported="false" />
+        <activity
             android:name=".ui.start.GuideActivity"
             android:exported="false" />
         <activity

@@ -54,42 +54,146 @@
         android:layout_width="229dp"
         android:layout_height="match_parent"
         android:layout_gravity="right"
-        android:background="@color/white">
+        android:background="@drawable/drawer_radius10_shape">
 
 
-        <ScrollView
+        <com.zhengshuo.phoenix.widget.baseview.MyArrowItemView
+            android:id="@+id/wallet_MyView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="@dimen/dp_43"
+            android:layout_marginTop="28dp"
+            app:arrowItemAvatarHeight="@dimen/dp_12"
+            app:arrowItemAvatarSrc="@mipmap/my_qianbao"
+            app:arrowItemShowAvatar="true"
+            app:arrowItemTitle="我的钱包"
+            app:arrowItemShowDivider="false"
+            app:arrowItemTitleColor="@color/text_color_212121"
+            app:arrowItemTitleSize="12sp"
+            app:layout_constraintTop_toTopOf="parent" />
 
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content" />-->
+        <com.zhengshuo.phoenix.widget.baseview.MyArrowItemView
+            android:id="@+id/phoenixCoin_MyView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            app:arrowItemAvatarHeight="@dimen/dp_12"
+            app:arrowItemAvatarSrc="@mipmap/my_fenghuangbi"
+            app:arrowItemShowDivider="false"
+            app:arrowItemShowAvatar="true"
+            app:arrowItemTitle="凤凰币"
+            app:arrowItemTitleColor="@color/text_color_212121"
+            app:arrowItemTitleSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/wallet_MyView" />
 
-            <!--            android:background="@drawable/shape_background_white_radius4_no_line"-->
+        <com.zhengshuo.phoenix.widget.baseview.MyArrowItemView
+            android:id="@+id/gift_MyView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            app:arrowItemAvatarHeight="@dimen/dp_12"
+            app:arrowItemAvatarSrc="@mipmap/my_songli"
+            app:arrowItemShowAvatar="true"
+            app:arrowItemTitle="赠礼中心"
+            app:arrowItemTitleColor="@color/text_color_212121"
+            app:arrowItemTitleSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/phoenixCoin_MyView" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/top_Con"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp">
+        <com.zhengshuo.phoenix.widget.baseview.MyArrowItemView
+            android:id="@+id/zan_MyView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            app:arrowItemAvatarHeight="@dimen/dp_12"
+            app:arrowItemAvatarSrc="@mipmap/my_wodedianzan"
+            app:arrowItemShowDivider="false"
+            app:arrowItemShowAvatar="true"
+            app:arrowItemTitle="我的点赞"
+            app:arrowItemTitleColor="@color/text_color_212121"
+            app:arrowItemTitleSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/gift_MyView" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1111111111111" />
+        <com.zhengshuo.phoenix.widget.baseview.MyArrowItemView
+            android:id="@+id/comment_MyView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            app:arrowItemAvatarHeight="@dimen/dp_12"
+            app:arrowItemAvatarSrc="@mipmap/my_pinglun"
+            app:arrowItemShowDivider="false"
+            app:arrowItemShowAvatar="true"
+            app:arrowItemTitle="我的评论"
+            app:arrowItemTitleColor="@color/text_color_212121"
+            app:arrowItemTitleSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/zan_MyView" />
 
-                <!--                    <com.xunda.lib.common.view.MyArrowItemView-->
-                <!--                        android:id="@+id/focus_MyView"-->
-                <!--                        android:layout_width="match_parent"-->
-                <!--                        android:layout_height="@dimen/dp_43"-->
-                <!--                        app:arrowItemAvatarHeight="@dimen/dp_12"-->
-                <!--                        app:arrowItemAvatarSrc="@mipmap/guanzhu"-->
-                <!--                        app:arrowItemShowAvatar="true"-->
-                <!--                        app:arrowItemTitle="关注"-->
-                <!--                        app:arrowItemTitleColor="@color/text_color_6f6f6f" />-->
+        <com.zhengshuo.phoenix.widget.baseview.MyArrowItemView
+            android:id="@+id/history_MyView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            app:arrowItemAvatarHeight="@dimen/dp_12"
+            app:arrowItemAvatarSrc="@mipmap/my_liulan"
+            app:arrowItemShowDivider="false"
+            app:arrowItemShowAvatar="true"
+            app:arrowItemTitle="浏览记录"
+            app:arrowItemTitleColor="@color/text_color_212121"
+            app:arrowItemTitleSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/comment_MyView" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </ScrollView>
+        <com.zhengshuo.phoenix.widget.baseview.MyArrowItemView
+            android:id="@+id/footprint_MyView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            app:arrowItemAvatarHeight="@dimen/dp_12"
+            app:arrowItemAvatarSrc="@mipmap/my_zuji"
+            app:arrowItemShowDivider="false"
+            app:arrowItemShowAvatar="true"
+            app:arrowItemTitle="访客记录"
+            app:arrowItemTitleColor="@color/text_color_212121"
+            app:arrowItemTitleSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/history_MyView" />
+
+
+        <TextView
+            android:id="@+id/set_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginBottom="36dp"
+            android:drawableTop="@mipmap/my_shezhi"
+            android:drawablePadding="9dp"
+            android:text="设置"
+            android:textColor="@color/text_color_212121"
+            android:textFontWeight="500"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/service_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:drawableTop="@mipmap/my_kefu"
+            android:drawablePadding="9dp"
+            android:text="客服中心"
+            android:textColor="@color/text_color_212121"
+            android:textFontWeight="500"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/qrcode_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:drawableTop="@mipmap/my_saoyisao"
+            android:layout_marginEnd="18dp"
+            android:drawablePadding="9dp"
+            android:text="扫一扫"
+            android:textColor="@color/text_color_212121"
+            android:textFontWeight="500"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

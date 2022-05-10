@@ -1,18 +1,27 @@
 package com.zhengshuo.phoenix.base;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Typeface;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.viewbinding.ViewBinding;
 import androidx.viewpager.widget.ViewPager;
 
+import com.dylanc.viewbinding.base.ViewBindingUtil;
 import com.google.android.material.tabs.TabLayout;
+import com.gyf.barlibrary.ImmersionBar;
 import com.zhengshuo.phoenix.R;
-import com.zhengshuo.phoenix.base.baseview.NormalFragmentAdapter;
+import com.zhengshuo.phoenix.widget.baseview.NormalFragmentAdapter;
 import com.zhengshuo.phoenix.model.AppMenuBean;
 
 import java.util.ArrayList;
@@ -21,24 +30,98 @@ import java.util.List;
 /**
  * tablayout的基类
  */
-public class BaseTabLayoutBindingActivity extends BaseBindingActivity {
+public class BaseTabLayoutBindingActivity<VB extends ViewBinding> extends FragmentActivity {
     protected List<Fragment> fragments = new ArrayList<>();
     protected List<AppMenuBean> menuList = new ArrayList<>();
     public TabLayout mTabLayout;
     public ViewPager mViewPager;
     private int selectSize = 16;
     private int normalSize = 14;
-
+    protected BaseApplication mApplication;
+    protected Context mContext;
+    protected FragmentActivity mActivity;
 
 //    @Override
 //    protected int getLayoutId() {
 //        return 0;
 //    }
 
+    public VB binding;
+
+    public VB getBinding() {
+        return binding;
+    }
 
     @Override
+    protected void onCreate(Bundle arg0) {
+        super.onCreate(arg0);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);// 禁止横屏
+        binding = ViewBindingUtil.inflateWithGeneric(this, getLayoutInflater());
+        setContentView(binding.getRoot());
+        mApplication = BaseApplication.getInstance();
+        mContext = mApplication.getContext();
+        mActivity = this;
+        //初始化本地数据
+        initLocalData(getIntent());
+        //view与数据绑定
+        initView();
+        initView(arg0);
+        //初始化ViewModel
+        initViewModel();
+        //设置监听
+        initEvent();
+        //请求服务端接口数据
+        setStatusBar();
+    }
+
+    /**
+     * 初始化本地数据
+     */
+    protected void initLocalData(Intent mIntent) {
+
+    }
+
+
+    /**
+     * 初始化view
+     */
+    protected void initView() {
+
+    }
+
+
+    /**
+     * 初始化view
+     */
+    protected void initView(Bundle arg0) {
+
+    }
+
+    /**
+     * 初始化ViewModel
+     */
+    protected void initViewModel() {
+
+    }
+
+    /**
+     * 设置监听
+     */
     protected void initEvent() {
-        mTabLayout.addOnTabSelectedListener(new MyOnTabSelectedListener());
+        if (mTabLayout != null) {
+            mTabLayout.addOnTabSelectedListener(new MyOnTabSelectedListener());
+        }
+    }
+
+    /**
+     * 设置状态栏
+     */
+    protected void setStatusBar() {
+        ImmersionBar.with(this)
+                .fitsSystemWindows(true)
+                .statusBarColor(R.color.white)     //状态栏颜色，不写默认透明色
+                .statusBarDarkFont(true)
+                .init();
     }
 
 
@@ -76,7 +159,7 @@ public class BaseTabLayoutBindingActivity extends BaseBindingActivity {
 
     @SuppressLint("WrongConstant")
     protected void initViewPager(int position) {
-        mTabLayout.setTabMode(TabLayout.MODE_AUTO);
+//        mTabLayout.setTabMode(TabLayout.MODE_AUTO);
         NormalFragmentAdapter mFragmentAdapter = new NormalFragmentAdapter(getSupportFragmentManager(), fragments, menuList);
         if (mViewPager != null) {
             mFragmentAdapter.clear(mViewPager);
@@ -96,7 +179,7 @@ public class BaseTabLayoutBindingActivity extends BaseBindingActivity {
 
         View view = mTabLayout.getTabAt(position).getCustomView();
         if (null != view) {
-            setTextViewStyle(view, selectSize, R.color.text_color_444444, Typeface.DEFAULT_BOLD, View.VISIBLE);
+            setTextViewStyle(view, 15, R.color.text_color_212121, Typeface.DEFAULT_BOLD, View.VISIBLE);
         }
         mViewPager.setCurrentItem(position);
     }

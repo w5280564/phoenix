@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zhengshuo.phoenix.base.baseview.DisInterceptNestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhengshuo.phoenix.widget.baseview.DisInterceptNestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/top_Src"
@@ -202,4 +202,4 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</com.zhengshuo.phoenix.base.baseview.DisInterceptNestedScrollView>
+</com.zhengshuo.phoenix.widget.baseview.DisInterceptNestedScrollView>

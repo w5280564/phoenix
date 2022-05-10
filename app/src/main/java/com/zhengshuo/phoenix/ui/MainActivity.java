@@ -6,6 +6,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
@@ -21,6 +22,7 @@ import com.zhengshuo.phoenix.ui.home.fragment.Home;
 import com.zhengshuo.phoenix.ui.home.fragment.HomeMessage;
 import com.zhengshuo.phoenix.ui.home.fragment.HomeMy;
 import com.zhengshuo.phoenix.ui.home.fragment.HomeSquare;
+import com.zhengshuo.phoenix.ui.homemy.activity.Person_Set;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +32,7 @@ import java.util.List;
  * @Author: ouyang
  * @CreateDate: 2022/3/10 0009
  */
-public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
+public class MainActivity extends BaseBindingActivity<ActivityMainBinding> implements View.OnClickListener {
     int fragmentId = R.id.act_main_fragment;
     protected List<AppMenuBean> menuList = new ArrayList<>();
     int[] ivTabs = new int[]{R.drawable.tab_home, R.drawable.tab_square, R.mipmap.homepage_add, R.drawable.tab_mes, R.drawable.tab_my};
@@ -64,6 +66,7 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
     @Override
     protected void initEvent() {
         getBinding().mTab.addOnTabSelectedListener(new MyOnTabSelectedListener());
+        getBinding().setTv.setOnClickListener(this);
     }
 
     protected void initViewPager(int position) {
@@ -187,6 +190,23 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
         drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
         textView.setCompoundDrawables(null, drawable, null, null);
     }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.set_Tv:
+                closeLeft();
+                skipAnotherActivity(Person_Set.class);
+                break;
+        }
+    }
+
+    // 关闭左侧抽屉
+    private void closeLeft() {
+        getBinding().dlLayout.closeDrawer(getBinding().lvDrawerLeft);
+    }
+
+
     private class MyOnTabSelectedListener implements TabLayout.OnTabSelectedListener {
         @Override
         public void onTabSelected(TabLayout.Tab tab) {
@@ -221,16 +241,21 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
     private void changeFragment(TabLayout.Tab tab){
         int position = tab.getPosition();
         String name = menuList.get(position).getName();
-        if (TextUtils.equals(name,"首页")){
-            position = 0;
-        }else if (TextUtils.equals(name,"广场")){
-            position = 1;
-        }else if (TextUtils.equals(name,"消息")){
-            position = 2;
-        }else if (TextUtils.equals(name,"我的")){
-            position = 3;
+        if (TextUtils.equals(name,"")){
+            Toast.makeText(mActivity,"点击加号",Toast.LENGTH_SHORT).show();
+        }else {
+            if (TextUtils.equals(name,"首页")){
+                position = 0;
+            }else if (TextUtils.equals(name,"广场")){
+                position = 1;
+            }else if (TextUtils.equals(name,"消息")){
+                position = 2;
+            }else if (TextUtils.equals(name,"我的")){
+                position = 3;
+            }
+            showFragment(position, fragmentId);
         }
-        showFragment(position, fragmentId);
+
     }
 
     @Override

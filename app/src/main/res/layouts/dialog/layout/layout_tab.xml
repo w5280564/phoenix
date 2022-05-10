@@ -12,7 +12,7 @@
         android:id="@+id/tab_item_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="5dp"
         android:maxLines="1"
         android:textColor="@color/text_color_535353"
         android:textFontWeight="500"

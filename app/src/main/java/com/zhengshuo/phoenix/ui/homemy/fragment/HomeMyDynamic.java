@@ -4,14 +4,14 @@ import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.zhengshuo.phoenix.base.BaseRecyclerBindingSplitFragment;
+import com.zhengshuo.phoenix.base.BaseRecyclerSplitBindingFragment;
 import com.zhengshuo.phoenix.databinding.HomemydynamicBinding;
 import com.zhengshuo.phoenix.model.MyVideoBean;
 import com.zhengshuo.phoenix.ui.homemy.adapter.MyDynamic_Adapter;
 
 import java.util.ArrayList;
 
-public class HomeMyDynamic extends BaseRecyclerBindingSplitFragment<HomemydynamicBinding> {
+public class HomeMyDynamic extends BaseRecyclerSplitBindingFragment<HomemydynamicBinding> {
 
     @Override
     protected void initView(View mRootView) {

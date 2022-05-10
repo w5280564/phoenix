@@ -7,6 +7,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.CycleInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -21,23 +24,27 @@ import androidx.core.graphics.drawable.DrawableCompat;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.tabs.TabLayout;
+import com.google.common.eventbus.EventBus;
 import com.gyf.barlibrary.ImmersionBar;
 import com.zhengshuo.phoenix.R;
 import com.zhengshuo.phoenix.base.BaseTabLayoutBindingFragment;
-import com.zhengshuo.phoenix.base.behavior.AppBarLayoutOverScrollViewBehavior;
 import com.zhengshuo.phoenix.databinding.HomemyBinding;
 import com.zhengshuo.phoenix.model.AppMenuBean;
 import com.zhengshuo.phoenix.ui.MainActivity;
+import com.zhengshuo.phoenix.ui.dialog.ZanDialog;
+import com.zhengshuo.phoenix.ui.homemy.activity.Person_FansAndFollow;
 import com.zhengshuo.phoenix.ui.homemy.fragment.HomeMyDynamic;
 import com.zhengshuo.phoenix.ui.homemy.fragment.HomeMyVideo;
 import com.zhengshuo.phoenix.ui.homemy.fragment.HomeMyZan;
 import com.zhengshuo.phoenix.util.DisplayUtil;
+import com.zhengshuo.phoenix.widget.TouchRegion;
+import com.zhengshuo.phoenix.widget.behavior.AppBarLayoutOverScrollViewBehavior;
 
 import java.util.ArrayList;
 
 import jp.wasabeef.glide.transformations.ColorFilterTransformation;
 
-public class HomeMy extends BaseTabLayoutBindingFragment<HomemyBinding> {
+public class HomeMy extends BaseTabLayoutBindingFragment<HomemyBinding> implements View.OnClickListener {
     private Toolbar mToolbar;
 
     @Override
@@ -55,10 +62,6 @@ public class HomeMy extends BaseTabLayoutBindingFragment<HomemyBinding> {
                 .init();
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-    }
 
     @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
@@ -68,25 +71,72 @@ public class HomeMy extends BaseTabLayoutBindingFragment<HomemyBinding> {
         mViewPager = getBinding().cardViewPager;
         mToolbar = getBinding().mToolbar;
 
+        TouchRegion touchRegion = new TouchRegion(getBinding().cardHeadInclude.topCon);
+        touchRegion.expandViewTouchRegion(getBinding().cardHeadInclude.qrcodeImg, 50);
+        touchRegion.expandViewTouchRegion(getBinding().cardHeadInclude.tvFollowNumber, 50);
+        touchRegion.expandViewTouchRegion(getBinding().cardHeadInclude.tvFansNumber, 50);
+        touchRegion.expandViewTouchRegion(getBinding().cardHeadInclude.zanTv, 50);
+
+        TouchRegion tooBarTouch = new TouchRegion(getBinding().titleCon);
+        tooBarTouch.expandViewTouchRegion(getBinding().settingBtn, 50);
+
         mTabLayout.setTabMode(TabLayout.MODE_FIXED);
         initMenuData();
         changeAppLayout();
         changeView();
+
     }
+
 
     @Override
     protected void initEvent() {
         super.initEvent();
-        getBinding().settingBtn.setOnClickListener(new drawer_left_ImgClick());
+        getBinding().settingBtn.setOnClickListener(this);
+        getBinding().cardHeadInclude.tvFollowNumber.setOnClickListener(this);
+        getBinding().cardHeadInclude.textview10.setOnClickListener(this);
+        getBinding().cardHeadInclude.tvFansNumber.setOnClickListener(this);
+        getBinding().cardHeadInclude.textview11.setOnClickListener(this);
+        getBinding().cardHeadInclude.zanTv.setOnClickListener(this);
+        getBinding().cardHeadInclude.textview12.setOnClickListener(this);
+        getBinding().cardHeadInclude.editUserTv.setOnClickListener(this);
+
     }
 
-    private class drawer_left_ImgClick implements View.OnClickListener {
-        @Override
-        public void onClick(View v) {
-            ((MainActivity) requireActivity()).LeftDL();
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.setting_Btn:
+                ((MainActivity) requireActivity()).LeftDL();
+                break;
+            case R.id.qrcode_Img:
+
+                break;
+            case R.id.editUser_Tv_:
+
+                break;
+            case R.id.tv_follow_number:
+            case R.id.textview10:
+                Person_FansAndFollow.startActivity(mActivity,"关注","");
+                break;
+            case R.id.tv_fans_number:
+            case R.id.textview11:
+                Person_FansAndFollow.startActivity(mActivity,"粉丝","");
+                break;
+            case R.id.zan_Tv:
+            case R.id.textview12:
+                showZanDialog();
+                break;
+
+
         }
     }
 
+    protected void showZanDialog() {//1 点击确定会返回， 0 只是弹窗消失
+        ZanDialog mDialog = new ZanDialog(mActivity, "", "林允儿…共获得1.3w个赞", "确定", () -> {
+
+        });
+        mDialog.show();
+    }
 
 
     private void changeView() {
@@ -229,6 +279,7 @@ public class HomeMy extends BaseTabLayoutBindingFragment<HomemyBinding> {
         }
         initChildViewPager(selectedTabPosition);
     }
+
 
 
 }

@@ -5,15 +5,14 @@ import android.view.View;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.viewbinding.ViewBinding;
 
-import com.zhengshuo.phoenix.base.BaseRecyclerBindingSplitFragment;
-import com.zhengshuo.phoenix.databinding.HomemydynamicBinding;
+import com.zhengshuo.phoenix.base.BaseRecyclerSplitBindingFragment;
 import com.zhengshuo.phoenix.databinding.HomemyvideoBinding;
 import com.zhengshuo.phoenix.model.MyVideoBean;
 import com.zhengshuo.phoenix.ui.homemy.adapter.MyVideo_Adapter;
 
 import java.util.ArrayList;
 
-public class HomeMyVideo extends BaseRecyclerBindingSplitFragment<HomemyvideoBinding> {
+public class HomeMyVideo extends BaseRecyclerSplitBindingFragment<HomemyvideoBinding> {
 
     @Override
     protected void initView(View mRootView) {
@@ -23,10 +22,6 @@ public class HomeMyVideo extends BaseRecyclerBindingSplitFragment<HomemyvideoBin
         initSwipeRefreshLayoutAndAdapter("暂无数据", 0, false);
     }
 
-    @Override
-    protected void initBinding(ViewBinding binding) {
-
-    }
 
     @Override
     protected void onRefreshData() {
