@@ -23,6 +23,8 @@ import com.zhengshuo.phoenix.ui.home.fragment.HomeMessage;
 import com.zhengshuo.phoenix.ui.home.fragment.HomeMy;
 import com.zhengshuo.phoenix.ui.home.fragment.HomeSquare;
 import com.zhengshuo.phoenix.ui.homemy.activity.Person_Set;
+import com.zhengshuo.phoenix.ui.homemy.activity.Person_Wallet;
+import com.zhengshuo.phoenix.ui.homemy.activity.Person_WalletDesc;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +69,7 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> imple
     protected void initEvent() {
         getBinding().mTab.addOnTabSelectedListener(new MyOnTabSelectedListener());
         getBinding().setTv.setOnClickListener(this);
+        getBinding().walletMyView.setOnClickListener(this);
     }
 
     protected void initViewPager(int position) {
@@ -195,14 +198,18 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> imple
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.set_Tv:
-                closeLeft();
+                closeRight();
                 skipAnotherActivity(Person_Set.class);
+                break;
+            case R.id.wallet_MyView:
+                closeRight();
+                Person_WalletDesc.startActivity(mActivity);
                 break;
         }
     }
 
     // 关闭左侧抽屉
-    private void closeLeft() {
+    private void closeRight() {
         getBinding().dlLayout.closeDrawer(getBinding().lvDrawerLeft);
     }
 

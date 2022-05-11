@@ -6,11 +6,14 @@
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/background_begin.xml" value="0.2485" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/base_gradual_top.xml" value="0.2145" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/card_edit.xml" value="0.2875" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/drawer_radius10_shape.xml" value="0.293" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/drawer_radius17_shape.xml" value="0.2775" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/drawer_radius23_shape.xml" value="0.2775" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/drawer_radius_shape.xml" value="0.2845" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/drawer_shape.xml" value="0.295" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/dynamic_lable.xml" value="0.228" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/gradualbtn_shape.xml" value="0.2775" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/gradualbtn_shape_grey.xml" value="0.294" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/radius_red.xml" value="0.295" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/shape_no_read_point.xml" value="0.295" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/tab_home.xml" value="0.279" />
@@ -19,6 +22,7 @@
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/tab_my.xml" value="0.2875" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/tab_shape.xml" value="0.228" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/tab_square.xml" value="0.2875" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/wallet_shape.xml" value="0.293" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/drawable/zanbg_shape.xml" value="0.2775" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/font-v26/myfont.xml" value="0.3748717948717949" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/font/myfont.xml" value="0.3807291666666667" />
@@ -36,17 +40,27 @@
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/adapter/layout/myfocus_item.xml" value="0.35052083333333334" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/adapter/layout/myvideo_item.xml" value="0.35052083333333334" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/chat/layout/activity_guide.xml" value="0.35052083333333334" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/chat/layout/activity_personassets.xml" value="0.35052083333333334" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/chat/layout/activity_personedit.xml" value="0.35052083333333334" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/chat/layout/activity_personqrcode.xml" value="0.35052083333333334" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/chat/layout/activity_personset.xml" value="0.35052083333333334" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/chat/layout/activity_personwallet.xml" value="0.33" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/chat/layout/activity_personwalletdesc.xml" value="0.35052083333333334" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/chat/layout/activity_text.xml" value="0.35052083333333334" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/chat/layout/fanandfollow.xml" value="0.35052083333333334" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/chat/layout/fragment_chat.xml" value="0.35052083333333334" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/chat/layout/myorother_fanandfollow.xml" value="0.35052083333333334" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/chat/layout/person_myandother.xml" value="0.35052083333333334" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/dialog/layout/dialog_loading.xml" value="0.35052083333333334" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/dialog/layout/dialog_two_button.xml" value="0.35052083333333334" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/dialog/layout/gift_dialog.xml" value="0.35052083333333334" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/dialog/layout/gift_type_popup.xml" value="0.35052083333333334" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/dialog/layout/giftexchange_dialog.xml" value="0.33" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/dialog/layout/layout_tab.xml" value="0.35052083333333334" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/dialog/layout/layout_tips_dialog.xml" value="0.35052083333333334" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/dialog/layout/main_tab.xml" value="0.35052083333333334" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/dialog/layout/my_arrowitemview.xml" value="0.35052083333333334" />
+        <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/dialog/layout/vip_type_popup.xml" value="0.33" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/dialog/layout/zan_dialog.xml" value="0.35052083333333334" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/fragments/layout-v28/home.xml" value="0.35052083333333334" />
         <entry key="..\:/workspace/phoenix-android/app/src/main/res/layouts/fragments/layout/empty_view_layout.xml" value="0.35052083333333334" />

@@ -240,7 +240,7 @@ public abstract class BaseBindingActivity<VB extends ViewBinding> extends Fragme
 
         for (int i = 0; i < mFragmentList.size(); i++) {
             Fragment fragment = mFragmentList.get(i);
-            FragmentTransaction ft = this.getSupportFragmentManager().beginTransaction();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             if (index == i) {
                 ft.show(fragment);
             } else {

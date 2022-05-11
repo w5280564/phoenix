@@ -6,11 +6,11 @@ android {
     compileSdk 31
 
     signingConfigs {
-        config {
-            storeFile file('../FastIm.jks')
-            storePassword 'fast123456'
-            keyPassword 'fast123456'
-            keyAlias 'FastIm'
+        release {
+            storeFile file('D:\\蓝凤凰\\key\\phoenixandroid.jks')
+            storePassword 'phoenix123456'
+            keyPassword 'phoenix123456'
+            keyAlias 'android'
         }
     }
 
@@ -35,14 +35,10 @@ android {
     }
 
     buildTypes {
-        debug {
-            signingConfig signingConfigs.config
-        }
-
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {

@@ -362,6 +362,10 @@ public class CustomTitleBar extends FrameLayout implements OnClickListener {
         title_line.setVisibility(View.GONE);
     }
 
+    public TextView getLeftBtnView() {
+        return leftBtnView;
+    }
+
     @Override
     public void onClick(View v) {
         if (titleBarClickListener == null) {

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/code_COn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/qrcode_bg"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.homemy.activity.Person_QRCode">
+
+
+    <com.zhengshuo.phoenix.widget.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleBarBackgroundColor="#00ffffff"
+        app:titleBarBackgroundShowType="COLOR"
+        app:titleBarLeftImg="@mipmap/fanhui"
+        app:titleBarShowBottomLine="false"
+        app:titleBarTitle="我的二维码"
+        app:titleBarRightShowFlag="VISIBLE"
+        app:titleBarRightImg="@mipmap/gnegduo_icon"
+        app:titleColor="@color/white" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/codeBg_Con"
+        android:layout_width="312dp"
+        android:layout_height="363dp"
+        android:layout_marginTop="77dp"
+        android:background="@drawable/drawer_radius23_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar">
+
+        <TextView
+            android:id="@+id/nickName_Tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="53dp"
+            android:gravity="center"
+            android:textFontWeight="700"
+            android:text="林允儿的迷妹"
+            android:textColor="@color/text_color_212121"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/code_Img"
+            android:layout_width="159dp"
+            android:layout_height="159dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nickName_Tv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蓝凤凰扫一扫，立即关注我"
+            android:textColor="@color/text_color_535353"
+            android:textSize="12sp"
+            android:layout_marginTop="17dp"
+            android:textFontWeight="500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/code_Img" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/head_Img"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="49dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

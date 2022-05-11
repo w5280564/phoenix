@@ -23,7 +23,7 @@ import com.zhengshuo.phoenix.widget.CustomLoadMoreView;
 /**
  * 带分页的基类Activity
  */
-public abstract class BaseRecyclerSplitBindingActivity<VB extends ViewBinding> extends BaseBindingActivity implements BaseQuickAdapter.RequestLoadMoreListener, SwipeRefreshLayout.OnRefreshListener{
+public abstract class BaseRecyclerSplitBindingActivity<VB extends ViewBinding> extends BaseBindingActivity implements BaseQuickAdapter.RequestLoadMoreListener, SwipeRefreshLayout.OnRefreshListener {
     protected SwipeRefreshLayout mSwipeRefreshLayout;
     protected RecyclerView mRecyclerView;
     protected BaseQuickAdapter mAdapter;
@@ -61,8 +61,8 @@ public abstract class BaseRecyclerSplitBindingActivity<VB extends ViewBinding> e
     protected void initSwipeRefreshLayoutAndAdapter(String emptyToastText, int emptyViewImgResource, boolean isHaveRefresh) {
         mAdapter.setEmptyView(addEmptyView(emptyToastText, emptyViewImgResource));
         mAdapter.setLoadMoreView(new CustomLoadMoreView());
-        mAdapter.setOnLoadMoreListener(this,mRecyclerView);
-        if (isHaveRefresh && mSwipeRefreshLayout!=null) {
+        mAdapter.setOnLoadMoreListener(this, mRecyclerView);
+        if (isHaveRefresh && mSwipeRefreshLayout != null) {
             mSwipeRefreshLayout.setColorSchemeColors(ContextCompat.getColor(mActivity, R.color.animal_color));
             mSwipeRefreshLayout.setOnRefreshListener(this);
         }
@@ -70,41 +70,41 @@ public abstract class BaseRecyclerSplitBindingActivity<VB extends ViewBinding> e
 
     /**
      * 无数据 不展示空数据界面
+     *
      * @param isHaveRefresh
      */
     protected void initSwipeRefreshLayoutAndAdapter(boolean isHaveRefresh) {
         mAdapter.setLoadMoreView(new CustomLoadMoreView());
-        mAdapter.setOnLoadMoreListener(this,mRecyclerView);
-        if (isHaveRefresh && mSwipeRefreshLayout!=null) {
-            mSwipeRefreshLayout.setColorSchemeColors(ContextCompat.getColor(mActivity,R.color.animal_color));
+        mAdapter.setOnLoadMoreListener(this, mRecyclerView);
+        if (isHaveRefresh && mSwipeRefreshLayout != null) {
+            mSwipeRefreshLayout.setColorSchemeColors(ContextCompat.getColor(mActivity, R.color.animal_color));
             mSwipeRefreshLayout.setOnRefreshListener(this);
         }
     }
 
 
-
     /**
      * 全局处理分页的公共方法
-     * @param obj  具体的分页对象  列表适配器
+     *
+     * @param obj      具体的分页对象  列表适配器
      * @param mAdapter
      */
     protected void handleSplitListData(BaseSplitIndexBean obj, BaseQuickAdapter mAdapter, int mPageSize) {
-        if(obj!=null){
-            int allCount = StringUtil.isBlank(obj.getCount())?0:Integer.parseInt(obj.getCount());
+        if (obj != null) {
+            int allCount = StringUtil.isBlank(obj.getCount()) ? 0 : Integer.parseInt(obj.getCount());
             int bigPage = 0;//最大页
-            if(allCount%mPageSize!=0){
-                bigPage=allCount/mPageSize+1;
-            }else{
-                bigPage=allCount/mPageSize;
+            if (allCount % mPageSize != 0) {
+                bigPage = allCount / mPageSize + 1;
+            } else {
+                bigPage = allCount / mPageSize;
             }
-            if(page==bigPage){
+            if (page == bigPage) {
                 mAdapter.loadMoreEnd();//显示“没有更多数据”
             }
 
-            boolean isRefresh = page==1?true:false;
-            if(!ListUtil.isEmpty(obj.getList())){
+            boolean isRefresh = page == 1 ? true : false;
+            if (!ListUtil.isEmpty(obj.getList())) {
                 int size = obj.getList().size();
-
                 if (isRefresh) {
                     mAdapter.setNewData(obj.getList());
                 } else {
@@ -117,7 +117,7 @@ public abstract class BaseRecyclerSplitBindingActivity<VB extends ViewBinding> e
                 } else {
                     mAdapter.loadMoreComplete();
                 }
-            }else{
+            } else {
 
                 if (isRefresh) {
                     mAdapter.setNewData(null);//刷新列表

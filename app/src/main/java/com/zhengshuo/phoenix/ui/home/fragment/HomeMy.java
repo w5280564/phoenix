@@ -4,18 +4,13 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.CycleInterpolator;
-import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.annotation.DrawableRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -24,7 +19,6 @@ import androidx.core.graphics.drawable.DrawableCompat;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.tabs.TabLayout;
-import com.google.common.eventbus.EventBus;
 import com.gyf.barlibrary.ImmersionBar;
 import com.zhengshuo.phoenix.R;
 import com.zhengshuo.phoenix.base.BaseTabLayoutBindingFragment;
@@ -32,7 +26,9 @@ import com.zhengshuo.phoenix.databinding.HomemyBinding;
 import com.zhengshuo.phoenix.model.AppMenuBean;
 import com.zhengshuo.phoenix.ui.MainActivity;
 import com.zhengshuo.phoenix.ui.dialog.ZanDialog;
+import com.zhengshuo.phoenix.ui.homemy.activity.Person_Edit;
 import com.zhengshuo.phoenix.ui.homemy.activity.Person_FansAndFollow;
+import com.zhengshuo.phoenix.ui.homemy.activity.Person_QRCode;
 import com.zhengshuo.phoenix.ui.homemy.fragment.HomeMyDynamic;
 import com.zhengshuo.phoenix.ui.homemy.fragment.HomeMyVideo;
 import com.zhengshuo.phoenix.ui.homemy.fragment.HomeMyZan;
@@ -99,7 +95,7 @@ public class HomeMy extends BaseTabLayoutBindingFragment<HomemyBinding> implemen
         getBinding().cardHeadInclude.zanTv.setOnClickListener(this);
         getBinding().cardHeadInclude.textview12.setOnClickListener(this);
         getBinding().cardHeadInclude.editUserTv.setOnClickListener(this);
-
+        getBinding().cardHeadInclude.qrcodeImg.setOnClickListener(this);
     }
 
     @Override
@@ -109,24 +105,23 @@ public class HomeMy extends BaseTabLayoutBindingFragment<HomemyBinding> implemen
                 ((MainActivity) requireActivity()).LeftDL();
                 break;
             case R.id.qrcode_Img:
-
+                Person_QRCode.startActivity(mActivity);
                 break;
             case R.id.editUser_Tv_:
-
+                Person_Edit.startActivity(mActivity);
                 break;
             case R.id.tv_follow_number:
             case R.id.textview10:
-                Person_FansAndFollow.startActivity(mActivity,"关注","");
+                Person_FansAndFollow.startActivity(mActivity, "关注", "");
                 break;
             case R.id.tv_fans_number:
             case R.id.textview11:
-                Person_FansAndFollow.startActivity(mActivity,"粉丝","");
+                Person_FansAndFollow.startActivity(mActivity, "粉丝", "");
                 break;
             case R.id.zan_Tv:
             case R.id.textview12:
                 showZanDialog();
                 break;
-
 
         }
     }
@@ -279,7 +274,6 @@ public class HomeMy extends BaseTabLayoutBindingFragment<HomemyBinding> implemen
         }
         initChildViewPager(selectedTabPosition);
     }
-
 
 
 }

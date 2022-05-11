@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="236dp"
+    android:layout_height="224dp"
+    android:background="@drawable/drawer_radius17_shape"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="-2dp"
+        android:layout_marginEnd="-2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@mipmap/giftdialog_bg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="您的收益可兑换 ¥60\n确定兑换吗？"
+        android:textColor="@color/text_color_212121"
+        android:textFontWeight="500"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/cancelTv"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sure_Tv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="取消"
+        android:textFontWeight="500"
+        android:textColor="@color/text_color_535353"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/sure_Tv"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:textFontWeight="500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cancelTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="确定"
+        android:textColor="#FF7F24FE"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toTopOf="@id/cancelTv"
+        android:background="#f5f5f5"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#f5f5f5"
+        app:layout_constraintStart_toEndOf="@id/cancelTv"
+        app:layout_constraintTop_toTopOf="@id/cancelTv"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

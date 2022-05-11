@@ -37,6 +37,23 @@
         android:persistent="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Base">
+
+        <activity
+            android:name=".ui.homemy.activity.Person_WalletDesc"
+            android:exported="false" />
+        <activity
+            android:name=".ui.homemy.activity.Person_Assets"
+            android:exported="false" />
+        <activity
+            android:name=".ui.homemy.activity.Person_Wallet"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.homemy.activity.Person_QRCode"
+            android:exported="false" />
+        <activity
+            android:name=".ui.homemy.activity.Person_Edit"
+            android:exported="false" />
         <activity
             android:name=".ui.homemy.activity.Person_FansAndFollow"
             android:exported="false" />

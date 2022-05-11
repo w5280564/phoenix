@@ -106,6 +106,8 @@
 
     <color name="homeTab_color_80">#80000000</color>
     <color name="color_33">#33000000</color>
+    <color name="color_F7F4FD">#FFF7F4FD</color>
+
 
 
 </resources>

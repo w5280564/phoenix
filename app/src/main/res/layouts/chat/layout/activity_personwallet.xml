@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F7F4FD"
+    tools:context=".ui.homemy.activity.Person_Wallet"
+    tools:ignore="MissingConstraints">
+
+    <com.zhengshuo.phoenix.widget.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleBarBackgroundColor="@color/color_F7F4FD"
+        app:titleBarBackgroundShowType="COLOR"
+        app:titleBarLeftImg="@mipmap/fanhui"
+        app:titleBarRightShowFlag="VISIBLE"
+        app:titleBarRightShowType="TEXT"
+        app:titleBarRightTxt="账单明细"
+        app:titleBarRightTxtColor="@color/text_color_535353"
+        app:titleBarRightTxtSize="12sp"
+        app:titleBarShowBottomLine="false"
+        app:titleBarTitle="我的钱包" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/zi_Con"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="16dp"
+        android:background="@mipmap/wallet_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="25dp"
+            android:text="我的资产"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/moneyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="14dp"
+            android:drawableEnd="@mipmap/arrow_rightwithe"
+            android:drawablePadding="12dp"
+            android:text="¥8720.99"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="123dp"
+        android:background="@drawable/drawer_radius17_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/zi_Con">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="60dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:text="我的收益"
+            android:textColor="@color/text_color_212121"
+            android:textFontWeight="700"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="16dp"
+            android:layout_height="5dp"
+            android:background="@drawable/tab_shape"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@id/textView4"
+            app:layout_goneMarginTop="3dp" />
+
+        <com.zhengshuo.phoenix.widget.FlowLayout
+            android:id="@+id/vipType_Flow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line" />
+
+        <TextView
+            android:id="@+id/tvBtn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="87dp"
+            android:background="@drawable/wallet_shape"
+            android:gravity="center"
+            android:text="收益兑换"
+            android:textColor="#b8ffffff"
+            android:textFontWeight="500"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="23dp"
+            android:text="《充值/提现须知》《收益兑换说明》"
+            android:textColor="@color/text_color_4f59ff"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

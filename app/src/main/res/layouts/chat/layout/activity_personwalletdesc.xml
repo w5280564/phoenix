@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.homemy.activity.Person_Wallet"
+    tools:ignore="MissingConstraints">
+
+    <com.zhengshuo.phoenix.widget.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleBarBackgroundColor="@color/color_F7F4FD"
+        app:titleBarBackgroundShowType="COLOR"
+        app:titleBarLeftImg="@mipmap/fanhui"
+        app:titleBarRightShowFlag="INVISIBLE"
+        app:titleBarShowBottomLine="false"
+        app:titleBarTitle="开通说明" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/walletdesc_icon"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="38dp"
+        android:text="我的钱包所产生的交易支付是由杉德支付提供，
+蓝凤凰将向杉德支付提供您的个人身份信息，
+用于开通杉德支付账号，同时我们不会泄露您
+的个人信息。同意开通请点击下方【同意开通】按钮。"
+        android:textColor="#ff535353"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+
+
+        <com.zhengshuo.phoenix.widget.TimeButton
+            android:id="@+id/tvBtn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="87dp"
+            android:background="@drawable/gradualbtn_shape"
+            android:gravity="center"
+            android:text="同意开通"
+            android:textColor="#ffffff"
+            android:textFontWeight="500"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="23dp"
+            android:text="《用户服务协议》 《隐私政策》"
+            android:textColor="@color/text_color_4f59ff"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
